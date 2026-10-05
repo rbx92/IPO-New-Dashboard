@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-05",
+ "updated": "2026-10-06",
  "live": [
   {
    "name": "SRIT India",
@@ -63,9 +63,9 @@
    "band_low": 104.0,
    "band_high": 111.0,
    "qib": 1.0,
-   "nii": 1.49,
-   "retail": 0.72,
-   "total": 1.12
+   "nii": 1.87,
+   "retail": 0.81,
+   "total": 1.36
   },
   {
    "name": "Eventions",
@@ -84,10 +84,10 @@
    "close": "2026-10-05",
    "band_low": 80.0,
    "band_high": 85.0,
-   "qib": 63.48,
-   "nii": 251.57,
-   "retail": 167.27,
-   "total": 162.38
+   "qib": 148.63,
+   "nii": 406.15,
+   "retail": 264.23,
+   "total": 271.74
   },
   {
    "name": "Nityas Gems & Jewellery",
@@ -95,10 +95,10 @@
    "close": "2026-10-05",
    "band_low": 70.0,
    "band_high": 75.0,
-   "qib": 0.8,
-   "nii": 1.5,
-   "retail": 3.3,
-   "total": 1.78
+   "qib": 1.06,
+   "nii": 2.03,
+   "retail": 3.88,
+   "total": 2.19
   },
   {
    "name": "Omara Ventures",
@@ -107,9 +107,9 @@
    "band_low": 296.0,
    "band_high": 311.0,
    "qib": 1.0,
-   "nii": 1.6,
-   "retail": 0.39,
-   "total": 1.03
+   "nii": 1.63,
+   "retail": 0.43,
+   "total": 1.06
   },
   {
    "name": "SJP Ultrasonic",
@@ -128,10 +128,10 @@
    "close": "2026-10-05",
    "band_low": 50.0,
    "band_high": 53.0,
-   "qib": 1.33,
-   "nii": 1.97,
-   "retail": 1.39,
-   "total": 1.53
+   "qib": 1.7,
+   "nii": 2.46,
+   "retail": 1.68,
+   "total": 1.9
   },
   {
    "name": "Sollfege Smart Electronics",
@@ -162,9 +162,9 @@
    "band_low": 186.0,
    "band_high": 196.0,
    "qib": 5.7,
-   "nii": 1.85,
-   "retail": 2.01,
-   "total": 2.95
+   "nii": 2.74,
+   "retail": 2.82,
+   "total": 3.56
   },
   {
    "name": "Paramount Syntex",
@@ -174,8 +174,8 @@
    "band_high": 127.0,
    "qib": 119.29,
    "nii": 0.12,
-   "retail": 0.22,
-   "total": 1.39
+   "retail": 0.44,
+   "total": 1.49
   },
   {
    "name": "TNA Solutions",
@@ -184,9 +184,9 @@
    "band_low": 66.0,
    "band_high": 70.0,
    "qib": 4.77,
-   "nii": 1.22,
-   "retail": 1.75,
-   "total": 2.41
+   "nii": 1.7,
+   "retail": 2.42,
+   "total": 2.85
   },
   {
    "name": "R K Fashion",
@@ -194,10 +194,10 @@
    "close": "2026-10-07",
    "band_low": 77.0,
    "band_high": 82.0,
-   "qib": 0.0,
-   "nii": 0.41,
+   "qib": 14.11,
+   "nii": 0.55,
    "retail": 0.01,
-   "total": 0.18
+   "total": 0.38
   }
  ],
  "past": [
