@@ -102,6 +102,7 @@ var data = null;
 
 function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
 function cleanName(s){return String(s).replace(/\s+(Ltd\.?|Limited)\s*$/i,"");}
+function key(s){return cleanName(s).toLowerCase().replace(/[^a-z0-9]/g,"");}
 function isNum(v){return typeof v==="number" && isFinite(v);}
 
 function fmtX(v){
@@ -185,12 +186,12 @@ function batchCaption(b){
 function render(){
   var today=data.updated, i, k, p, l;
   var live=[], cands=[], seen={};
-  for(i=0;i<data.past.length;i++){ p=data.past[i]; seen[p.name]=true; cands.push(p); }
+  for(i=0;i<data.past.length;i++){ p=data.past[i]; seen[key(p.name)]=true; cands.push(p); }
   for(k=0;k<data.live.length;k++){
     l=data.live[k];
     if(l.close>=today){
       if(isNum(l.qib)||isNum(l.nii)||isNum(l.retail)||isNum(l.total)) live.push(l);
-    } else if(!seen[l.name]){
+    } else if(!seen[key(l.name)]){
       cands.push({name:l.name,type:l.type,qib:l.qib,nii:l.nii,retail:l.retail,total:l.total,offer:l.band_high,current:null,pl:null});
     }
   }
