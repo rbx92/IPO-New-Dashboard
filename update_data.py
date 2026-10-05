@@ -115,6 +115,7 @@ def parse_groww(html, today):
         c_ret = find_col(headers, "retail", "rii")
         c_tot = find_col(headers, "total")
         if c_qib is None or c_tot is None:
+            print("table skipped (no QIB/Total columns), first row:", headers[:12])
             continue
         if c_name is None:
             c_name = 0
@@ -147,6 +148,51 @@ def parse_groww(html, today):
     return rows_out
 
 
+def describe(html):
+    """Prints what the page looks like so a failed run can be diagnosed from the log."""
+    soup = BeautifulSoup(html, "html.parser")
+    print("--- diagnostics ---")
+    print("page length:", len(html))
+    for i, t in enumerate(soup.find_all("table")):
+        trs = t.find_all("tr")
+        first = []
+        if trs:
+            first = [c.get_text(" ", strip=True)[:25] for c in trs[0].find_all(["th", "td"])][:12]
+        print("table", i, "rows:", len(trs), "first row:", first)
+    nd = soup.find("script", id="__NEXT_DATA__")
+    print("__NEXT_DATA__ present:", bool(nd), "length:", len(nd.string or "") if nd else 0)
+    low = html.lower()
+    print("'qib' appears", low.count("qib"), "times")
+    pos = low.find("qib")
+    if pos >= 0:
+        print("text around first 'qib':", html[max(0, pos - 300):pos + 500].replace("\n", " "))
+    print("--- end diagnostics ---")
+
+
+def fetch_rendered(url):
+    """Opens the page in a real (headless) browser so scripts run, then returns the finished HTML."""
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        print("browser tool not installed, skipping browser fetch")
+        return None
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch()
+            page = browser.new_page(user_agent=HEADERS["User-Agent"], locale="en-IN")
+            page.goto(url, wait_until="networkidle", timeout=60000)
+            try:
+                page.wait_for_selector("table", timeout=20000)
+            except Exception:
+                print("no table appeared in the browser within 20 seconds")
+            html = page.content()
+            browser.close()
+            return html
+    except Exception as e:
+        print("browser fetch failed:", str(e)[:300])
+        return None
+
+
 def merge_live(old_live, new_rows, today):
     keep_after = today - datetime.timedelta(days=KEEP_CLOSED_DAYS)
     merged = {}
@@ -177,12 +223,19 @@ def main():
 
     html = fetch(GROWW_URL)
     rows = parse_groww(html, today)
-    print("rows read from Groww:", len(rows))
+    print("rows read from the plain page:", len(rows))
+    if len(rows) < MIN_ROWS:
+        describe(html)
+        print("the plain page had no usable table, trying a real browser")
+        rendered = fetch_rendered(GROWW_URL)
+        if rendered:
+            rows = parse_groww(rendered, today)
+            print("rows read from the browser page:", len(rows))
+            if len(rows) < MIN_ROWS:
+                describe(rendered)
     for r in rows[:3]:
         print("  sample:", r)
     if len(rows) < MIN_ROWS:
-        text = BeautifulSoup(html, "html.parser").get_text(" ", strip=True)
-        print("page text starts with:", text[:1200])
         fail("read fewer than %d IPO rows, so data.json was left unchanged" % MIN_ROWS)
     if not any(r["qib"] is not None or r["total"] is not None for r in rows):
         fail("no subscription numbers found in any row, so data.json was left unchanged")
