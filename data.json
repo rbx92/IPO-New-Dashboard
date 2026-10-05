@@ -1,159 +1,16 @@
 {
- "updated": "2026-10-04",
+ "updated": "2026-10-05",
  "live": [
   {
-   "name": "Nityas Gems & Jewellery",
+   "name": "SRIT India",
    "type": "Mainboard",
-   "close": "2026-10-05",
-   "band_low": 70.0,
-   "band_high": 75.0,
-   "qib": 0.38,
-   "nii": 0.27,
-   "retail": 1.31,
-   "total": 0.69
-  },
-  {
-   "name": "Vishal Nirmiti",
-   "type": "Mainboard",
-   "close": "2026-10-05",
-   "band_low": 208.0,
-   "band_high": 220.0,
-   "qib": 0.96,
-   "nii": 0.8,
-   "retail": 0.47,
-   "total": 0.57
-  },
-  {
-   "name": "EverestIMS Technologies",
-   "type": "SME",
-   "close": "2026-10-05",
-   "band_low": 80.0,
-   "band_high": 85.0,
-   "qib": 0.87,
-   "nii": 1.37,
-   "retail": 2.27,
-   "total": 1.66
-  },
-  {
-   "name": "Shree TNB Polymers",
-   "type": "SME",
-   "close": "2026-10-05",
-   "band_low": 50.0,
-   "band_high": 53.0,
-   "qib": 0.75,
-   "nii": 1.45,
-   "retail": 0.84,
-   "total": 0.98
-  },
-  {
-   "name": "Dove Soft",
-   "type": "SME",
-   "close": "2026-10-05",
-   "band_low": 104.0,
-   "band_high": 111.0,
-   "qib": 1.0,
-   "nii": 1.17,
-   "retail": 0.55,
-   "total": 0.87
-  },
-  {
-   "name": "Omara Ventures",
-   "type": "SME",
-   "close": "2026-10-05",
-   "band_low": 296.0,
-   "band_high": 311.0,
-   "qib": 1.0,
-   "nii": 1.06,
-   "retail": 0.16,
-   "total": 0.71
-  },
-  {
-   "name": "Sollfege Smart Electronics",
-   "type": "SME",
-   "close": "2026-10-05",
-   "band_low": 55.0,
-   "band_high": 55.0,
-   "qib": null,
-   "nii": null,
-   "retail": null,
-   "total": null
-  },
-  {
-   "name": "SJP Ultrasonic",
-   "type": "SME",
-   "close": "2026-10-05",
-   "band_low": 67.0,
-   "band_high": 67.0,
-   "qib": null,
-   "nii": null,
-   "retail": null,
-   "total": null
-  },
-  {
-   "name": "Eventions",
-   "type": "SME",
-   "close": "2026-10-05",
-   "band_low": 112.0,
-   "band_high": 118.0,
-   "qib": null,
-   "nii": null,
-   "retail": null,
-   "total": null
-  },
-  {
-   "name": "Paramount Syntex",
-   "type": "SME",
-   "close": "2026-10-06",
-   "band_low": 119.0,
-   "band_high": 127.0,
-   "qib": 119.29,
-   "nii": 0.01,
-   "retail": 0.1,
-   "total": 1.28
-  },
-  {
-   "name": "Acme India Industries",
-   "type": "SME",
-   "close": "2026-10-06",
-   "band_low": 186.0,
-   "band_high": 196.0,
-   "qib": 5.7,
-   "nii": 0.62,
-   "retail": 0.48,
-   "total": 1.9
-  },
-  {
-   "name": "TNA Solutions",
-   "type": "SME",
-   "close": "2026-10-06",
-   "band_low": 66.0,
-   "band_high": 70.0,
-   "qib": 4.77,
-   "nii": 0.35,
-   "retail": 0.64,
-   "total": 1.66
-  },
-  {
-   "name": "R K Fashion",
-   "type": "SME",
-   "close": "2026-10-07",
-   "band_low": 77.0,
-   "band_high": 82.0,
-   "qib": null,
-   "nii": null,
-   "retail": null,
-   "total": null
-  },
-  {
-   "name": "Green Asia Impex",
-   "type": "SME",
-   "close": "2026-10-01",
-   "band_low": 84.0,
-   "band_high": 89.0,
-   "qib": null,
-   "nii": null,
-   "retail": null,
-   "total": null
+   "close": "2026-09-30",
+   "band_low": 123.0,
+   "band_high": 130.0,
+   "qib": 91.84,
+   "nii": 310.94,
+   "retail": 56.75,
+   "total": 121.24
   },
   {
    "name": "Black Opal Consultants",
@@ -165,6 +22,17 @@
    "nii": 43.0,
    "retail": 27.2,
    "total": 25.4
+  },
+  {
+   "name": "Green Asia Impex",
+   "type": "SME",
+   "close": "2026-10-01",
+   "band_low": 84.0,
+   "band_high": 89.0,
+   "qib": null,
+   "nii": null,
+   "retail": null,
+   "total": null
   },
   {
    "name": "Papadmalji Agro",
@@ -189,15 +57,147 @@
    "total": 347.25
   },
   {
-   "name": "SRIT India",
+   "name": "Dove Soft",
+   "type": "SME",
+   "close": "2026-10-05",
+   "band_low": 104.0,
+   "band_high": 111.0,
+   "qib": 1.0,
+   "nii": 1.49,
+   "retail": 0.72,
+   "total": 1.12
+  },
+  {
+   "name": "Eventions",
+   "type": "SME",
+   "close": "2026-10-05",
+   "band_low": 112.0,
+   "band_high": 118.0,
+   "qib": null,
+   "nii": null,
+   "retail": null,
+   "total": null
+  },
+  {
+   "name": "EverestIMS Technologies",
+   "type": "SME",
+   "close": "2026-10-05",
+   "band_low": 80.0,
+   "band_high": 85.0,
+   "qib": 63.48,
+   "nii": 251.57,
+   "retail": 167.27,
+   "total": 162.38
+  },
+  {
+   "name": "Nityas Gems & Jewellery",
    "type": "Mainboard",
-   "close": "2026-09-30",
-   "band_low": 123.0,
-   "band_high": 130.0,
-   "qib": 91.84,
-   "nii": 310.94,
-   "retail": 56.75,
-   "total": 121.24
+   "close": "2026-10-05",
+   "band_low": 70.0,
+   "band_high": 75.0,
+   "qib": 0.8,
+   "nii": 1.5,
+   "retail": 3.3,
+   "total": 1.78
+  },
+  {
+   "name": "Omara Ventures",
+   "type": "SME",
+   "close": "2026-10-05",
+   "band_low": 296.0,
+   "band_high": 311.0,
+   "qib": 1.0,
+   "nii": 1.6,
+   "retail": 0.39,
+   "total": 1.03
+  },
+  {
+   "name": "SJP Ultrasonic",
+   "type": "SME",
+   "close": "2026-10-05",
+   "band_low": 67.0,
+   "band_high": 67.0,
+   "qib": null,
+   "nii": null,
+   "retail": null,
+   "total": null
+  },
+  {
+   "name": "Shree TNB Polymers",
+   "type": "SME",
+   "close": "2026-10-05",
+   "band_low": 50.0,
+   "band_high": 53.0,
+   "qib": 1.33,
+   "nii": 1.97,
+   "retail": 1.39,
+   "total": 1.53
+  },
+  {
+   "name": "Sollfege Smart Electronics",
+   "type": "SME",
+   "close": "2026-10-05",
+   "band_low": 55.0,
+   "band_high": 55.0,
+   "qib": null,
+   "nii": null,
+   "retail": null,
+   "total": null
+  },
+  {
+   "name": "Vishal Nirmiti",
+   "type": "Mainboard",
+   "close": "2026-10-05",
+   "band_low": 208.0,
+   "band_high": 220.0,
+   "qib": 1.03,
+   "nii": 1.63,
+   "retail": 1.44,
+   "total": 1.49
+  },
+  {
+   "name": "Acme India Industries",
+   "type": "SME",
+   "close": "2026-10-06",
+   "band_low": 186.0,
+   "band_high": 196.0,
+   "qib": 5.7,
+   "nii": 1.85,
+   "retail": 2.01,
+   "total": 2.95
+  },
+  {
+   "name": "Paramount Syntex",
+   "type": "SME",
+   "close": "2026-10-06",
+   "band_low": 119.0,
+   "band_high": 127.0,
+   "qib": 119.29,
+   "nii": 0.12,
+   "retail": 0.22,
+   "total": 1.39
+  },
+  {
+   "name": "TNA Solutions",
+   "type": "SME",
+   "close": "2026-10-06",
+   "band_low": 66.0,
+   "band_high": 70.0,
+   "qib": 4.77,
+   "nii": 1.22,
+   "retail": 1.75,
+   "total": 2.41
+  },
+  {
+   "name": "R K Fashion",
+   "type": "SME",
+   "close": "2026-10-07",
+   "band_low": 77.0,
+   "band_high": 82.0,
+   "qib": 0.0,
+   "nii": 0.41,
+   "retail": 0.01,
+   "total": 0.18
   }
  ],
  "past": [
