@@ -96,56 +96,88 @@ def find_col(headers, *keys):
     return None
 
 
+CELL_X = re.compile(r"(\d[\d,]*\.?\d*x|--|-)$")
+
+
+def looks_like_data_row(cells):
+    """Groww's table has no header row. A data row has 10 cells with subscription values at 5 and 9."""
+    return (len(cells) >= 10
+            and CELL_X.match(cells[5].strip().lower().replace(" ", "")) is not None
+            and CELL_X.match(cells[9].strip().lower().replace(" ", "")) is not None)
+
+
+def build_row(cells, cols, today, type_from_row_text):
+    def cell(key):
+        i = cols.get(key)
+        return cells[i] if i is not None and i < len(cells) else None
+
+    name = cell("name") or ""
+    if type_from_row_text:
+        tm = TYPE_RE.search(" ".join(cells))
+        name = TYPE_RE.sub("", name)
+    else:
+        tm = TYPE_RE.search(cell("type") or "")
+    name = re.sub(r"\s+", " ", name).strip(" -|")
+    close = parse_date(cell("close"), today) if cell("close") else None
+    if not name or close is None:
+        return None
+    lo, hi = parse_band(cell("price"))
+    return {
+        "name": name,
+        "type": ("SME" if tm.group(1).lower() == "sme" else "Mainboard") if tm else None,
+        "close": close.isoformat(),
+        "band_low": lo,
+        "band_high": hi,
+        "qib": num(cell("qib")),
+        "nii": num(cell("nii")),
+        "retail": num(cell("retail")),
+        "total": num(cell("total")),
+    }
+
+
 def parse_groww(html, today):
     soup = BeautifulSoup(html, "html.parser")
     tables = soup.find_all("table")
     print("tables on page:", len(tables))
-    rows_out = []
     for table in tables:
         trs = table.find_all("tr")
-        if len(trs) < 2:
+        if not trs:
             continue
-        head_cells = trs[0].find_all(["th", "td"])
-        headers = [c.get_text(" ", strip=True).lower() for c in head_cells]
-        c_name = find_col(headers, "company", "name")
-        c_close = find_col(headers, "close", "end")
-        c_price = find_col(headers, "price")
-        c_qib = find_col(headers, "qib", "qualified")
-        c_nii = find_col(headers, "nii", "hni", "non-inst", "non inst")
-        c_ret = find_col(headers, "retail", "rii")
-        c_tot = find_col(headers, "total")
-        if c_qib is None or c_tot is None:
-            print("table skipped (no QIB/Total columns), first row:", headers[:12])
-            continue
-        if c_name is None:
-            c_name = 0
-        print("subscription table found, columns:", headers)
-        for tr in trs[1:]:
-            cells = [c.get_text(" ", strip=True) for c in tr.find_all(["td", "th"])]
-            if len(cells) <= max(x for x in (c_name, c_close, c_price, c_qib, c_nii, c_ret, c_tot) if x is not None):
-                continue
-            row_text = " ".join(cells)
-            tm = TYPE_RE.search(row_text)
-            name = TYPE_RE.sub("", cells[c_name]).strip(" -|")
-            name = re.sub(r"\s+", " ", name)
-            close = parse_date(cells[c_close], today) if c_close is not None else None
-            if not name or close is None:
-                continue
-            lo, hi = parse_band(cells[c_price]) if c_price is not None else (None, None)
-            rows_out.append({
-                "name": name,
-                "type": ("SME" if tm.group(1).lower() == "sme" else "Mainboard") if tm else None,
-                "close": close.isoformat(),
-                "band_low": lo,
-                "band_high": hi,
-                "qib": num(cells[c_qib]),
-                "nii": num(cells[c_nii]) if c_nii is not None else None,
-                "retail": num(cells[c_ret]) if c_ret is not None else None,
-                "total": num(cells[c_tot]),
-            })
+        grid = [[c.get_text(" ", strip=True) for c in tr.find_all(["td", "th"])] for tr in trs]
+        headers = [c.lower() for c in grid[0]]
+        cols = {
+            "name": find_col(headers, "company", "name"),
+            "close": find_col(headers, "close", "end"),
+            "price": find_col(headers, "price"),
+            "qib": find_col(headers, "qib", "qualified"),
+            "nii": find_col(headers, "nii", "hni", "non-inst", "non inst"),
+            "retail": find_col(headers, "retail", "rii"),
+            "total": find_col(headers, "total"),
+        }
+        rows_out = []
+        if cols["qib"] is not None and cols["total"] is not None:
+            print("table with header row found, columns:", headers)
+            if cols["name"] is None:
+                cols["name"] = 0
+            for cells in grid[1:]:
+                r = build_row(cells, cols, today, True)
+                if r:
+                    rows_out.append(r)
+        elif looks_like_data_row(grid[0]):
+            print("table without header row found, using Groww column order (%d rows)" % len(grid))
+            cols = {"name": 0, "type": 1, "close": 2, "price": 4,
+                    "qib": 5, "nii": 6, "retail": 7, "total": 9}
+            for cells in grid:
+                if not looks_like_data_row(cells):
+                    continue
+                r = build_row(cells, cols, today, False)
+                if r:
+                    rows_out.append(r)
+        else:
+            print("table skipped, first row:", grid[0][:12])
         if rows_out:
-            break
-    return rows_out
+            return rows_out
+    return []
 
 
 def describe(html):
