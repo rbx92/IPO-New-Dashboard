@@ -18,7 +18,8 @@ jobs:
           python-version: "3.12"
       - name: Install tools
         run: pip install requests beautifulsoup4 playwright
-      - name: Install browser
+      - name: Install browser (backup only)
+        continue-on-error: true
         run: playwright install --with-deps chromium
       - name: Fetch and update data
         run: python update_data.py
