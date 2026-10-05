@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IPO dashboard</title>
+<style>
+html{font-size:16px}
+@media (min-width:1500px){html{font-size:20px}}
+@media (min-width:1900px){html{font-size:22px}}
+*{box-sizing:border-box}
+body{margin:0;background:#E9ECEA;color:#0F2A1B;font-family:"Amazon Ember",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-text-size-adjust:100%}
+.page{padding:1.25rem 1.5rem 2.5rem}
+.top{display:-webkit-flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:baseline;align-items:baseline;margin-bottom:1.25rem}
+h1{font-size:1.75rem;font-weight:500;margin:0}
+.upd{font-size:.9rem;color:#4A6354}
+.sec{margin-bottom:2rem}
+.sechead{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;margin:0 0 .75rem .25rem}
+.sub{margin-top:1.5rem}
+h2{font-size:1.2rem;font-weight:500;margin:0}
+h3{font-size:1.05rem;font-weight:500;margin:0}
+.count{font-size:.85rem;font-weight:500;background:#14472B;color:#fff;border-radius:999px;padding:.15rem .6rem;margin-left:.6rem}
+.cap{font-size:.9rem;color:#4A6354;margin-left:.75rem}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-gap:1rem}
+@media (max-width:1099px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:759px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:479px){.grid{grid-template-columns:1fr}}
+.card{border-radius:1.15rem;padding:1rem 1rem .9rem;display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;background:#fff;color:#0F2A1B}
+.card.live{background:#14472B;color:#fff}
+.chips{display:-webkit-flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;align-items:center;min-height:1.7rem}
+.name{font-size:1.4rem;font-weight:500;line-height:1.2;margin:.55rem 0 0;min-height:3.4rem;overflow-wrap:break-word;word-wrap:break-word}
+.chip{display:inline-block;font-size:.8rem;font-weight:500;border-radius:999px;padding:.25rem .65rem;white-space:nowrap}
+.t-main{background:#E3F1E8;color:#14472B}
+.t-sme{background:#FFE3A8;color:#6B4200}
+.live .t-main{background:#2A6A45;color:#fff}
+.live .t-sme{background:#F6C453;color:#3A2600}
+.chip-live{background:#fff;color:#14472B}
+.dot{display:inline-block;position:relative;width:.55rem;height:.55rem;border-radius:50%;background:#1E9E5A;margin-right:.4rem;vertical-align:.05rem}
+.dot:after{content:"";position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;background:#1E9E5A;-webkit-animation:pulse 1.6s ease-out infinite;animation:pulse 1.6s ease-out infinite}
+@-webkit-keyframes pulse{0%{-webkit-transform:scale(1);opacity:.7}100%{-webkit-transform:scale(3);opacity:0}}
+@keyframes pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(3);opacity:0}}
+@media (prefers-reduced-motion:reduce){.dot:after{-webkit-animation:none;animation:none;opacity:0}}
+.hero{font-size:3.25rem;font-weight:500;line-height:1;margin-top:.5rem}
+.herolab{font-size:.85rem;margin-top:.25rem;color:#4A6354}
+.live .herolab{color:#BFE8CF}
+.cols{display:-webkit-flex;display:flex}
+.cols>div{-webkit-flex:1;flex:1;text-align:center}
+.val{font-size:.9rem;font-weight:500;margin-top:.8rem}
+.nm{font-size:.85rem;margin-top:.4rem;color:#4A6354}
+.live .nm{color:#BFE8CF}
+.nm.tot,.live .nm.tot{font-weight:500;color:#0F2A1B}
+.live .nm.tot{color:#fff}
+.cap-t{display:inline-block;width:2.4rem;height:7rem;border-radius:1.2rem;position:relative;overflow:hidden;margin-top:.25rem;background:repeating-linear-gradient(135deg,#D5DBD7 0,#D5DBD7 2px,transparent 2px,transparent 6px)}
+.live .cap-t{background:repeating-linear-gradient(135deg,rgba(255,255,255,.22) 0,rgba(255,255,255,.22) 2px,transparent 2px,transparent 6px)}
+.cap-f{position:absolute;left:0;right:0;bottom:0;border-radius:1.2rem}
+.foot{margin-top:auto;padding-top:.8rem;display:-webkit-flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;align-items:center;font-size:.9rem;color:#4A6354}
+.foot b{font-weight:500;color:#0F2A1B}
+.live .foot{color:#E3F6EA}
+.pl-up{background:#DDF3E4;color:#14472B}
+.pl-dn{background:#FBE3E0;color:#8A1F17}
+.pl-na{background:#EEF2EF;color:#4A6354}
+.msg{padding:1.5rem;color:#4A6354;font-size:1rem}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top">
+    <h1>IPO dashboard</h1>
+    <div class="upd" id="upd"></div>
+  </div>
+  <div class="sec">
+    <div class="sechead"><h2>Live now</h2><span class="count" id="liveN">0</span></div>
+    <div class="grid" id="liveGrid"></div>
+  </div>
+  <div class="sec">
+    <div class="sechead"><h2>Past IPOs</h2><span class="count" id="pastN">0</span><span class="cap" id="pastCap"></span></div>
+    <div id="batches"></div>
+  </div>
+</div>
+<script>
+/* ---------- FILTERS FOR PAST IPOs (applied in this order; live IPOs are never filtered) ---------- */
+var FILTER_QIB_MIN = 30;     /* filter 1: QIB subscription must be MORE than this (x) */
+var FILTER_TOTAL_MIN = 10;   /* filter 2: total subscription must be at least this (x), applied after filter 1 */
+
+/* ---------- SORTING BATCHES (an IPO goes to the first batch it qualifies for) ---------- */
+/* profitMax = highest profit % allowed; strict = true means profit must be BELOW it, not equal */
+var BATCHES = [
+  {n:1, qibMin:200, profitMax:25, strict:false, label:"Batch 1"},
+  {n:2, qibMin:100, profitMax:20, strict:false, label:"Batch 2"},
+  {n:3, qibMin:50,  profitMax:10, strict:true,  label:"Batch 3"}
+];
+var SHOW_UNBATCHED = true;   /* true = IPOs that pass the filters but fit no batch are shown last as Batch 4 (false hides them) */
+
+var REFRESH_MINUTES = 30;
+var DATA_URL = "data.json";
+
+var MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var COLORS_PAST = ["#14472B","#2E8B57","#7CC79A","#3B4A42"];
+var COLORS_LIVE = ["#9BE5B8","#5CBF86","#D7F3E2","#B7C4BC"];
+var LABELS = ["QIB","NII","Retail","Total"];
+var data = null;
+
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+function cleanName(s){return String(s).replace(/\s+(Ltd\.?|Limited)\s*$/i,"");}
+function isNum(v){return typeof v==="number" && isFinite(v);}
+
+function fmtX(v){
+  if(!isNum(v)) return "\u2013";
+  if(v>=10) return Math.round(v)+"x";
+  if(v>=1) return v.toFixed(1)+"x";
+  return v.toFixed(2)+"x";
+}
+function group(n){
+  var s=String(Math.round(n)), last=s.slice(-3), rest=s.slice(0,-3);
+  if(rest) last=","+last;
+  return rest.replace(/\B(?=(\d{2})+(?!\d))/g,",")+last;
+}
+function fmtPrice(v){
+  if(!isNum(v)) return "\u2013";
+  if(v>=100) return "\u20B9"+group(v);
+  return "\u20B9"+v.toFixed(2).replace(/\.?0+$/,"");
+}
+function barPct(v){
+  if(!isNum(v)||v<=0) return 0;
+  var p=(Math.log(v)/Math.LN10+1)/4;
+  if(p>1) p=1;
+  if(p<0.04) p=0.04;
+  return Math.round(p*1000)/10;
+}
+function dayMonth(iso){var p=iso.split("-");return p[2]+" "+MONTHS[parseInt(p[1],10)-1];}
+function longDate(iso){var p=iso.split("-");return parseInt(p[2],10)+" "+MONTHS[parseInt(p[1],10)-1]+" "+p[0];}
+
+function typeChip(t){
+  if(t==="Mainboard") return '<span class="chip t-main">Mainboard</span>';
+  if(t==="SME") return '<span class="chip t-sme">SME</span>';
+  return "<span></span>";
+}
+function capsules(d,colors){
+  var vals=[d.qib,d.nii,d.retail,d.total], i, a="", b="", c="";
+  for(i=0;i<4;i++){
+    a+='<div class="val">'+fmtX(vals[i])+'</div>';
+    b+='<div><span class="cap-t"><span class="cap-f" style="height:'+barPct(vals[i])+'%;background:'+colors[i]+'"></span></span></div>';
+    c+='<div class="nm'+(i===3?' tot':'')+'">'+LABELS[i]+'</div>';
+  }
+  return '<div class="cols">'+a+'</div><div class="cols">'+b+'</div><div class="cols">'+c+'</div>';
+}
+function heroBlock(d){return '<div class="hero">'+fmtX(d.qib)+'</div><div class="herolab">QIB</div>';}
+
+function liveCard(d){
+  return '<div class="card live"><div class="chips">'+typeChip(d.type)+'<span class="chip chip-live"><span class="dot"></span>Live</span></div>'
+    +'<p class="name">'+esc(cleanName(d.name))+'</p>'
+    +heroBlock(d)+capsules(d,COLORS_LIVE)
+    +'<div class="foot"><span>Closes '+dayMonth(d.close)+'</span><span>Band '+fmtPrice(d.band_high)+'</span></div></div>';
+}
+function pastCard(d){
+  var chip;
+  if(isNum(d.pl)){
+    var up=d.pl>=0, a=Math.abs(d.pl);
+    chip='<span class="chip '+(up?'pl-up':'pl-dn')+'">'+(up?'\u25B2 ':'\u25BC ')+(a>=10?Math.round(a):a.toFixed(1))+'%</span>';
+  } else if(!isNum(d.current)){
+    chip='<span class="chip pl-na">Listing soon</span>';
+  } else {
+    chip='<span class="chip pl-na">\u2013</span>';
+  }
+  return '<div class="card"><div class="chips">'+typeChip(d.type)+'<span></span></div>'
+    +'<p class="name">'+esc(cleanName(d.name))+'</p>'
+    +heroBlock(d)+capsules(d,COLORS_PAST)
+    +'<div class="foot"><span>'+fmtPrice(d.offer)+' \u2192 <b>'+fmtPrice(d.current)+'</b></span>'+chip+'</div></div>';
+}
+
+/* returns batch number 1..n, or 0 when the IPO fits no batch.
+   Closed IPOs not yet listed have no profit figure; they are treated as within the profit limit until they list. */
+function batchOf(d){
+  var unknown=!isNum(d.pl), i, b;
+  for(i=0;i<BATCHES.length;i++){
+    b=BATCHES[i];
+    if(d.qib>=b.qibMin && (unknown || (b.strict ? d.pl<b.profitMax : d.pl<=b.profitMax))) return b.n;
+  }
+  return 0;
+}
+function batchCaption(b){
+  return "QIB \u2265"+b.qibMin+"x, profit "+(b.strict?"<":"\u2264")+b.profitMax+"%";
+}
+
+function render(){
+  var today=data.updated, i, k, p, l;
+  var live=[], cands=[], seen={};
+  for(i=0;i<data.past.length;i++){ p=data.past[i]; seen[p.name]=true; cands.push(p); }
+  for(k=0;k<data.live.length;k++){
+    l=data.live[k];
+    if(l.close>=today){
+      if(isNum(l.qib)||isNum(l.nii)||isNum(l.retail)||isNum(l.total)) live.push(l);
+    } else if(!seen[l.name]){
+      cands.push({name:l.name,type:l.type,qib:l.qib,nii:l.nii,retail:l.retail,total:l.total,offer:l.band_high,current:null,pl:null});
+    }
+  }
+  live.sort(function(a,b){return a.close<b.close?-1:(a.close>b.close?1:0);});
+
+  var groups={0:[],1:[],2:[],3:[]}, kept=0;
+  for(i=0;i<cands.length;i++){
+    p=cands[i];
+    if(!(isNum(p.qib) && p.qib>FILTER_QIB_MIN)) continue;          /* filter 1 */
+    if(!(isNum(p.total) && p.total>=FILTER_TOTAL_MIN)) continue;   /* filter 2 */
+    var bn=batchOf(p);
+    if(bn===0 && !SHOW_UNBATCHED) continue;
+    groups[bn].push(p); kept++;
+  }
+  for(i=0;i<4;i++) groups[i].sort(function(a,b){return b.qib-a.qib;});
+
+  document.getElementById("upd").textContent="Updated "+longDate(today);
+  document.getElementById("liveN").textContent=live.length;
+  document.getElementById("pastN").textContent=kept;
+  document.getElementById("pastCap").textContent="QIB >"+FILTER_QIB_MIN+"x \u00B7 Total \u2265"+FILTER_TOTAL_MIN+"x";
+
+  var lh="";
+  for(i=0;i<live.length;i++) lh+=liveCard(live[i]);
+  document.getElementById("liveGrid").innerHTML=lh||'<div class="msg">No IPOs open right now.</div>';
+
+  var order=[], out="", g, j, b;
+  for(i=0;i<BATCHES.length;i++) order.push({n:BATCHES[i].n,title:BATCHES[i].label,cap:batchCaption(BATCHES[i])});
+  if(SHOW_UNBATCHED) order.push({n:0,title:"Batch 4",cap:"Pass both filters, fit no batch above"});
+  for(i=0;i<order.length;i++){
+    b=order[i]; g=groups[b.n];
+    if(!g.length) continue;
+    out+='<div class="'+(out?'sub ':'')+'sechead"><h3>'+b.title+'</h3><span class="count">'+g.length+'</span><span class="cap">'+b.cap+'</span></div><div class="grid">';
+    for(j=0;j<g.length;j++) out+=pastCard(g[j]);
+    out+='</div>';
+  }
+  document.getElementById("batches").innerHTML=out||'<div class="msg">No past IPOs match the filters yet.</div>';
+}
+
+function load(){
+  var x=new XMLHttpRequest();
+  x.open("GET",DATA_URL+"?t="+new Date().getTime(),true);
+  x.onreadystatechange=function(){
+    if(x.readyState!==4) return;
+    if(x.status>=200 && x.status<300){
+      try{ data=JSON.parse(x.responseText); render(); }
+      catch(e){ fail(); }
+    } else if(!data){ fail(); }
+  };
+  x.send();
+}
+function fail(){
+  document.getElementById("liveGrid").innerHTML='<div class="msg">Couldn\u2019t load the data. Check your connection and reload.</div>';
+}
+load();
+setInterval(load,REFRESH_MINUTES*60*1000);
+</script>
+</body>
+</html>
