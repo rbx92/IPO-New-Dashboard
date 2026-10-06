@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-06",
+ "updated": "2026-10-07",
  "live": [
   {
    "name": "SRIT India",
@@ -161,10 +161,10 @@
    "close": "2026-10-06",
    "band_low": 186.0,
    "band_high": 196.0,
-   "qib": 5.7,
-   "nii": 2.74,
-   "retail": 2.82,
-   "total": 3.56
+   "qib": 137.93,
+   "nii": 145.0,
+   "retail": 84.26,
+   "total": 114.91
   },
   {
    "name": "Paramount Syntex",
@@ -173,9 +173,9 @@
    "band_low": 119.0,
    "band_high": 127.0,
    "qib": 119.29,
-   "nii": 0.12,
-   "retail": 0.44,
-   "total": 1.49
+   "nii": 0.18,
+   "retail": 1.1,
+   "total": 1.83
   },
   {
    "name": "TNA Solutions",
@@ -183,10 +183,10 @@
    "close": "2026-10-06",
    "band_low": 66.0,
    "band_high": 70.0,
-   "qib": 4.77,
-   "nii": 1.7,
-   "retail": 2.42,
-   "total": 2.85
+   "qib": 35.64,
+   "nii": 75.82,
+   "retail": 45.58,
+   "total": 51.12
   },
   {
    "name": "R K Fashion",
@@ -195,9 +195,9 @@
    "band_low": 77.0,
    "band_high": 82.0,
    "qib": 14.11,
-   "nii": 0.55,
-   "retail": 0.01,
-   "total": 0.38
+   "nii": 0.56,
+   "retail": 0.15,
+   "total": 0.47
   }
  ],
  "past": [
