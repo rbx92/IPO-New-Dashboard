@@ -1,0 +1,17 @@
+name: Probe price sources
+
+on:
+  workflow_dispatch:   # run by hand from the Actions tab; never runs on its own
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install tools
+        run: pip install requests beautifulsoup4
+      - name: Probe NSE, BSE and Chittorgarh
+        run: python probe_prices.py
