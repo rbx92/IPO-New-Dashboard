@@ -96,14 +96,18 @@ def find_col(headers, *keys):
     return None
 
 
-CELL_X = re.compile(r"(\d[\d,]*\.?\d*x|--|-)$")
+# A subscription cell is a number like "12.5x", or an empty-looking value ("--", "NA", blank).
+# SME IPOs often have no QIB bucket, and brand-new IPOs have no figures yet, so these must count.
+CELL_X = re.compile(r"^(\d[\d,]*\.?\d*x?|--+|-|na|n/a|nil|tba|)$")
 
 
 def looks_like_data_row(cells):
-    """Groww's table has no header row. A data row has 10 cells with subscription values at 5 and 9."""
+    """Groww's table has no header row. A data row has 10 cells; cells 5 and 9 (QIB, Total) hold
+    either a subscription number or an empty-looking value. A real row also has a close date."""
     return (len(cells) >= 10
             and CELL_X.match(cells[5].strip().lower().replace(" ", "")) is not None
-            and CELL_X.match(cells[9].strip().lower().replace(" ", "")) is not None)
+            and CELL_X.match(cells[9].strip().lower().replace(" ", "")) is not None
+            and re.search(r"\d", cells[2]) is not None)
 
 
 def build_row(cells, cols, today, type_from_row_text):
@@ -265,8 +269,9 @@ def main():
             print("rows read from the browser page:", len(rows))
             if len(rows) < MIN_ROWS:
                 describe(rendered)
-    for r in rows[:3]:
-        print("  sample:", r)
+    for r in rows:
+        print("  row:", r["name"], "|", r["type"], "|", r["close"], "| QIB", r["qib"],
+              "| Total", r["total"])
     if len(rows) < MIN_ROWS:
         fail("read fewer than %d IPO rows, so data.json was left unchanged" % MIN_ROWS)
     if not any(r["qib"] is not None or r["total"] is not None for r in rows):
