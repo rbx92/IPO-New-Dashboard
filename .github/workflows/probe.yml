@@ -12,6 +12,8 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install tools
-        run: pip install requests beautifulsoup4
-      - name: Probe NSE, BSE and Chittorgarh
+        run: pip install requests beautifulsoup4 playwright
+      - name: Install browser
+        run: playwright install --with-deps chromium
+      - name: Probe price sources
         run: python probe_prices.py
