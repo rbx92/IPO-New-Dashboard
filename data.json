@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07",
+ "updated": "2026-10-08",
  "live": [
   {
    "name": "SRIT India",
@@ -195,9 +195,9 @@
    "band_low": 77.0,
    "band_high": 82.0,
    "qib": 14.11,
-   "nii": 0.56,
-   "retail": 0.15,
-   "total": 0.47
+   "nii": 1.68,
+   "retail": 3.08,
+   "total": 2.59
   }
  ],
  "past": [
