@@ -32,6 +32,8 @@ h2{font-size:1.2rem;font-weight:500;margin:0}
 .pill.on{background:#14472B;color:#fff}
 .pill.reset{background:#EEF2EF;color:#4A6354}
 .more{text-align:center;margin-top:1.25rem}
+.lab b{font-weight:500;color:#14472B}
+.slide{display:block;width:16rem;height:2.6rem;margin:0 0 .5rem;padding:0;background:transparent}
 
 .card{border-radius:1.15rem;padding:1rem 1rem .9rem;display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;background:#fff;color:#0F2A1B}
 .card.live{background:#14472B;color:#fff}
@@ -96,7 +98,7 @@ var REFRESH_MINUTES = 30;
 var DATA_URL = "data.json";
 var PAGE = 24;   /* past IPOs shown at a time */
 
-var DEFAULTS = {show:"both", type:"all", qmin:0, tmin:0, res:"all", sort:"date", dir:"desc", limit:PAGE};
+var DEFAULTS = {qmin:0, tmin:0, gmin:0, sort:"qib", limit:PAGE};
 var S = {};
 var q;
 for(q in DEFAULTS){ S[q]=DEFAULTS[q]; }
@@ -178,17 +180,13 @@ function pastCard(d){
 
 /* ---------- filter and sort ---------- */
 function passes(d,kind){
-  if(S.type!=="all" && d.type!==S.type) return false;
   if(S.qmin>0 && !(isNum(d.qib) && d.qib>=S.qmin)) return false;
   if(S.tmin>0 && !(isNum(d.total) && d.total>=S.tmin)) return false;
-  if(kind==="past"){
-    if(S.res==="gain" && !(isNum(d.pl) && d.pl>0)) return false;
-    if(S.res==="loss" && !(isNum(d.pl) && d.pl<0)) return false;
-  }
+  /* Gain slider: only past IPOs are affected; 0 means off */
+  if(kind==="past" && S.gmin>0 && !(isNum(d.pl) && d.pl>=S.gmin)) return false;
   return true;
 }
 function keyOf(d,kind){
-  if(S.sort==="date") return kind==="past" ? (d.listed||d.close||"") : (d.close||"");
   if(S.sort==="gain") return (kind==="past" && isNum(d.pl)) ? d.pl : null;
   return isNum(d[S.sort]) ? d[S.sort] : null;
 }
@@ -202,28 +200,29 @@ function pick(list,kind){
     if(ma) return 1;
     if(mb) return -1;
     if(ka===kb) return a.name<b.name?-1:1;
-    var r=ka<kb?-1:1;
-    return S.dir==="desc"?-r:r;
+    return ka<kb?1:-1;   /* always highest first */
   });
   return arr;
 }
 
 /* ---------- controls ---------- */
 function controls(){
-  var date=S.sort==="date";
   return [
-    {k:"show",label:"Show",o:[["live","Live"],["past","Past"],["both","Both"]]},
-    {k:"type",label:"Type",o:[["all","All"],["Mainboard","Mainboard"],["SME","SME"]]},
     {k:"qmin",label:"QIB at least",o:[[0,"Any"],[10,"10x"],[30,"30x"],[100,"100x"]]},
     {k:"tmin",label:"Total at least",o:[[0,"Any"],[10,"10x"],[30,"30x"],[100,"100x"]]},
-    {k:"res",label:"Past result",o:[["all","All"],["gain","Gainers"],["loss","Losers"]]},
-    {k:"sort",label:"Sort by",o:[["date","Date"],["qib","QIB"],["nii","NII"],["retail","Retail"],["total","Total"],["gain","Gain"]]},
-    {k:"dir",label:"Order",o:[["desc",date?"Newest first":"High to low"],["asc",date?"Oldest first":"Low to high"]]}
+    {k:"gain",label:"Gain at least"},
+    {k:"sort",label:"Sort by",o:[["qib","QIB"],["total","Total"],["gain","Gain"]]}
   ];
 }
+function gainLabel(){ return S.gmin>0 ? S.gmin+"%" : "Any"; }
 function drawPanel(){
   var c=controls(), h="", i, j, on;
   for(i=0;i<c.length;i++){
+    if(c[i].k==="gain"){
+      h+='<div class="grp"><span class="lab">Gain at least: <b id="gval">'+gainLabel()+'</b></span>'
+        +'<input type="range" id="gain" min="0" max="550" step="5" value="'+S.gmin+'" class="slide"></div>';
+      continue;
+    }
     h+='<div class="grp"><span class="lab">'+c[i].label+'</span>';
     for(j=0;j<c[i].o.length;j++){
       on=String(S[c[i].k])===String(c[i].o[j][0]);
@@ -236,7 +235,7 @@ function drawPanel(){
 }
 
 /* ---------- page ---------- */
-function render(){
+function render(skipPanel){
   if(!data) return;
   var today=data.updated, i, k, p, l;
   var live=[], cands=[], seen={};
@@ -254,12 +253,10 @@ function render(){
   var ps=pick(cands,"past");
   var shown=ps.slice(0,S.limit);
 
-  drawPanel();
+  if(!skipPanel) drawPanel();
   document.getElementById("upd").textContent="Updated "+longDate(today);
   document.getElementById("liveN").textContent=lv.length;
   document.getElementById("pastN").textContent=ps.length;
-  document.getElementById("secLive").style.display=(S.show==="past")?"none":"block";
-  document.getElementById("secPast").style.display=(S.show==="live")?"none":"block";
 
   var lh="";
   for(i=0;i<lv.length;i++) lh+=liveCard(lv[i]);
@@ -283,6 +280,17 @@ document.addEventListener("click",function(e){
   else { S[kk]=(kk==="qmin"||kk==="tmin")?parseFloat(vv):vv; S.limit=PAGE; }
   render();
 });
+
+function onSlide(e){
+  var t=e.target||e.srcElement;
+  if(!t || t.id!=="gain") return;
+  S.gmin=parseFloat(t.value)||0;
+  S.limit=PAGE;
+  document.getElementById("gval").textContent=gainLabel();
+  render(true);
+}
+document.addEventListener("input",onSlide);
+document.addEventListener("change",onSlide);
 
 function load(){
   var x=new XMLHttpRequest();
