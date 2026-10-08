@@ -3,250 +3,343 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IPO dashboard</title>
+<title>IPO receipts</title>
 <style>
-html{font-size:16px}
-@media (min-width:1500px){html{font-size:20px}}
-@media (min-width:1900px){html{font-size:22px}}
 *{box-sizing:border-box}
-body{margin:0;background:#E9ECEA;color:#0F2A1B;font-family:"Amazon Ember",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-text-size-adjust:100%}
-.page{padding:1.25rem 1.5rem 2.5rem}
-.top{display:-webkit-flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:baseline;align-items:baseline;margin-bottom:1.25rem}
-h1{font-size:1.75rem;font-weight:500;margin:0}
-.upd{font-size:.9rem;color:#4A6354}
-.sec{margin-bottom:2rem}
-.sechead{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;margin:0 0 .75rem .25rem}
-.sub{margin-top:1.5rem}
-h2{font-size:1.2rem;font-weight:500;margin:0}
-h3{font-size:1.05rem;font-weight:500;margin:0}
-.count{font-size:.85rem;font-weight:500;background:#14472B;color:#fff;border-radius:999px;padding:.15rem .6rem;margin-left:.6rem}
-.cap{font-size:.9rem;color:#4A6354;margin-left:.75rem}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-gap:1rem}
-@media (max-width:1099px){.grid{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:759px){.grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:479px){.grid{grid-template-columns:1fr}}
-.card{border-radius:1.15rem;padding:1rem 1rem .9rem;display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;background:#fff;color:#0F2A1B}
-.card.live{background:#14472B;color:#fff}
-.chips{display:-webkit-flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;align-items:center;min-height:1.7rem}
-.name{font-size:1.4rem;font-weight:500;line-height:1.2;margin:.55rem 0 0;min-height:3.4rem;overflow-wrap:break-word;word-wrap:break-word}
-.chip{display:inline-block;font-size:.8rem;font-weight:500;border-radius:999px;padding:.25rem .65rem;white-space:nowrap}
-.t-main{background:#E3F1E8;color:#14472B}
-.t-sme{background:#FFE3A8;color:#6B4200}
-.live .t-main{background:#2A6A45;color:#fff}
-.live .t-sme{background:#F6C453;color:#3A2600}
-.chip-live{background:#fff;color:#14472B}
-.dot{display:inline-block;position:relative;width:.55rem;height:.55rem;border-radius:50%;background:#1E9E5A;margin-right:.4rem;vertical-align:.05rem}
-.dot:after{content:"";position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;background:#1E9E5A;-webkit-animation:pulse 1.6s ease-out infinite;animation:pulse 1.6s ease-out infinite}
-@-webkit-keyframes pulse{0%{-webkit-transform:scale(1);opacity:.7}100%{-webkit-transform:scale(3);opacity:0}}
-@keyframes pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(3);opacity:0}}
-@media (prefers-reduced-motion:reduce){.dot:after{-webkit-animation:none;animation:none;opacity:0}}
-.hero{font-size:3.25rem;font-weight:500;line-height:1;margin-top:.5rem}
-.herolab{font-size:.85rem;margin-top:.25rem;color:#4A6354}
-.live .herolab{color:#BFE8CF}
-.cols{display:-webkit-flex;display:flex}
-.cols>div{-webkit-flex:1;flex:1;text-align:center}
-.val{font-size:.9rem;font-weight:500;margin-top:.8rem}
-.nm{font-size:.85rem;margin-top:.4rem;color:#4A6354}
-.live .nm{color:#BFE8CF}
-.nm.tot,.live .nm.tot{font-weight:500;color:#0F2A1B}
-.live .nm.tot{color:#fff}
-.cap-t{display:inline-block;width:2.4rem;height:7rem;border-radius:1.2rem;position:relative;overflow:hidden;margin-top:.25rem;background:repeating-linear-gradient(135deg,#D5DBD7 0,#D5DBD7 2px,transparent 2px,transparent 6px)}
-.live .cap-t{background:repeating-linear-gradient(135deg,rgba(255,255,255,.22) 0,rgba(255,255,255,.22) 2px,transparent 2px,transparent 6px)}
-.cap-f{position:absolute;left:0;right:0;bottom:0;border-radius:1.2rem}
-.foot{margin-top:auto;padding-top:.8rem;display:-webkit-flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;align-items:center;font-size:.9rem;color:#4A6354}
-.foot b{font-weight:500;color:#0F2A1B}
-.live .foot{color:#E3F6EA}
-.pl-up{background:#DDF3E4;color:#14472B}
-.pl-dn{background:#FBE3E0;color:#8A1F17}
-.pl-na{background:#EEF2EF;color:#4A6354}
-.msg{padding:1.5rem;color:#4A6354;font-size:1rem}
+html,body{margin:0;padding:0}
+body{background:#E4E0D3;color:#1E1E1E;font-family:"Roboto Mono","Droid Sans Mono",Menlo,Consolas,"Courier New",monospace;font-size:15px;line-height:1.35}
+button{font-family:inherit}
+
+.top{padding:20px 24px 4px;overflow:hidden}
+.top h1{margin:0;font-size:26px;float:left}
+.top .upd{float:right;font-size:13px;color:#6B6B63;line-height:34px}
+
+.panel{background:#FBFAF4;border:2px dashed #1E1E1E;margin:10px 24px 8px;padding:12px 14px 6px}
+.grp{display:inline-block;vertical-align:top;margin:0 22px 6px 0}
+.lab{display:block;font-size:12px;color:#6B6B63;margin-bottom:4px}
+.pill{display:inline-block;min-height:40px;padding:0 14px;margin:0 6px 6px 0;border:2px solid #1E1E1E;background:#FBFAF4;color:#1E1E1E;font-size:15px;border-radius:0;cursor:pointer}
+.pill.on{background:#1E1E1E;color:#FBFAF4}
+.pill.reset{border-style:dashed}
+.count{padding:4px 24px 0;font-size:13px;color:#6B6B63}
+
+.sec{padding:14px 24px 0}
+.sec h2{margin:0 0 14px;font-size:19px;padding-bottom:8px;border-bottom:2px dashed #1E1E1E}
+.wrap{overflow:hidden}
+.rc{display:inline-block;vertical-align:top;width:300px;margin:0 16px 26px 0}
+.edge{height:8px;background-repeat:repeat-x;background-size:15px 8px}
+.edge.t{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='8'><polygon points='0,8 7.5,0 15,8' fill='%23FBFAF4'/></svg>")}
+.edge.b{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='8'><polygon points='0,0 7.5,8 15,0' fill='%23FBFAF4'/></svg>")}
+.mute .edge.t{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='8'><polygon points='0,8 7.5,0 15,8' fill='%23D9E3DA'/></svg>")}
+.mute .edge.b{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='8'><polygon points='0,0 7.5,8 15,0' fill='%23D9E3DA'/></svg>")}
+.paper{background:#FBFAF4;padding:6px 18px 12px}
+.mute .paper{background:#D9E3DA;color:#4B5A51}
+
+.kick{text-align:center;font-size:12px;color:#6B6B63;letter-spacing:1px}
+.nm{text-align:center;font-size:17px;font-weight:bold;margin-top:6px;line-height:1.25;word-wrap:break-word}
+.tp{text-align:center;font-size:13px;margin-top:4px}
+.dash{border-top:2px dashed #1E1E1E;margin:12px 0 2px}
+.mute .dash{border-top-color:#6F7F72}
+
+.row{margin-top:12px;overflow:hidden}
+.rl{float:left;font-size:14px;line-height:28px}
+.rv{float:right;font-size:17px;font-weight:bold;line-height:28px}
+.rv.hero{font-size:27px}
+.track{clear:both;height:26px;background-color:#F0EEE4;background-image:radial-gradient(#8A8A82 0.7px,transparent 0.9px);background-size:4px 4px;position:relative}
+.fill{height:26px;background-color:#1E1E1E;background-image:repeating-linear-gradient(90deg,#1E1E1E 0,#1E1E1E 9px,#4A4A46 9px,#4A4A46 10px)}
+.nq{position:absolute;left:8px;top:0;line-height:26px;font-size:12px;color:#6B6B63}
+.scale{position:relative;height:16px;margin-top:6px;font-size:11px;color:#6B6B63}
+.scale span{position:absolute;top:0}
+
+.fr{overflow:hidden;font-size:14px;margin-top:5px}
+.fr .a{float:left}
+.fr .z{float:right}
+.gain{border-top:2px solid #1E1E1E;margin-top:12px;padding-top:8px;overflow:hidden}
+.gain .gl{float:left;font-size:14px;font-weight:bold;line-height:36px}
+.gain .gv{float:right;font-size:30px;font-weight:bold;line-height:36px}
+.gain .gv.s{font-size:20px}
+.up{color:#1E7A3E}
+.dn{color:#B3261E}
+.bc{height:30px;margin-top:14px;background-repeat:no-repeat;background-size:100% 100%;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 268 30' preserveAspectRatio='none'><line x1='0' y1='15' x2='268' y2='15' stroke='%231E1E1E' stroke-width='30' stroke-dasharray='2 3 4 2 1 3 3 2 5 3 2 2 1 4 3 2 4 3 1 2 3 3 2 4 1 3 5 2 2 3 1 3 4 2 3 2 1 4 2 3 3 2 4 1 2 3 5 2 1 3 2 4 3 2 1 3 4 2 2 3 1 5 3 2 4 1 3 2'/></svg>")}
+
+.none{text-align:center;font-size:20px;margin:30px 0 6px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:#1E1E1E;margin-right:6px;-webkit-animation:blink 1.4s infinite;animation:blink 1.4s infinite}
+@-webkit-keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+
+.more{clear:both;text-align:center;padding:4px 0 30px}
+.msg{padding:30px 24px;font-size:17px}
+.empty{padding:6px 0 24px;font-size:15px;color:#6B6B63}
 </style>
 </head>
 <body>
-<div class="page">
-  <div class="top">
-    <h1>IPO dashboard</h1>
-    <div class="upd" id="upd"></div>
-  </div>
-  <div class="sec">
-    <div class="sechead"><h2>Live now</h2><span class="count" id="liveN">0</span></div>
-    <div class="grid" id="liveGrid"></div>
-  </div>
-  <div class="sec">
-    <div class="sechead"><h2>Past IPOs</h2><span class="count" id="pastN">0</span><span class="cap" id="pastCap"></span></div>
-    <div id="batches"></div>
-  </div>
+
+<div class="top">
+  <h1>IPO receipts</h1>
+  <div class="upd" id="upd"></div>
 </div>
+<div class="panel" id="panel"></div>
+<div class="count" id="count"></div>
+<div id="out"><div class="msg">Loading…</div></div>
+
 <script>
-/* ---------- FILTERS FOR PAST IPOs (applied in this order; live IPOs are never filtered) ---------- */
-var FILTER_QIB_MIN = 30;     /* filter 1: QIB subscription must be MORE than this (x) */
-var FILTER_TOTAL_MIN = 10;   /* filter 2: total subscription must be at least this (x), applied after filter 1 */
+(function () {
+  var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var DATA = null;
+  var DEFAULTS = { show: 'both', type: 'all', qmin: 0, tmin: 0, res: 'all', sort: 'newest', dir: 'desc', limit: 30 };
+  var S = {};
+  var k;
+  for (k in DEFAULTS) { S[k] = DEFAULTS[k]; }
 
-/* ---------- SORTING BATCHES (an IPO goes to the first batch it qualifies for) ---------- */
-/* profitMax = highest profit % allowed; strict = true means profit must be BELOW it, not equal */
-var BATCHES = [
-  {n:1, qibMin:200, profitMax:25, strict:false, label:"Batch 1"},
-  {n:2, qibMin:100, profitMax:20, strict:false, label:"Batch 2"},
-  {n:3, qibMin:50,  profitMax:10, strict:true,  label:"Batch 3"}
-];
-var SHOW_UNBATCHED = true;   /* true = IPOs that pass the filters but fit no batch are shown last as Batch 4 (false hides them) */
-
-var REFRESH_MINUTES = 30;
-var DATA_URL = "data.json";
-
-var MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-var COLORS_PAST = ["#14472B","#2E8B57","#7CC79A","#3B4A42"];
-var COLORS_LIVE = ["#9BE5B8","#5CBF86","#D7F3E2","#B7C4BC"];
-var LABELS = ["QIB","NII","Retail","Total"];
-var data = null;
-
-function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
-function cleanName(s){return String(s).replace(/\s+(Ltd\.?|Limited)\s*$/i,"");}
-function key(s){return cleanName(s).toLowerCase().replace(/[^a-z0-9]/g,"");}
-function isNum(v){return typeof v==="number" && isFinite(v);}
-
-function fmtX(v){
-  if(!isNum(v)) return "\u2013";
-  if(v>=10) return Math.round(v)+"x";
-  if(v>=1) return v.toFixed(1)+"x";
-  return v.toFixed(2)+"x";
-}
-function group(n){
-  var s=String(Math.round(n)), last=s.slice(-3), rest=s.slice(0,-3);
-  if(rest) last=","+last;
-  return rest.replace(/\B(?=(\d{2})+(?!\d))/g,",")+last;
-}
-function fmtPrice(v){
-  if(!isNum(v)) return "\u2013";
-  if(v>=100) return "\u20B9"+group(v);
-  return "\u20B9"+v.toFixed(2).replace(/\.?0+$/,"");
-}
-function barPct(v){
-  if(!isNum(v)||v<=0) return 0;
-  var p=(Math.log(v)/Math.LN10+1)/4;
-  if(p>1) p=1;
-  if(p<0.04) p=0.04;
-  return Math.round(p*1000)/10;
-}
-function dayMonth(iso){var p=iso.split("-");return p[2]+" "+MONTHS[parseInt(p[1],10)-1];}
-function longDate(iso){var p=iso.split("-");return parseInt(p[2],10)+" "+MONTHS[parseInt(p[1],10)-1]+" "+p[0];}
-
-function typeChip(t){
-  if(t==="Mainboard") return '<span class="chip t-main">Mainboard</span>';
-  if(t==="SME") return '<span class="chip t-sme">SME</span>';
-  return "<span></span>";
-}
-function capsules(d,colors){
-  var vals=[d.qib,d.nii,d.retail,d.total], i, a="", b="", c="";
-  for(i=0;i<4;i++){
-    a+='<div class="val">'+fmtX(vals[i])+'</div>';
-    b+='<div><span class="cap-t"><span class="cap-f" style="height:'+barPct(vals[i])+'%;background:'+colors[i]+'"></span></span></div>';
-    c+='<div class="nm'+(i===3?' tot':'')+'">'+LABELS[i]+'</div>';
+  /* ---------- helpers ---------- */
+  function esc(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
-  return '<div class="cols">'+a+'</div><div class="cols">'+b+'</div><div class="cols">'+c+'</div>';
-}
-function heroBlock(d){return '<div class="hero">'+fmtX(d.qib)+'</div><div class="herolab">QIB</div>';}
-
-function liveCard(d){
-  return '<div class="card live"><div class="chips">'+typeChip(d.type)+'<span class="chip chip-live"><span class="dot"></span>Live</span></div>'
-    +'<p class="name">'+esc(cleanName(d.name))+'</p>'
-    +heroBlock(d)+capsules(d,COLORS_LIVE)
-    +'<div class="foot"><span>Closes '+dayMonth(d.close)+'</span><span>Band '+fmtPrice(d.band_high)+'</span></div></div>';
-}
-function pastCard(d){
-  var chip;
-  if(isNum(d.pl)){
-    var up=d.pl>=0, a=Math.abs(d.pl);
-    chip='<span class="chip '+(up?'pl-up':'pl-dn')+'">'+(up?'\u25B2 ':'\u25BC ')+(a>=10?Math.round(a):a.toFixed(1))+'%</span>';
-  } else if(!isNum(d.current)){
-    chip='<span class="chip pl-na">Listing soon</span>';
-  } else {
-    chip='<span class="chip pl-na">\u2013</span>';
+  function isNum(v) { return v !== null && v !== undefined && !isNaN(v); }
+  function trim0(s) {
+    if (s.indexOf('.') > -1) { s = s.replace(/0+$/, '').replace(/\.$/, ''); }
+    return s;
   }
-  return '<div class="card"><div class="chips">'+typeChip(d.type)+'<span></span></div>'
-    +'<p class="name">'+esc(cleanName(d.name))+'</p>'
-    +heroBlock(d)+capsules(d,COLORS_PAST)
-    +'<div class="foot"><span>'+fmtPrice(d.offer)+' \u2192 <b>'+fmtPrice(d.current)+'</b></span>'+chip+'</div></div>';
-}
-
-/* returns batch number 1..n, or 0 when the IPO fits no batch.
-   Closed IPOs not yet listed have no profit figure; they are treated as within the profit limit until they list. */
-function batchOf(d){
-  var unknown=!isNum(d.pl), i, b;
-  for(i=0;i<BATCHES.length;i++){
-    b=BATCHES[i];
-    if(d.qib>=b.qibMin && (unknown || (b.strict ? d.pl<b.profitMax : d.pl<=b.profitMax))) return b.n;
+  function mult(v) {
+    if (!isNum(v)) { return '–'; }
+    var d = v >= 100 ? 0 : (v >= 10 ? 1 : 2);
+    return trim0(v.toFixed(d)) + '×';
   }
-  return 0;
-}
-function batchCaption(b){
-  return "QIB \u2265"+b.qibMin+"x, profit "+(b.strict?"<":"\u2264")+b.profitMax+"%";
-}
-
-function render(){
-  var today=data.updated, i, k, p, l;
-  var live=[], cands=[], seen={};
-  for(i=0;i<data.past.length;i++){ p=data.past[i]; seen[key(p.name)]=true; cands.push(p); }
-  for(k=0;k<data.live.length;k++){
-    l=data.live[k];
-    if(l.close>=today){
-      if(isNum(l.qib)||isNum(l.nii)||isNum(l.retail)||isNum(l.total)) live.push(l);
-    } else if(!seen[key(l.name)]){
-      cands.push({name:l.name,type:l.type,qib:l.qib,nii:l.nii,retail:l.retail,total:l.total,offer:l.band_high,current:null,pl:null});
+  function pos(v) {
+    if (!isNum(v) || v <= 1) { return 2; }
+    var p = Math.log(v) / Math.LN10 / 3 * 100;
+    return p > 100 ? 100 : (p < 2 ? 2 : p);
+  }
+  function inr(v) {
+    if (!isNum(v)) { return '–'; }
+    var parts = Math.abs(v).toFixed(2).split('.');
+    var ip = parts[0];
+    if (ip.length > 3) {
+      var last = ip.slice(-3);
+      var rest = ip.slice(0, -3).replace(/\B(?=(\d{2})+(?!\d))/g, ',');
+      ip = rest + ',' + last;
     }
+    var dec = trim0('0.' + parts[1]).replace('0', '').replace(/^\./, '');
+    return '₹' + ip + (dec ? '.' + dec : '');
   }
-  live.sort(function(a,b){return a.close<b.close?-1:(a.close>b.close?1:0);});
-
-  var groups={0:[],1:[],2:[],3:[]}, kept=0;
-  for(i=0;i<cands.length;i++){
-    p=cands[i];
-    if(!(isNum(p.qib) && p.qib>FILTER_QIB_MIN)) continue;          /* filter 1 */
-    if(!(isNum(p.total) && p.total>=FILTER_TOTAL_MIN)) continue;   /* filter 2 */
-    var bn=batchOf(p);
-    if(bn===0 && !SHOW_UNBATCHED) continue;
-    groups[bn].push(p); kept++;
+  function dshort(s) {
+    if (!s) { return '–'; }
+    var p = s.split('-');
+    return parseInt(p[2], 10) + ' ' + MONTHS[parseInt(p[1], 10) - 1];
   }
-  for(i=0;i<4;i++) groups[i].sort(function(a,b){return b.qib-a.qib;});
-
-  document.getElementById("upd").textContent="Updated "+longDate(today);
-  document.getElementById("liveN").textContent=live.length;
-  document.getElementById("pastN").textContent=kept;
-  document.getElementById("pastCap").textContent="QIB >"+FILTER_QIB_MIN+"x \u00B7 Total \u2265"+FILTER_TOTAL_MIN+"x";
-
-  var lh="";
-  for(i=0;i<live.length;i++) lh+=liveCard(live[i]);
-  document.getElementById("liveGrid").innerHTML=lh||'<div class="msg">No IPOs open right now.</div>';
-
-  var order=[], out="", g, j, b;
-  for(i=0;i<BATCHES.length;i++) order.push({n:BATCHES[i].n,title:BATCHES[i].label,cap:batchCaption(BATCHES[i])});
-  if(SHOW_UNBATCHED) order.push({n:0,title:"Batch 4",cap:"Pass both filters, fit no batch above"});
-  for(i=0;i<order.length;i++){
-    b=order[i]; g=groups[b.n];
-    if(!g.length) continue;
-    out+='<div class="'+(out?'sub ':'')+'sechead"><h3>'+b.title+'</h3><span class="count">'+g.length+'</span><span class="cap">'+b.cap+'</span></div><div class="grid">';
-    for(j=0;j<g.length;j++) out+=pastCard(g[j]);
-    out+='</div>';
+  function dfull(s) {
+    if (!s) { return '–'; }
+    return dshort(s) + ' ' + s.split('-')[0];
   }
-  document.getElementById("batches").innerHTML=out||'<div class="msg">No past IPOs match the filters yet.</div>';
-}
+  function todayStr() {
+    var d = new Date();
+    var m = d.getMonth() + 1, day = d.getDate();
+    return d.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (day < 10 ? '0' : '') + day;
+  }
+  function band(it) {
+    if (!isNum(it.band_low) && !isNum(it.band_high)) { return '–'; }
+    if (it.band_low === it.band_high || !isNum(it.band_low)) { return inr(it.band_high); }
+    if (!isNum(it.band_high)) { return inr(it.band_low); }
+    return inr(it.band_low) + '–' + inr(it.band_high).replace('₹', '');
+  }
+  function noFigures(it) {
+    return !isNum(it.qib) && !isNum(it.nii) && !isNum(it.retail) && !isNum(it.total);
+  }
+  function noQib(it) {
+    return it.type === 'SME' && (!isNum(it.qib) || it.qib === 0) && isNum(it.total);
+  }
 
-function load(){
-  var x=new XMLHttpRequest();
-  x.open("GET",DATA_URL+"?t="+new Date().getTime(),true);
-  x.onreadystatechange=function(){
-    if(x.readyState!==4) return;
-    if(x.status>=200 && x.status<300){
-      try{ data=JSON.parse(x.responseText); render(); }
-      catch(e){ fail(); }
-    } else if(!data){ fail(); }
+  /* ---------- card pieces ---------- */
+  function bar(label, v, hero, extraNote) {
+    var h = '<div class="row"><div class="rl">' + label + '</div><div class="rv' + (hero ? ' hero' : '') + '">' + mult(v) + '</div></div>';
+    if (extraNote) {
+      h += '<div class="track"><span class="nq">' + extraNote + '</span></div>';
+    } else {
+      h += '<div class="track"><div class="fill" style="width:' + (isNum(v) ? pos(v) : 0) + '%"></div></div>';
+    }
+    return h;
+  }
+  function bars(it) {
+    var nq = noQib(it);
+    var h = '';
+    h += nq ? bar('QIB', null, false, 'No QIB') : bar('QIB', it.qib, true);
+    h += bar('NII', it.nii, false);
+    h += bar('Retail', it.retail, false);
+    h += bar('Total', it.total, nq);
+    h += '<div class="scale"><span style="left:0">1×</span><span style="left:30%">10×</span><span style="left:63%">100×</span><span style="right:0">1000×</span></div>';
+    return h;
+  }
+  function wrapCard(inner, mute) {
+    return '<div class="rc' + (mute ? ' mute' : '') + '"><div class="edge t"></div><div class="paper">' + inner + '</div><div class="edge b"></div></div>';
+  }
+  function head(kick, it) {
+    return '<div class="kick">' + kick + '</div><div class="nm">' + esc(it.name) + '</div><div class="tp">[ ' + esc(it.type) + ' ]</div><div class="dash"></div>';
+  }
+
+  function pastCard(it) {
+    var up = isNum(it.pl) && it.pl >= 0;
+    var g = isNum(it.pl) ? ((up ? '+' : '−') + Math.round(Math.abs(it.pl)) + '%') : '–';
+    var h = head('Listed ' + dfull(it.listed), it) + bars(it);
+    h += '<div class="dash"></div>';
+    h += '<div class="fr"><span class="a">Issue</span><span class="z">' + inr(it.offer) + '</span></div>';
+    h += '<div class="fr"><span class="a">Now</span><span class="z">' + inr(it.current) + '</span></div>';
+    h += '<div class="gain"><span class="gl">Gain</span><span class="gv ' + (isNum(it.pl) ? (up ? 'up' : 'dn') : '') + '">' + g + '</span></div>';
+    h += '<div class="bc"></div>';
+    return wrapCard(h, false);
+  }
+
+  function liveCard(it, today) {
+    var open = it.close && it.close >= today;
+    if (noFigures(it)) {
+      var m = head('Awaiting figures', it);
+      m += '<div class="none">No figures yet</div><div class="dash"></div>';
+      m += '<div class="fr"><span class="a">' + (open ? 'Closes' : 'Closed') + '</span><span class="z">' + dshort(it.close) + '</span></div>';
+      m += '<div class="fr"><span class="a">Band</span><span class="z">' + band(it) + '</span></div>';
+      m += '<div class="gain" style="border-top-color:#6F7F72"><span class="gl">Status</span><span class="gv s">Awaiting</span></div>';
+      return wrapCard(m, true);
+    }
+    var kick = open ? '<span class="dot"></span>Live, closes ' + dshort(it.close) : 'Closed ' + dshort(it.close);
+    var h = head(kick, it) + bars(it);
+    h += '<div class="dash"></div>';
+    h += '<div class="fr"><span class="a">' + (open ? 'Closes' : 'Closed') + '</span><span class="z">' + dshort(it.close) + '</span></div>';
+    h += '<div class="fr"><span class="a">Band</span><span class="z">' + band(it) + '</span></div>';
+    h += '<div class="gain"><span class="gl">Status</span><span class="gv s">' + (open ? 'Live now' : 'Listing soon') + '</span></div>';
+    h += '<div class="bc"></div>';
+    return wrapCard(h, false);
+  }
+
+  /* ---------- filter and sort ---------- */
+  function passes(it, kind) {
+    if (S.type !== 'all' && it.type !== S.type) { return false; }
+    if (S.qmin > 0 && !(isNum(it.qib) && it.qib >= S.qmin)) { return false; }
+    if (S.tmin > 0 && !(isNum(it.total) && it.total >= S.tmin)) { return false; }
+    if (kind === 'past') {
+      if (S.res === 'gain' && !(isNum(it.pl) && it.pl > 0)) { return false; }
+      if (S.res === 'loss' && !(isNum(it.pl) && it.pl < 0)) { return false; }
+    }
+    return true;
+  }
+  function keyOf(it, kind) {
+    if (S.sort === 'newest') { return kind === 'past' ? it.listed : it.close; }
+    if (S.sort === 'gain') { return kind === 'past' && isNum(it.pl) ? it.pl : null; }
+    return isNum(it[S.sort]) ? it[S.sort] : null;
+  }
+  function sorted(list, kind) {
+    var arr = [];
+    var i;
+    for (i = 0; i < list.length; i++) { if (passes(list[i], kind)) { arr.push(list[i]); } }
+    arr.sort(function (a, b) {
+      var ka = keyOf(a, kind), kb = keyOf(b, kind);
+      var ma = (ka === null || ka === undefined), mb = (kb === null || kb === undefined);
+      if (ma && mb) { return a.name < b.name ? -1 : 1; }
+      if (ma) { return 1; }
+      if (mb) { return -1; }
+      if (ka === kb) { return a.name < b.name ? -1 : 1; }
+      var r = ka < kb ? -1 : 1;
+      return S.dir === 'desc' ? -r : r;
+    });
+    return arr;
+  }
+
+  /* ---------- controls ---------- */
+  function ctl() {
+    var newest = S.sort === 'newest';
+    return [
+      { k: 'show', label: 'Show', o: [['live', 'Live'], ['past', 'Past'], ['both', 'Both']] },
+      { k: 'type', label: 'Type', o: [['all', 'All'], ['Mainboard', 'Mainboard'], ['SME', 'SME']] },
+      { k: 'qmin', label: 'QIB at least', o: [[0, 'Any'], [10, '10×'], [30, '30×'], [100, '100×']] },
+      { k: 'tmin', label: 'Total at least', o: [[0, 'Any'], [10, '10×'], [30, '30×'], [100, '100×']] },
+      { k: 'res', label: 'Past result', o: [['all', 'All'], ['gain', 'Gainers'], ['loss', 'Losers']] },
+      { k: 'sort', label: 'Sort by', o: [['newest', 'Newest'], ['qib', 'QIB'], ['nii', 'NII'], ['retail', 'Retail'], ['total', 'Total'], ['gain', 'Gain']] },
+      { k: 'dir', label: 'Order', o: [['desc', newest ? 'Newest first' : 'High to low'], ['asc', newest ? 'Oldest first' : 'Low to high']] }
+    ];
+  }
+  function drawPanel() {
+    var c = ctl(), h = '', i, j;
+    for (i = 0; i < c.length; i++) {
+      h += '<div class="grp"><span class="lab">' + c[i].label + '</span>';
+      for (j = 0; j < c[i].o.length; j++) {
+        var on = String(S[c[i].k]) === String(c[i].o[j][0]);
+        h += '<button type="button" class="pill' + (on ? ' on' : '') + '" data-k="' + c[i].k + '" data-v="' + c[i].o[j][0] + '">' + c[i].o[j][1] + '</button>';
+      }
+      h += '</div>';
+    }
+    h += '<div class="grp"><span class="lab">&nbsp;</span><button type="button" class="pill reset" data-k="reset" data-v="1">Reset</button></div>';
+    document.getElementById('panel').innerHTML = h;
+  }
+
+  /* ---------- page ---------- */
+  function draw() {
+    if (!DATA) { return; }
+    drawPanel();
+    var today = todayStr();
+    var out = '';
+    var counts = [];
+
+    if (S.show !== 'past') {
+      var lv = sorted(DATA.live || [], 'live');
+      out += '<div class="sec"><h2>Live now, ' + lv.length + ' of ' + (DATA.live || []).length + '</h2><div class="wrap">';
+      var i;
+      for (i = 0; i < lv.length; i++) { out += liveCard(lv[i], today); }
+      out += '</div>';
+      if (!lv.length) { out += '<div class="empty">Nothing matches these filters.</div>'; }
+      out += '</div>';
+      counts.push(lv.length + ' live');
+    }
+    if (S.show !== 'live') {
+      var ps = sorted(DATA.past || [], 'past');
+      var shown = ps.slice(0, S.limit);
+      out += '<div class="sec"><h2>Past IPOs, ' + ps.length + ' of ' + (DATA.past || []).length + '</h2><div class="wrap">';
+      var j;
+      for (j = 0; j < shown.length; j++) { out += pastCard(shown[j]); }
+      out += '</div>';
+      if (!ps.length) { out += '<div class="empty">Nothing matches these filters.</div>'; }
+      if (ps.length > shown.length) {
+        out += '<div class="more"><button type="button" class="pill" data-k="more" data-v="1">Show 30 more</button></div>';
+      }
+      out += '</div>';
+      counts.push(ps.length + ' past');
+    }
+    document.getElementById('out').innerHTML = out;
+    document.getElementById('count').innerHTML = 'Matching: ' + counts.join(', ');
+  }
+
+  document.addEventListener('click', function (e) {
+    var t = e.target || e.srcElement;
+    while (t && t !== document && !(t.getAttribute && t.getAttribute('data-k'))) { t = t.parentNode; }
+    if (!t || t === document) { return; }
+    var key = t.getAttribute('data-k'), val = t.getAttribute('data-v');
+    if (key === 'reset') {
+      var q;
+      for (q in DEFAULTS) { S[q] = DEFAULTS[q]; }
+    } else if (key === 'more') {
+      S.limit += 30;
+    } else {
+      S[key] = (key === 'qmin' || key === 'tmin') ? parseFloat(val) : val;
+      S.limit = DEFAULTS.limit;
+    }
+    draw();
+  });
+
+  /* ---------- load ---------- */
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'data.json?t=' + new Date().getTime(), true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState !== 4) { return; }
+    if (xhr.status >= 200 && xhr.status < 300) {
+      try {
+        DATA = JSON.parse(xhr.responseText);
+      } catch (err) {
+        document.getElementById('out').innerHTML = '<div class="msg">data.json could not be read. Check that the file is valid.</div>';
+        return;
+      }
+      document.getElementById('upd').innerHTML = DATA.updated ? 'Updated ' + dfull(DATA.updated) : '';
+      draw();
+    } else {
+      document.getElementById('out').innerHTML = '<div class="msg">data.json could not be loaded. Check that it sits next to index.html.</div>';
+    }
   };
-  x.send();
-}
-function fail(){
-  document.getElementById("liveGrid").innerHTML='<div class="msg">Couldn\u2019t load the data. Check your connection and reload.</div>';
-}
-load();
-setInterval(load,REFRESH_MINUTES*60*1000);
+  xhr.send();
+})();
 </script>
 </body>
 </html>
