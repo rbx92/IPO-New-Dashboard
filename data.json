@@ -1,17 +1,6 @@
 {
- "updated": "2026-10-10",
+ "updated": "2026-10-11",
  "live": [
-  {
-   "name": "SRIT India",
-   "type": "Mainboard",
-   "close": "2026-09-30",
-   "band_low": 123.0,
-   "band_high": 130.0,
-   "qib": 91.84,
-   "nii": 310.94,
-   "retail": 56.75,
-   "total": 121.24
-  },
   {
    "name": "Black Opal Consultants",
    "type": "SME",
