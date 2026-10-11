@@ -1,50 +1,6 @@
 {
- "updated": "2026-10-11",
+ "updated": "2026-10-12",
  "live": [
-  {
-   "name": "Black Opal Consultants",
-   "type": "SME",
-   "close": "2026-10-01",
-   "band_low": 185.0,
-   "band_high": 197.0,
-   "qib": 4.38,
-   "nii": 43.0,
-   "retail": 27.2,
-   "total": 25.4
-  },
-  {
-   "name": "Green Asia Impex",
-   "type": "SME",
-   "close": "2026-10-01",
-   "band_low": 84.0,
-   "band_high": 89.0,
-   "qib": null,
-   "nii": null,
-   "retail": null,
-   "total": null
-  },
-  {
-   "name": "Papadmalji Agro",
-   "type": "SME",
-   "close": "2026-10-01",
-   "band_low": 69.0,
-   "band_high": 72.0,
-   "qib": 86.85,
-   "nii": 1.14,
-   "retail": 1.21,
-   "total": 2.16
-  },
-  {
-   "name": "Vans Electroengineerings",
-   "type": "SME",
-   "close": "2026-10-01",
-   "band_low": 112.0,
-   "band_high": 118.0,
-   "qib": 73.3,
-   "nii": 450.33,
-   "retail": 461.25,
-   "total": 347.25
-  },
   {
    "name": "Dove Soft",
    "type": "SME",
@@ -187,6 +143,39 @@
    "nii": 1.68,
    "retail": 3.08,
    "total": 2.59
+  },
+  {
+   "name": "HD Fire Protect",
+   "type": "Mainboard",
+   "close": "2026-10-15",
+   "band_low": 258.0,
+   "band_high": 271.0,
+   "qib": null,
+   "nii": null,
+   "retail": null,
+   "total": null
+  },
+  {
+   "name": "Ravita Engineering Services",
+   "type": "SME",
+   "close": "2026-10-15",
+   "band_low": 105.0,
+   "band_high": 112.0,
+   "qib": null,
+   "nii": null,
+   "retail": null,
+   "total": null
+  },
+  {
+   "name": "Vaibhav Vyapar",
+   "type": "SME",
+   "close": "2026-10-15",
+   "band_low": 51.0,
+   "band_high": 54.0,
+   "qib": null,
+   "nii": null,
+   "retail": null,
+   "total": null
   }
  ],
  "past": [
