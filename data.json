@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12",
+ "updated": "2026-10-13",
  "live": [
   {
    "name": "Dove Soft",
@@ -156,9 +156,31 @@
    "total": null
   },
   {
-   "name": "Ravita Engineering Services",
+   "name": "Vaibhav Vyapar",
    "type": "SME",
    "close": "2026-10-15",
+   "band_low": 51.0,
+   "band_high": 54.0,
+   "qib": null,
+   "nii": null,
+   "retail": null,
+   "total": null
+  },
+  {
+   "name": "Fusion CX",
+   "type": "Mainboard",
+   "close": "2026-10-16",
+   "band_low": 275.0,
+   "band_high": 289.0,
+   "qib": null,
+   "nii": null,
+   "retail": null,
+   "total": null
+  },
+  {
+   "name": "Ravita Engineering Services",
+   "type": "SME",
+   "close": "2026-10-16",
    "band_low": 105.0,
    "band_high": 112.0,
    "qib": null,
@@ -167,11 +189,11 @@
    "total": null
   },
   {
-   "name": "Vaibhav Vyapar",
-   "type": "SME",
-   "close": "2026-10-15",
-   "band_low": 51.0,
-   "band_high": 54.0,
+   "name": "Zetwerk",
+   "type": "Mainboard",
+   "close": "2026-10-19",
+   "band_low": 143.0,
+   "band_high": 151.0,
    "qib": null,
    "nii": null,
    "retail": null,
