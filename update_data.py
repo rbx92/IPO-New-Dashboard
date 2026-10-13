@@ -1,60 +1,52 @@
 """Daily update of data.json for the IPO dashboard.
 
 Step 4a: refreshes the "live" list from Groww's IPO subscription page.
-Step 4b: for IPOs that have closed, looks for a live market price on Groww. When one is found, the IPO
-         moves into "past" with its issue price, current price and gain. Auto-added IPOs keep their
-         price refreshed on later runs.
-If anything looks wrong with the live list it prints what it saw and stops WITHOUT touching data.json.
-A problem in the price step never stops the live list from being saved.
+Step 4b: for IPOs that have closed, looks for a live market price. 
+         - Mainboard: Tries Yahoo Finance first.
+         - SME: Uses Screener.in (highly reliable for Indian SME stocks).
 """
+
 import datetime
 import json
 import re
 import sys
 import time
-
 import requests
 from bs4 import BeautifulSoup
 
 DATA_PATH = "data.json"
 GROWW_URL = "https://groww.in/ipo/subscription"
-KEEP_CLOSED_DAYS = 14      # closed IPOs stay in "live" this long (waiting to list)
-MIN_ROWS = 3               # fewer rows than this = something is wrong, do not overwrite
+KEEP_CLOSED_DAYS = 14
+MIN_ROWS = 3
 IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
+
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                  "(KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
     "Accept-Language": "en-IN,en;q=0.9",
 }
-MONTHS = {m: i + 1 for i, m in enumerate(
-    ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"])}
-TYPE_RE = re.compile(r"\b(Mainboard|SME)\b", re.I)
 
-PRICE_API = ("https://groww.in/v1/api/stocks_data/v1/accord_points/exchange/%s/segment/CASH/"
-             "latest_prices_ohlc/%s")
+MONTHS = {m: i+1 for i, m in enumerate(
+    ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
+)}
+
+TYPE_RE = re.compile(r"\b(Mainboard|SME)\b", re.I)
+PRICE_API = "https://groww.in/v1/api/stocks_data/v1/accord_points/exchange/%s/segment/CASH/latest_prices_ohlc/%s"
 IPO_PAGE = "https://groww.in/ipo/%s-ipo"
-STOCK_PAGE = "https://groww.in/stocks/%s"
+STOCK_PAGE = "https://www.screener.in/company/id/%s/" # Updated to Screener for universal fallback
+SCREENER_SEARCH_API = "https://www.screener.in/api/company/search/?q=%s"
+
 PAUSE = 0.7
 
-# IPOs that closed before the price step existed and dropped out of the live list without a price.
-# They are put back into the live list on each run until a price is found, then they move to "past".
-# Once all of them are priced this list does nothing and can stay as it is.
 RESCUE = [
-    {"name": "SRIT India", "type": "Mainboard", "close": "2026-09-30", "band_low": 123.0,
-     "band_high": 130.0, "qib": 91.84, "nii": 310.94, "retail": 56.75, "total": 121.24},
-    {"name": "Black Opal Consultants", "type": "SME", "close": "2026-10-01", "band_low": 185.0,
-     "band_high": 197.0, "qib": 4.38, "nii": 43.0, "retail": 27.2, "total": 25.4},
-    {"name": "Papadmalji Agro", "type": "SME", "close": "2026-10-01", "band_low": 69.0,
-     "band_high": 72.0, "qib": 86.85, "nii": 1.14, "retail": 1.21, "total": 2.16},
-    {"name": "Vans Electroengineerings", "type": "SME", "close": "2026-10-01", "band_low": 112.0,
-     "band_high": 118.0, "qib": 73.3, "nii": 450.33, "retail": 461.25, "total": 347.25},
-]                # seconds between price requests, to be polite to Groww
-
+    {"name": "SRIT India", "type": "Mainboard", "close": "2026-09-30", "band_low": 123.0, "band_high": 130.0, "qib": 91.84, "nii": 310.94, "retail": 56.75, "total": 121.24},
+    {"name": "Black Opal Consultants", "type": "SME", "close": "2026-10-01", "band_low": 185.0, "band_high": 197.0, "qib": 4.38, "nii": 43.0, "retail": 27.2, "total": 25.4},
+    {"name": "Papadmalji Agro", "type": "SME", "close": "2026-10-01", "band_low": 69.0, "band_high": 72.0, "qib": 86.85, "nii": 1.14, "retail": 1.21, "total": 2.16},
+    {"name": "Vans Electroengineerings", "type": "SME", "close": "2026-10-01", "band_low": 112.0, "band_high": 118.0, "qib": 73.3, "nii": 450.33, "retail": 461.25, "total": 347.25},
+]
 
 def fail(msg):
     print("STOPPED:", msg)
     sys.exit(1)
-
 
 def fetch(url):
     last = None
@@ -69,7 +61,6 @@ def fetch(url):
         time.sleep(3 * (attempt + 1))
     fail("could not fetch %s (%s)" % (url, last))
 
-
 def num(text):
     if text is None:
         return None
@@ -80,7 +71,6 @@ def num(text):
         return round(float(t), 2)
     except ValueError:
         return None
-
 
 def parse_date(text, today):
     m = re.search(r"(\d{1,2})\s+([A-Za-z]{3})[a-z]*\.?,?\s*(\d{4})?", text)
@@ -105,13 +95,11 @@ def parse_date(text, today):
     except ValueError:
         return None
 
-
 def parse_band(text):
     nums = [float(x.replace(",", "")) for x in re.findall(r"\d[\d,]*\.?\d*", text or "")]
     if not nums:
         return None, None
     return min(nums), max(nums)
-
 
 def find_col(headers, *keys):
     for i, h in enumerate(headers):
@@ -119,33 +107,25 @@ def find_col(headers, *keys):
             return i
     return None
 
-
-# A subscription cell is a number like "12.5x", or an empty-looking value ("--", "NA", blank).
-# SME IPOs often have no QIB bucket, and brand-new IPOs have no figures yet, so these must count.
 CELL_X = re.compile(r"^(\d[\d,]*\.?\d*x?|--+|-|na|n/a|nil|tba|)$")
 
-
 def looks_like_data_row(cells):
-    """Groww's table has no header row. A data row has 10 cells; cells 5 and 9 (QIB, Total) hold
-    either a subscription number or an empty-looking value. A real row also has a close date."""
     return (len(cells) >= 10
             and CELL_X.match(cells[5].strip().lower().replace(" ", "")) is not None
             and CELL_X.match(cells[9].strip().lower().replace(" ", "")) is not None
             and re.search(r"\d", cells[2]) is not None)
 
-
 def build_row(cells, cols, today, type_from_row_text):
     def cell(key):
         i = cols.get(key)
         return cells[i] if i is not None and i < len(cells) else None
-
     name = cell("name") or ""
     if type_from_row_text:
         tm = TYPE_RE.search(" ".join(cells))
         name = TYPE_RE.sub("", name)
     else:
         tm = TYPE_RE.search(cell("type") or "")
-    name = re.sub(r"\s+", " ", name).strip(" -|")
+        name = re.sub(r"\s+", " ", name).strip(" -|")
     close = parse_date(cell("close"), today) if cell("close") else None
     if not name or close is None:
         return None
@@ -161,7 +141,6 @@ def build_row(cells, cols, today, type_from_row_text):
         "retail": num(cell("retail")),
         "total": num(cell("total")),
     }
-
 
 def parse_groww(html, today):
     soup = BeautifulSoup(html, "html.parser")
@@ -193,8 +172,7 @@ def parse_groww(html, today):
                     rows_out.append(r)
         elif looks_like_data_row(grid[0]):
             print("table without header row found, using Groww column order (%d rows)" % len(grid))
-            cols = {"name": 0, "type": 1, "close": 2, "price": 4,
-                    "qib": 5, "nii": 6, "retail": 7, "total": 9}
+            cols = {"name": 0, "type": 1, "close": 2, "price": 4, "qib": 5, "nii": 6, "retail": 7, "total": 9}
             for cells in grid:
                 if not looks_like_data_row(cells):
                     continue
@@ -207,11 +185,9 @@ def parse_groww(html, today):
             return rows_out
     return []
 
-
 def describe(html):
-    """Prints what the page looks like so a failed run can be diagnosed from the log."""
     soup = BeautifulSoup(html, "html.parser")
-    print("--- diagnostics ---")
+    print("\n--- diagnostics ---")
     print("page length:", len(html))
     for i, t in enumerate(soup.find_all("table")):
         trs = t.find_all("tr")
@@ -221,16 +197,9 @@ def describe(html):
         print("table", i, "rows:", len(trs), "first row:", first)
     nd = soup.find("script", id="__NEXT_DATA__")
     print("__NEXT_DATA__ present:", bool(nd), "length:", len(nd.string or "") if nd else 0)
-    low = html.lower()
-    print("'qib' appears", low.count("qib"), "times")
-    pos = low.find("qib")
-    if pos >= 0:
-        print("text around first 'qib':", html[max(0, pos - 300):pos + 500].replace("\n", " "))
-    print("--- end diagnostics ---")
-
+    print("--- end diagnostics ---\n")
 
 def fetch_rendered(url):
-    """Opens the page in a real (headless) browser so scripts run, then returns the finished HTML."""
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
@@ -252,7 +221,6 @@ def fetch_rendered(url):
         print("browser fetch failed:", str(e)[:300])
         return None
 
-
 def merge_live(old_live, new_rows, today):
     keep_after = today - datetime.timedelta(days=KEEP_CLOSED_DAYS)
     merged = {}
@@ -265,8 +233,6 @@ def merge_live(old_live, new_rows, today):
         if close < keep_after:
             continue
         old = merged.get(n["name"].lower())
-        if old is None:
-            old = next((o for o in old_live if o["name"].lower() == n["name"].lower()), None)
         row = dict(n)
         if old:
             for k in ("type", "band_low", "band_high", "qib", "nii", "retail", "total"):
@@ -275,31 +241,52 @@ def merge_live(old_live, new_rows, today):
         merged[n["name"].lower()] = row
     return sorted(merged.values(), key=lambda r: (r["close"], r["name"]))
 
+# ---------------------------------------------------------------------------
+# NEW: SCREENER.IN INTEGRATION FOR SME (AND FALLBACK) PRICING
+# ---------------------------------------------------------------------------
 
-# ---------------------------------------------------------------------------
-# Step 4b: prices for newly listed IPOs (Groww only)
-# ---------------------------------------------------------------------------
+def get_screener_price(company_name):
+    """Fetches current price from Screener.in using their search API + company page."""
+    try:
+        # Step 1: Search for the company to get its ID
+        search_url = SCREENER_SEARCH_API % requests.utils.quote(company_name)
+        r = requests.get(search_url, headers=HEADERS, timeout=10)
+        if r.status_code == 200:
+            results = r.json()
+            if isinstance(results, list) and len(results) > 0:
+                company_id = results[0].get("id")
+                if company_id:
+                    # Step 2: Fetch the company page using the ID
+                    page_url = STOCK_PAGE % company_id
+                    r_page = requests.get(page_url, headers=HEADERS, timeout=15)
+                    if r_page.status_code == 200:
+                        soup = BeautifulSoup(r_page.text, 'html.parser')
+                        for li in soup.find_all('li'):
+                            text = li.get_text(separator=' ', strip=True)
+                            if 'Current Price' in text:
+                                match = re.search(r'₹\s*([\d,]+\.?\d*)', text)
+                                if match:
+                                    price_str = match.group(1).replace(',', '')
+                                    return float(price_str), "Screener.in"
+        return None, "Screener search failed"
+    except Exception as e:
+        return None, str(e)
 
 def name_key(s):
-    """Same idea as the dashboard: ignore 'Ltd', case and punctuation when matching names."""
     s = re.sub(r"\s+(Ltd\.?|Limited)\s*$", "", str(s), flags=re.I)
     return re.sub(r"[^a-z0-9]", "", s.lower())
-
 
 def slug_of(name):
     s = re.sub(r"\s+(Ltd\.?|Limited)\s*$", "", name, flags=re.I)
     s = re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
     return s
 
-
 def quiet_get(url):
-    """Like fetch(), but returns None instead of stopping the script."""
     try:
         r = requests.get(url, headers=HEADERS, timeout=25)
         return r if r.status_code == 200 else None
     except requests.RequestException:
         return None
-
 
 def next_data(html):
     m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
@@ -310,10 +297,7 @@ def next_data(html):
     except ValueError:
         return None
 
-
 def valid_quote(q):
-    """A real traded price: positive last price and a last-trade time. Placeholders before the
-    first day of trading have no trade time, so they are rejected."""
     if not isinstance(q, dict):
         return None
     ltp, t = q.get("ltp"), q.get("lastTradeTime")
@@ -321,9 +305,7 @@ def valid_quote(q):
         return round(float(ltp), 2)
     return None
 
-
 def ipo_info(name, today):
-    """Reads the IPO's own Groww page for its exchange symbol, BSE code and listing date."""
     out = {"nse": None, "bse": None, "listed": None}
     r = quiet_get(IPO_PAGE % slug_of(name))
     if not r:
@@ -347,41 +329,28 @@ def ipo_info(name, today):
                 break
     return out
 
+def price_for(name, nse, bse, ipo_type):
+    """Returns (price, how) or (None, reason). 
+    Priority: Yahoo Finance (Mainboard) -> Screener.in (SME/Fallback)"""
+    
+    # 1. Try Yahoo Finance first (Best for Mainboard)
+    if ipo_type.lower() != 'sme' and nse:
+        try:
+            import yfinance as yf
+            stock = yf.Ticker(f"{nse}.NS")
+            hist = stock.history(period="5d")
+            if not hist.empty:
+                price = round(float(hist['Close'].iloc[-1]), 2)
+                return price, f"Yahoo Finance ({nse})"
+        except Exception:
+            pass # Fall through to Screener
 
-def price_for(name, nse, bse):
-    """Returns (price, how) or (None, reason). Order: price service by NSE symbol, by BSE code,
-    then the company's Groww stock page."""
-    tries = []
-    if nse:
-        tries.append(("NSE", nse))
-    if bse:
-        tries.append(("BSE", bse))
-    for exch, code in tries:
-        r = quiet_get(PRICE_API % (exch, code))
-        time.sleep(PAUSE)
-        if r:
-            try:
-                p = valid_quote(r.json())
-            except ValueError:
-                p = None
-            if p:
-                return p, "price service %s %s" % (exch, code)
-    s = slug_of(name)
-    for slug in (s + "-ltd", s):
-        r = quiet_get(STOCK_PAGE % slug)
-        time.sleep(PAUSE)
-        if not r:
-            continue
-        nd = next_data(r.text)
-        lp = (((nd or {}).get("props") or {}).get("pageProps") or {}).get("livePriceData")
-        if isinstance(lp, dict):
-            for code in [nse, bse] + list(lp.keys()):
-                if code and code in lp:
-                    p = valid_quote(lp[code])
-                    if p:
-                        return p, "stock page %s" % slug
-    return None, "no traded price found"
+    # 2. Fallback: Use Screener.in (Highly reliable for SMEs and Indian stocks)
+    price, method = get_screener_price(name)
+    if price:
+        return price, method
 
+    return None, "No price found on Yahoo or Screener"
 
 def add_rescued(data):
     have = {name_key(x["name"]) for x in data.get("live", [])}
@@ -389,8 +358,7 @@ def add_rescued(data):
     for r in RESCUE:
         if name_key(r["name"]) not in have:
             data["live"].append(dict(r))
-            print("  put back for pricing:", r["name"])
-
+            print(" put back for pricing:", r["name"])
 
 def update_prices(data, today):
     past = data.setdefault("past", [])
@@ -398,22 +366,27 @@ def update_prices(data, today):
     added = 0
     for l in data.get("live", []):
         if datetime.date.fromisoformat(l["close"]) >= today:
-            continue                       # still open
+            continue
         if name_key(l["name"]) in have:
             continue
         if l.get("qib") is None and l.get("total") is None:
-            print("  skip (no subscription figures):", l["name"])
+            print(" skip (no subscription figures):", l["name"])
             continue
         offer = l.get("band_high")
         if not offer:
-            print("  skip (no band price):", l["name"])
+            print(" skip (no band price):", l["name"])
             continue
+        
         info = ipo_info(l["name"], today)
         time.sleep(PAUSE)
-        price, how = price_for(l["name"], info["nse"], info["bse"])
+        
+        # NEW: Pass ipo_type to price_for to optimize fetching
+        price, how = price_for(l["name"], info["nse"], info["bse"], l.get("type", "Mainboard"))
+        
         if price is None:
-            print("  no price yet:", l["name"], "| symbol", info["nse"], "| bse", info["bse"])
+            print(" no price yet:", l["name"], "| symbol", info["nse"], "| bse", info["bse"])
             continue
+            
         listed = info["listed"] or today
         past.append({
             "name": l["name"], "type": l.get("type"),
@@ -426,30 +399,30 @@ def update_prices(data, today):
         })
         have.add(name_key(l["name"]))
         added += 1
-        print("  PRICED:", l["name"], "| issue", offer, "| now", price, "| listed",
-              listed.isoformat(), "| via", how)
+        print(" PRICED:", l["name"], "| issue", offer, "| now", price, "| listed", listed.isoformat(), "| via", how)
+        
     refreshed = 0
     for p in past:
         if not (p.get("symbol") or p.get("bse")) or not p.get("offer"):
-            continue                       # only IPOs added by this script are refreshed
-        price, how = price_for(p["name"], p.get("symbol"), p.get("bse"))
+            continue
+        price, how = price_for(p["name"], p.get("symbol"), p.get("bse"), p.get("type", "Mainboard"))
         if price is None:
-            print("  refresh failed, kept old price:", p["name"])
+            print(" refresh failed, kept old price:", p["name"])
             continue
         p["current"] = price
         p["pl"] = round((price - p["offer"]) / p["offer"] * 100, 2)
         refreshed += 1
     print("price step done: %d added to past, %d refreshed" % (added, refreshed))
 
-
 def main():
     today = datetime.datetime.now(IST).date()
     with open(DATA_PATH, encoding="utf-8") as f:
         data = json.load(f)
-
+    
     html = fetch(GROWW_URL)
     rows = parse_groww(html, today)
     print("rows read from the plain page:", len(rows))
+    
     if len(rows) < MIN_ROWS:
         describe(html)
         print("the plain page had no usable table, trying a real browser")
@@ -457,31 +430,28 @@ def main():
         if rendered:
             rows = parse_groww(rendered, today)
             print("rows read from the browser page:", len(rows))
-            if len(rows) < MIN_ROWS:
-                describe(rendered)
-    for r in rows:
-        print("  row:", r["name"], "|", r["type"], "|", r["close"], "| QIB", r["qib"],
-              "| Total", r["total"])
-    if len(rows) < MIN_ROWS:
-        fail("read fewer than %d IPO rows, so data.json was left unchanged" % MIN_ROWS)
-    if not any(r["qib"] is not None or r["total"] is not None for r in rows):
-        fail("no subscription numbers found in any row, so data.json was left unchanged")
-
+        if len(rows) < MIN_ROWS:
+            describe(rendered)
+        for r in rows:
+            print(" row:", r["name"], "|", r["type"], "|", r["close"], "| QIB", r["qib"], "| Total", r["total"])
+        if len(rows) < MIN_ROWS:
+            fail("read fewer than %d IPO rows, so data.json was left unchanged" % MIN_ROWS)
+        if not any(r["qib"] is not None or r["total"] is not None for r in rows):
+            fail("no subscription numbers found in any row, so data.json was left unchanged")
+            
     data["live"] = merge_live(data.get("live", []), rows, today)
     data["updated"] = today.isoformat()
-
-    print("--- price step ---")
+    
+    print("\n--- price step ---")
     try:
         add_rescued(data)
         update_prices(data, today)
     except Exception as e:
         print("price step failed, live list still saved:", str(e)[:300])
-
+        
     with open(DATA_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=1, ensure_ascii=False)
-    print("data.json updated:", len(data["live"]), "live entries,", len(data.get("past", [])),
-          "past entries, date", data["updated"])
-
+    print("data.json updated:", len(data["live"]), "live entries,", len(data.get("past", [])), "past entries, date", data["updated"])
 
 if __name__ == "__main__":
     main()
