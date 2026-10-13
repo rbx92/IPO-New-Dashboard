@@ -1,26 +1,26 @@
 name: Update IPO Data
 
 on:
-  schedule:
-    - cron: '0 14 * * *'  # Runs daily at 7:30 PM IST
   workflow_dispatch:
+  schedule:
+    - cron: '0 14 * * *'
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas openpyxl requests
+          pip install pandas openpyxl
 
       - name: Run update script
         run: python update_data.py
@@ -29,6 +29,6 @@ jobs:
         run: |
           git config --global user.name "IPO-Bot"
           git config --global user.email "bot@github.com"
-          git add data.json "IPO - Self Populated.xlsx"
-          git commit -m "Auto-update: Refreshed IPO data and prices" || echo "No changes to commit"
+          git add data.json
+          git commit -m "Auto-update: Refreshed IPO data" || echo "No changes to commit"
           git push
