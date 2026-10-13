@@ -5,88 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>IPO Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #F1F5F9; --card-bg: #FFFFFF; --text-primary: #0F172A; --text-secondary: #64748B;
-            --border: #E2E8F0; --gain-bg: #D1FAE5; --gain-text: #065F46;
+            --bg: #F8FAFC; --card-bg: #FFFFFF; --text-primary: #0F172A; --text-secondary: #64748B;
+            --border: #E2E8F0; --gain-bg: #DCFCE7; --gain-text: #166534;
             --loss-bg: #FEE2E2; --loss-text: #991B1B; --sme-bg: #FEF3C7; --sme-text: #92400E;
-            --main-bg: #DBEAFE; --main-text: #1E40AF;
+            --main-bg: #E0E7FF; --main-text: #3730A3;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', -apple-system, sans-serif; background-color: var(--bg); color: var(--text-primary); padding: 2rem 1.5rem; line-height: 1.5; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text-primary); padding: 2rem 1.5rem; line-height: 1.5; }
         .container { max-width: 1200px; margin: 0 auto; }
-        .header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
-        .header h1 { font-size: 1.875rem; font-weight: 800; letter-spacing: -0.02em; }
-        .header .upd { font-size: 0.875rem; color: var(--text-secondary); font-weight: 500; }
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+        .header h1 { font-size: 1.5rem; font-weight: 700; }
+        .header .upd { font-size: 0.875rem; color: var(--text-secondary); }
         
         .section { margin-bottom: 3rem; }
         .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
-        .section-header h2 { font-size: 1.25rem; font-weight: 700; }
-        .badge-count { background: var(--bg); color: var(--text-secondary); font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 999px; }
-        .badge-count.live { background: var(--gain-bg); color: var(--gain-text); }
+        .section-header h2 { font-size: 1.25rem; font-weight: 600; }
+        .badge-count { background: #E2E8F0; color: #475569; font-size: 0.75rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 999px; }
+        .badge-count.live { background: #DCFCE7; color: #166534; }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; }
 
-        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); transition: transform 0.2s ease, box-shadow 0.2s ease; }
-        .card:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.08); }
-        .card.live { background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); border-color: #334155; color: #F8FAFC; }
-
-        .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
-        .company-info { display: flex; flex-direction: column; gap: 8px; }
-        .company-name { font-size: 1.25rem; font-weight: 700; line-height: 1.2; }
-        .card.live .company-name { color: #FFFFFF; }
+        /* --- BASE CARD --- */
+        .card { border-radius: 16px; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
         
-        .type-badge { display: inline-block; padding: 4px 10px; border-radius: 6px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; width: fit-content; }
-        .type-badge.sme { background: var(--sme-bg); color: var(--sme-text); }
-        .type-badge.main { background: var(--main-bg); color: var(--main-text); }
-        .card.live .type-badge.sme { background: rgba(245, 158, 11, 0.2); color: #FCD34D; }
-        .card.live .type-badge.main { background: rgba(59, 130, 246, 0.2); color: #93C5FD; }
+        /* --- LIVE CARD (Dark Green) --- */
+        .card.live { background: #14472B; color: #FFFFFF; border: 1px solid #0F3D22; }
+        .card.live .type-badge { background: rgba(255,255,255,0.15); color: #FFFFFF; }
+        .card.live .hero-label { color: #A7F3D0; }
+        .card.live .progress-bg { background: rgba(255,255,255,0.2); }
+        .card.live .legend { color: #D1FAE5; }
+        .card.live .footer-text { color: #A7F3D0; }
+        .card.live .footer-val { color: #FFFFFF; font-weight: 600; }
 
-        .gain-badge { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; white-space: nowrap; }
+        /* --- PAST CARD (White) --- */
+        .card.past { background: var(--card-bg); border: 1px solid var(--border); }
+        .card.past .type-badge.main { background: var(--main-bg); color: var(--main-text); }
+        .card.past .type-badge.sme { background: var(--sme-bg); color: var(--sme-text); }
+        .card.past .hero-label { color: var(--text-secondary); }
+        .card.past .progress-bg { background: #F1F5F9; }
+        .card.past .legend { color: var(--text-secondary); }
+        .card.past .footer-text { color: var(--text-secondary); }
+        .card.past .footer-val { color: var(--text-primary); font-weight: 600; }
+
+        /* --- CARD ELEMENTS --- */
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; }
+        .type-badge { padding: 4px 10px; border-radius: 6px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+        
+        .live-badge { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600; color: #34D399; }
+        .live-badge::before { content: ''; width: 8px; height: 8px; background: #34D399; border-radius: 50%; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); } 70% { box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); } 100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); } }
+
+        .company-name { font-size: 1.25rem; font-weight: 700; line-height: 1.2; margin-top: 0.5rem; }
+
+        .hero-metric { margin-bottom: 0.5rem; }
+        .hero-val { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1; }
+        .hero-label { font-size: 0.85rem; font-weight: 500; margin-top: 0.25rem; }
+
+        .breakdown-header { display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .progress-bg { height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 0.5rem; }
+        .progress-fill { height: 100%; border-radius: 4px; transition: width 0.5s ease; }
+        
+        /* Gradients matching screenshot */
+        .card.live .progress-fill { background: linear-gradient(90deg, #34D399 0%, #FBBF24 100%); }
+        .card.past .progress-fill { background: linear-gradient(90deg, #4F46E5 0%, #10B981 100%); }
+
+        .legend { display: flex; gap: 1rem; font-size: 0.75rem; font-weight: 500; flex-wrap: wrap; }
+        .legend-item { display: flex; align-items: center; gap: 0.3rem; }
+        .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+        
+        /* Legend Colors */
+        .card.live .dot-qib { background: #34D399; } .card.live .dot-nii { background: #2DD4BF; } .card.live .dot-retail { background: #FBBF24; }
+        .card.past .dot-qib { background: #4F46E5; } .card.past .dot-nii { background: #3B82F6; } .card.past .dot-retail { background: #10B981; }
+
+        .card-footer { margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }
+        .card.past .card-footer { border-top-color: var(--border); }
+
+        .gain-badge { padding: 4px 10px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; }
         .gain-badge.up { background: var(--gain-bg); color: var(--gain-text); }
         .gain-badge.down { background: var(--loss-bg); color: var(--loss-text); }
-        .gain-badge.na { background: var(--bg); color: var(--text-secondary); }
 
-        .live-badge { display: flex; align-items: center; gap: 6px; background: rgba(16, 185, 129, 0.15); color: #34D399; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; }
-        .live-badge::before { content: ''; width: 8px; height: 8px; background: #10B981; border-radius: 50%; animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); } 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); } }
+        .msg { padding: 2rem; text-align: center; color: var(--text-secondary); grid-column: 1 / -1; }
+        .error-box { background: #FEE2E2; color: #991B1B; padding: 20px; border-radius: 12px; font-family: monospace; margin: 20px 0; }
 
-        .price-section { display: flex; align-items: baseline; gap: 12px; border-bottom: 1px dashed var(--border); padding-bottom: 1.25rem; }
-        .card.live .price-section { border-bottom-color: #334155; }
-        .ltp { font-size: 2.25rem; font-weight: 800; letter-spacing: -0.02em; }
-        .card.live .ltp { color: #38BDF8; }
-        .issue-info { display: flex; flex-direction: column; }
-        .issue-label { font-size: 0.75rem; color: var(--text-secondary); font-weight: 500; }
-        .card.live .issue-label { color: #94A3B8; }
-        .issue-val { font-size: 1rem; font-weight: 600; color: var(--text-secondary); }
-        .card.live .issue-val { color: #CBD5E1; }
-
-        .sub-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        .sub-item { background: #F8FAFC; border-radius: 12px; padding: 14px; text-align: center; border: 1px solid transparent; }
-        .card.live .sub-item { background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.1); }
-        .sub-label { display: block; font-size: 0.7rem; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
-        .card.live .sub-label { color: #94A3B8; }
-        .sub-val { display: block; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); }
-        .card.live .sub-val { color: #FFFFFF; }
-        .sub-item.total { background: #ECFDF5; border-color: #A7F3D0; }
-        .sub-item.total .sub-val { color: #065F46; }
-        .card.live .sub-item.total { background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.3); }
-        .card.live .sub-item.total .sub-val { color: #34D399; }
-
-        .card-footer { margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--text-secondary); font-weight: 500; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
-        .card.live .card-footer { border-top-color: #334155; color: #94A3B8; }
-        .listing-gain { font-weight: 600; color: var(--text-primary); }
-        .card.live .listing-gain { color: #E2E8F0; }
-
-        .msg { padding: 1.5rem; color: var(--text-secondary); font-size: 1rem; text-align: center; grid-column: 1 / -1; }
-        .error-box { background: #FEE2E2; color: #991B1B; padding: 20px; border-radius: 12px; font-family: monospace; white-space: pre-wrap; margin: 20px 0; border: 1px solid #FECACA; }
-
-        @media (max-width: 640px) {
-            .grid { grid-template-columns: 1fr; }
-            .ltp { font-size: 1.8rem; }
-        }
+        @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -95,11 +99,11 @@
         <h1>IPO Dashboard</h1>
         <div class="upd" id="upd"></div>
     </div>
-    <div class="section" id="secLive">
+    <div class="section">
         <div class="section-header"><h2>Live Now</h2><span class="badge-count live" id="liveN">0</span></div>
         <div class="grid" id="liveGrid"></div>
     </div>
-    <div class="section" id="secPast">
+    <div class="section">
         <div class="section-header"><h2>Past IPOs</h2><span class="badge-count" id="pastN">0</span></div>
         <div class="grid" id="pastGrid"></div>
     </div>
@@ -128,69 +132,83 @@
     function formatDate(iso) {
         if (!iso) return "–";
         const d = new Date(iso);
-        return d.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: '2-digit' });
+        return d.toLocaleDateString('en-GB', { day: '2-digit', month: 'short' });
+    }
+
+    function getProgressWidth(qib, nii, retail) {
+        // Calculates a visual width based on the highest subscription to prevent overflow
+        const max = Math.max(qib || 0, nii || 0, retail || 0, 1);
+        const total = (qib || 0) + (nii || 0) + (retail || 0);
+        return Math.min(100, (total / (max * 1.5)) * 100);
     }
 
     function liveCard(d) {
         const typeClass = (d.type || "Mainboard").toLowerCase() === "sme" ? "sme" : "main";
+        const qib = d.qib || 0, nii = d.nii || 0, retail = d.retail || 0;
+        const width = getProgressWidth(qib, nii, retail);
+
         return `<div class="card live">
             <div class="card-header">
-                <div class="company-info">
-                    <h3 class="company-name">${esc(d.name)}</h3>
-                    <span class="type-badge ${typeClass}">${esc(d.type || 'Mainboard')}</span>
-                </div>
-                <div class="live-badge">LIVE</div>
+                <span class="type-badge ${typeClass}">${esc(d.type || 'Mainboard')}</span>
+                <div class="live-badge">Live</div>
             </div>
-            <div class="price-section">
-                <div class="ltp">${fmtPrice(d.current || d.band_high)}</div>
-                <div class="issue-info">
-                    <span class="issue-label">Issue Price</span>
-                    <span class="issue-val">${fmtPrice(d.offer || d.band_high)}</span>
-                </div>
+            <div class="company-name">${esc(d.name)}</div>
+            <div class="hero-metric">
+                <div class="hero-val">${fmtX(d.qib)}</div>
+                <div class="hero-label">QIB Subscription</div>
             </div>
-            <div class="sub-grid">
-                <div class="sub-item"><span class="sub-label">QIB</span><span class="sub-val">${fmtX(d.qib)}</span></div>
-                <div class="sub-item"><span class="sub-label">HNI</span><span class="sub-val">${fmtX(d.nii)}</span></div>
-                <div class="sub-item"><span class="sub-label">Retail</span><span class="sub-val">${fmtX(d.retail)}</span></div>
-                <div class="sub-item total"><span class="sub-label">Total</span><span class="sub-val">${fmtX(d.total)}</span></div>
+            <div>
+                <div class="breakdown-header">
+                    <span>Subscription Breakdown</span>
+                    <span>Total: ${fmtX(d.total)}</span>
+                </div>
+                <div class="progress-bg"><div class="progress-fill" style="width: ${width}%"></div></div>
+                <div class="legend">
+                    <div class="legend-item"><div class="legend-dot dot-qib"></div> QIB ${fmtX(d.qib)}</div>
+                    <div class="legend-item"><div class="legend-dot dot-nii"></div> NII ${fmtX(d.nii)}</div>
+                    <div class="legend-item"><div class="legend-dot dot-retail"></div> Retail ${fmtX(d.retail)}</div>
+                </div>
             </div>
             <div class="card-footer">
-                <span>Closes: ${formatDate(d.close)}</span>
+                <span class="footer-text">Closes: ${formatDate(d.close)}</span>
+                <span class="footer-text">Band: <span class="footer-val">${fmtPrice(d.offer || d.band_high)}</span></span>
             </div>
         </div>`;
     }
 
     function pastCard(d) {
         const typeClass = (d.type || "Mainboard").toLowerCase() === "sme" ? "sme" : "main";
-        const gainClass = isNum(d.pl) ? (d.pl >= 0 ? "up" : "down") : "na";
-        const gainArrow = isNum(d.pl) ? (d.pl >= 0 ? "▲" : "▼") : "–";
-        const gainText = isNum(d.pl) ? (d.pl >= 0 ? "+" : "") + d.pl.toFixed(1) + "%" : "–";
-        const listGainText = isNum(d.listing_pl) ? `Listing Gain: ${d.listing_pl >= 0 ? '+' : ''}${d.listing_pl.toFixed(1)}%` : '';
+        const qib = d.qib || 0, nii = d.nii || 0, retail = d.retail || 0;
+        const width = getProgressWidth(qib, nii, retail);
+        
+        const gainClass = isNum(d.pl) ? (d.pl >= 0 ? "up" : "down") : "";
+        const gainArrow = isNum(d.pl) ? (d.pl >= 0 ? "▲" : "▼") : "";
+        const gainText = isNum(d.pl) ? Math.abs(d.pl).toFixed(0) + "%" : "";
 
-        return `<div class="card">
+        return `<div class="card past">
             <div class="card-header">
-                <div class="company-info">
-                    <h3 class="company-name">${esc(d.name)}</h3>
-                    <span class="type-badge ${typeClass}">${esc(d.type || 'Mainboard')}</span>
-                </div>
-                <div class="gain-badge ${gainClass}">${gainArrow} ${gainText}</div>
+                <span class="type-badge ${typeClass}">${esc(d.type || 'Mainboard')}</span>
             </div>
-            <div class="price-section">
-                <div class="ltp">${fmtPrice(d.current)}</div>
-                <div class="issue-info">
-                    <span class="issue-label">Issue Price</span>
-                    <span class="issue-val">${fmtPrice(d.offer)}</span>
-                </div>
+            <div class="company-name">${esc(d.name)}</div>
+            <div class="hero-metric">
+                <div class="hero-val">${fmtX(d.qib)}</div>
+                <div class="hero-label">QIB Subscription</div>
             </div>
-            <div class="sub-grid">
-                <div class="sub-item"><span class="sub-label">QIB</span><span class="sub-val">${fmtX(d.qib)}</span></div>
-                <div class="sub-item"><span class="sub-label">HNI</span><span class="sub-val">${fmtX(d.nii)}</span></div>
-                <div class="sub-item"><span class="sub-label">Retail</span><span class="sub-val">${fmtX(d.retail)}</span></div>
-                <div class="sub-item total"><span class="sub-label">Total</span><span class="sub-val">${fmtX(d.total)}</span></div>
+            <div>
+                <div class="breakdown-header">
+                    <span>Subscription Breakdown</span>
+                    <span>Total: ${fmtX(d.total)}</span>
+                </div>
+                <div class="progress-bg"><div class="progress-fill" style="width: ${width}%"></div></div>
+                <div class="legend">
+                    <div class="legend-item"><div class="legend-dot dot-qib"></div> QIB ${fmtX(d.qib)}</div>
+                    <div class="legend-item"><div class="legend-dot dot-nii"></div> NII ${fmtX(d.nii)}</div>
+                    <div class="legend-item"><div class="legend-dot dot-retail"></div> Retail ${fmtX(d.retail)}</div>
+                </div>
             </div>
             <div class="card-footer">
-                <span>Listed: ${formatDate(d.listed)}</span>
-                ${listGainText ? `<span class="listing-gain">${listGainText}</span>` : ''}
+                <span class="footer-text">${fmtPrice(d.offer)} → <span class="footer-val">${fmtPrice(d.current)}</span></span>
+                ${gainText ? `<span class="gain-badge ${gainClass}">${gainArrow} ${gainText}</span>` : ''}
             </div>
         </div>`;
     }
@@ -210,7 +228,7 @@
             for (let i = 0; i < data.past.length; i++) ph += pastCard(data.past[i]);
             document.getElementById("pastGrid").innerHTML = ph || '<div class="msg">No past IPOs.</div>';
         } catch (e) {
-            document.body.innerHTML = "<h1 style='color:red; padding:20px;'>Dashboard Rendering Error</h1><div class='error-box'>" + e.message + "\n\n" + e.stack + "</div>";
+            document.body.innerHTML = "<h1 style='color:red'>Error</h1><div class='error-box'>" + e.message + "</div>";
         }
     }
 
@@ -221,9 +239,7 @@
             if (x.readyState !== 4) return;
             if (x.status >= 200 && x.status < 300) {
                 try { data = JSON.parse(x.responseText); render(); }
-                catch (e) { document.body.innerHTML = "<h1 style='color:red; padding:20px;'>Data Error</h1><div class='error-box'>Failed to parse data.json: " + e.message + "</div>"; }
-            } else if (!data) { 
-                document.body.innerHTML = "<h1 style='color:red; padding:20px;'>Network Error</h1><div class='error-box'>Could not load data.json. Status: " + x.status + "</div>"; 
+                catch (e) { document.body.innerHTML = "<div class='error-box'>Data Error: " + e.message + "</div>"; }
             }
         };
         x.send();
