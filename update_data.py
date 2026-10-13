@@ -1,156 +1,121 @@
 import pandas as pd
 import json
 import re
-import requests
-import yfinance as yf
 from datetime import datetime, date
-import time
 
 EXCEL_FILE = "IPO - Self Populated.xlsx"
 DATA_JSON = "data.json"
 
-MONTHS = {"Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6, 
-          "Jul": 7, "Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12}
-
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
-}
+def parse_num(val):
+    """Safely parses numbers, removing 'x', commas, and currency symbols."""
+    if pd.isna(val):
+        return None
+    s = str(val).strip().lower()
+    if s in ['-', 'na', 'n/a', '', 'nan', 'none']:
+        return None
+    # Clean up common formatting characters
+    s = s.replace('x', '').replace(',', '').replace(' ', '').replace('₹', '').replace('rs', '')
+    try:
+        return round(float(s), 2)
+    except ValueError:
+        return None
 
 def parse_date(date_str):
+    """Safely parses dates, handling Excel serial numbers and text like '12 Oct '26'."""
     if pd.isna(date_str):
         return None
-    date_str = str(date_str).strip()
-    # Matches "12 Oct `26" or "12 Oct 2026"
-    match = re.search(r"(\d{1,2})\s+([A-Za-z]{3})\s+`?(\d{2,4})", date_str)
+    s = str(date_str).strip()
+    
+    # 1. Try pandas native parser (Best for actual Excel date cells)
+    try:
+        dt = pd.to_datetime(s, dayfirst=True)
+        return dt.date()
+    except Exception:
+        pass
+    
+    # 2. Fallback to regex for text formats like "12 Oct '26"
+    match = re.search(r"(\d{1,2})\s+([A-Za-z]{3})\s+`?(\d{2,4})", s)
     if match:
         day = int(match.group(1))
         month_str = match.group(2).capitalize()
         year = int(match.group(3))
         if year < 100:
             year += 2000
-        month = MONTHS.get(month_str, 1)
+        months = {"Jan":1, "Feb":2, "Mar":3, "Apr":4, "May":5, "Jun":6, 
+                  "Jul":7, "Aug":8, "Sep":9, "Oct":10, "Nov":11, "Dec":12}
+        month = months.get(month_str, 1)
         try:
             return datetime(year, month, day).date()
         except ValueError:
             return None
     return None
 
-def parse_sub(val):
-    if pd.isna(val):
-        return None
-    s = str(val).strip().lower()
-    if s in ['-', 'na', 'n/a', '']:
-        return None
-    try:
-        return round(float(s.replace('x', '').replace(',', '')), 2)
-    except ValueError:
-        return None
-
-def get_screener_price(name):
-    """Fetches current price from Screener.in using their search API"""
-    try:
-        search_url = f"https://www.screener.in/api/company/search/?q={requests.utils.quote(name)}"
-        r = requests.get(search_url, headers=HEADERS, timeout=10)
-        if r.status_code == 200:
-            results = r.json()
-            if isinstance(results, list) and len(results) > 0:
-                company_id = results[0].get("id")
-                if company_id:
-                    page_url = f"https://www.screener.in/company/id/{company_id}/"
-                    r_page = requests.get(page_url, headers=HEADERS, timeout=15)
-                    if r_page.status_code == 200:
-                        match = re.search(r'Current Price.*?₹\s*([\d,]+\.?\d*)', r_page.text, re.IGNORECASE | re.DOTALL)
-                        if match:
-                            return float(match.group(1).replace(',', ''))
-    except Exception:
-        pass
-    return None
-
-def get_current_price(name, issue_price):
-    """Tries Screener.in first, then falls back to Yahoo Finance"""
-    # 1. Try Screener (Best for Indian SMEs & Mainboard)
-    price = get_screener_price(name)
-    if price:
-        return price
-    
-    # 2. Fallback to Yahoo Finance (Clean name for ticker)
-    try:
-        clean_name = re.sub(r'[^A-Za-z0-9]', '', name).upper()
-        ticker = yf.Ticker(f"{clean_name}.NS")
-        hist = ticker.history(period="5d")
-        if not hist.empty:
-            return round(float(hist['Close'].iloc[-1]), 2)
-    except Exception:
-        pass
-    
-    return None
-
 def main():
     print(f"📂 Reading {EXCEL_FILE}...")
     try:
-        df = pd.read_excel(EXCEL_FILE)
-    except FileNotFoundError:
-        print(f"❌ Error: {EXCEL_FILE} not found!")
-        return
-
-    # Ensure required columns exist
-    for col in ["Company Name", "Listing Date", "Issue Price"]:
-        if col not in df.columns:
-            print(f"❌ Missing required column: {col}")
+        xls = pd.ExcelFile(EXCEL_FILE)
+        df = None
+        
+        # AUTO-DETECT CORRECT SHEET (Finds the one with "Company Name")
+        for sheet in xls.sheet_names:
+            temp_df = pd.read_excel(xls, sheet_name=sheet)
+            # Strip hidden spaces from ALL column headers
+            temp_df.columns = [str(col).strip() for col in temp_df.columns]
+            if 'Company Name' in temp_df.columns:
+                df = temp_df
+                print(f"✅ Successfully found data in sheet: '{sheet}'")
+                break
+        
+        if df is None:
+            print("❌ Error: Could not find a sheet with a 'Company Name' column.")
             return
+    except Exception as e:
+        print(f"❌ Error reading Excel file: {e}")
+        return
 
     today = date.today()
     live_list = []
     past_list = []
+    skipped = 0
 
-    print("🚀 Processing IPOs (fetching missing prices & calculating gains)...\n")
+    print(f"🚀 Processing {len(df)} rows...\n")
 
     for index, row in df.iterrows():
         name = str(row.get("Company Name", "")).strip()
-        if not name:
+        if not name or name.lower() == 'nan':
+            skipped += 1
             continue
 
         listed_date = parse_date(row.get("Listing Date"))
-        issue_price = float(row.get("Issue Price", 0)) if pd.notna(row.get("Issue Price")) else None
+        issue_price = parse_num(row.get("Issue Price"))
         
-        qib = parse_sub(row.get("QIB"))
-        nii = parse_sub(row.get("HNI")) # Excel uses HNI, dashboard uses NII
-        retail = parse_sub(row.get("Retail"))
-        total = parse_sub(row.get("Total"))
+        # Map Excel columns to Dashboard JSON keys
+        qib = parse_num(row.get("QIB"))
+        nii = parse_num(row.get("HNI"))      # Excel uses HNI, Dashboard uses NII
+        retail = parse_num(row.get("Retail"))
+        total = parse_num(row.get("Total"))
         
-        # Check if user provided a Type, else default to "Mainboard"
+        # Default to Mainboard if Type column is missing
         ipo_type = str(row.get("Type", "Mainboard")).strip() if "Type" in df.columns else "Mainboard"
+        if ipo_type.lower() == 'nan': ipo_type = "Mainboard"
 
-        # 1. Handle Price & Gain
+        # 1. Get Current Price (TRUSTS YOUR EXCEL'S LTP COLUMN)
         ltp = row.get("LTP")
-        current_price = None
+        current_price = parse_num(ltp)
+        
+        # Calculate Profit Percentage
         gain_pct = None
-
-        if pd.notna(ltp) and str(ltp).strip() not in ['-', 'NA', 'N/A', '']:
-            try:
-                current_price = round(float(str(ltp).replace('x', '').replace(',', '')), 2)
-            except ValueError:
-                current_price = None
-
-        # If LTP is missing, fetch it automatically!
-        if current_price is None and issue_price:
-            print(f"🔍 Fetching price for: {name}...")
-            current_price = get_current_price(name, issue_price)
-            time.sleep(0.5) # Be polite to APIs
-
-        # Auto-calculate Profit Percentage
         if current_price and issue_price and issue_price > 0:
             gain_pct = round(((current_price - issue_price) / issue_price) * 100, 2)
 
         # 2. Categorize as Live or Past
-        # If it has a current price and listing date is in the past, it's "Past"
         is_past = (current_price is not None) and (listed_date is not None and listed_date < today)
 
         if is_past:
             past_list.append({
                 "name": name,
                 "type": ipo_type,
-                "listed": listed_date.isoformat() if listed_date else today.isoformat(),
+                "listed": listed_date.isoformat(),
                 "qib": qib,
                 "nii": nii,
                 "retail": retail,
@@ -159,9 +124,7 @@ def main():
                 "current": current_price,
                 "pl": gain_pct
             })
-            print(f"✅ {name} | Listed: {current_price} | Gain: {gain_pct}%")
         else:
-            # It's Live or Upcoming
             live_list.append({
                 "name": name,
                 "type": ipo_type,
@@ -173,10 +136,6 @@ def main():
                 "retail": retail,
                 "total": total
             })
-            if current_price:
-                print(f"⏳ {name} | Upcoming/Listing | Est. Price: {current_price}")
-            else:
-                print(f"⏳ {name} | Upcoming/Listing | Price: Waiting")
 
     # 3. Save to data.json
     output = {
@@ -188,7 +147,16 @@ def main():
     with open(DATA_JSON, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
 
-    print(f"\n🎉 Success! data.json updated with {len(live_list)} Live and {len(past_list)} Past IPOs.")
+    print(f"\n🎉 Success! data.json updated.")
+    print(f"📊 Total Past IPOs: {len(past_list)}")
+    print(f"⏳ Total Live/Upcoming: {len(live_list)}")
+    if skipped > 0:
+        print(f"⚠️ Skipped {skipped} empty/invalid rows.")
+    
+    # Print a quick sample so you can verify the data in the terminal
+    if past_list:
+        print("\n🔍 Sample Data Verification (First Past IPO):")
+        print(json.dumps(past_list[0], indent=2))
 
 if __name__ == "__main__":
     main()
