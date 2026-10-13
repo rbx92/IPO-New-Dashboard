@@ -1,36 +1,35 @@
-name: Update IPO data
+name: Update IPO Data
 
 on:
   schedule:
-    - cron: "30 14 * * *"   # 20:00 India time, every day
-  workflow_dispatch:         # lets you run it by hand from the Actions tab
-
-permissions:
-  contents: write
+    - cron: '0 14 * * *' # Runs daily at 7:30 PM IST (14:00 UTC)
+  workflow_dispatch: # Allows you to run it manually
 
 jobs:
-  update:
+  update-data:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          python-version: "3.12"
-      - name: Install tools
-        run: pip install requests beautifulsoup4 playwright
-      - name: Install browser (backup only)
-        continue-on-error: true
-        run: playwright install --with-deps chromium
-      - name: Fetch and update data
-        run: python update_data.py
-      - name: Save changes
+          python-version: '3.10'
+
+      # 👇 ADD THIS NEW STEP 👇
+      - name: Install dependencies
         run: |
-          if [ -n "$(git status --porcelain data.json)" ]; then
-            git config user.name "ipo-bot"
-            git config user.email "ipo-bot@users.noreply.github.com"
-            git add data.json
-            git commit -m "Update IPO data"
-            git push
-          else
-            echo "No changes"
-          fi
+          python -m pip install --upgrade pip
+          pip install pandas openpyxl requests yfinance
+
+      - name: Run update script
+        run: python update_data.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "IPO-Bot"
+          git config --global user.email "bot@github.com"
+          git add data.json
+          git commit -m "Auto-update: Refreshed IPO data and prices" || echo "No changes to commit"
+          git push
