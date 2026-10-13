@@ -9,307 +9,83 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #F8FAFC;
-            --card-bg: #FFFFFF;
-            --text-primary: #0F172A;
-            --text-secondary: #64748B;
-            --accent-primary: #4F46E5;
-            --border-color: #E2E8F0;
-            --success-bg: #DCFCE7;
-            --success-text: #166534;
-            --danger-bg: #FEE2E2;
-            --danger-text: #991B1B;
-            --neutral-bg: #F1F5F9;
-            --neutral-text: #475569;
+            --bg-color: #F8FAFC; --card-bg: #FFFFFF; --text-primary: #0F172A; --text-secondary: #64748B;
+            --accent-primary: #4F46E5; --border-color: #E2E8F0; --success-bg: #DCFCE7; --success-text: #166534;
+            --danger-bg: #FEE2E2; --danger-text: #991B1B; --neutral-bg: #F1F5F9; --neutral-text: #475569;
             --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
             --shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05);
         }
-
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
-            padding: 2rem 1.5rem;
-        }
-
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background-color: var(--bg-color); color: var(--text-primary); line-height: 1.5; -webkit-font-smoothing: antialiased; padding: 2rem 1.5rem; }
         .container { max-width: 1200px; margin: 0 auto; }
-
-        /* Header */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
+        .header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
         .header h1 { font-size: 1.875rem; font-weight: 700; color: var(--text-primary); letter-spacing: -0.025em; }
         .header .upd { font-size: 0.875rem; color: var(--text-secondary); font-weight: 500; }
-
-        /* Filter Panel */
-        .filter-panel {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 20px 24px;
-            margin-bottom: 32px;
-            box-shadow: var(--shadow);
-            display: flex;
-            flex-wrap: wrap;
-            gap: 24px;
-            align-items: flex-end;
-        }
+        .filter-panel { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 20px 24px; margin-bottom: 32px; box-shadow: var(--shadow); display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-end; }
         .filter-section { display: flex; flex-direction: column; gap: 8px; }
-        .filter-label {
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--text-secondary);
-        }
-        
-        .segmented-control {
-            display: inline-flex;
-            background: var(--neutral-bg);
-            border-radius: 999px;
-            padding: 4px;
-            gap: 2px;
-        }
-        .seg-btn {
-            padding: 6px 16px;
-            border-radius: 999px;
-            border: none;
-            background: transparent;
-            color: var(--text-secondary);
-            font-size: 0.875rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-family: inherit;
-        }
+        .filter-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); }
+        .segmented-control { display: inline-flex; background: var(--neutral-bg); border-radius: 999px; padding: 4px; gap: 2px; }
+        .seg-btn { padding: 6px 16px; border-radius: 999px; border: none; background: transparent; color: var(--text-secondary); font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: all 0.2s ease; font-family: inherit; }
         .seg-btn:hover { color: var(--text-primary); }
-        .seg-btn.active {
-            background: #FFFFFF;
-            color: var(--text-primary);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-            font-weight: 600;
-        }
-
+        .seg-btn.active { background: #FFFFFF; color: var(--text-primary); box-shadow: 0 1px 3px rgba(0,0,0,0.08); font-weight: 600; }
         .slider-wrapper { display: flex; align-items: center; gap: 16px; }
-        .custom-slider {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 100%;
-            max-width: 200px;
-            height: 6px;
-            background: #E2E8F0;
-            border-radius: 999px;
-            outline: none;
-        }
-        .custom-slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            background: #FFFFFF;
-            border: 2px solid var(--accent-primary);
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.1s;
-        }
+        .custom-slider { -webkit-appearance: none; appearance: none; width: 100%; max-width: 200px; height: 6px; background: #E2E8F0; border-radius: 999px; outline: none; }
+        .custom-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 20px; height: 20px; background: #FFFFFF; border: 2px solid var(--accent-primary); border-radius: 50%; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.1s; }
         .custom-slider::-webkit-slider-thumb:hover { transform: scale(1.1); }
-        .slider-value {
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--accent-primary);
-            min-width: 40px;
-        }
-
+        .slider-value { font-size: 0.875rem; font-weight: 600; color: var(--accent-primary); min-width: 40px; }
         .filter-actions { margin-left: auto; }
-        .reset-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 16px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            background: #F8FAFC;
-            color: var(--text-secondary);
-            font-size: 0.875rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-family: inherit;
-        }
-        .reset-btn:hover {
-            background: var(--neutral-bg);
-            color: var(--text-primary);
-            border-color: #CBD5E1;
-        }
-
-        /* Sections */
+        .reset-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 8px; border: 1px solid var(--border-color); background: #F8FAFC; color: var(--text-secondary); font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: all 0.2s ease; font-family: inherit; }
+        .reset-btn:hover { background: var(--neutral-bg); color: var(--text-primary); border-color: #CBD5E1; }
         .section { margin-bottom: 3rem; }
         .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
         .section-header h2 { font-size: 1.25rem; font-weight: 600; }
-        
-        .badge {
-            background: var(--neutral-bg);
-            color: var(--neutral-text);
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 0.25rem 0.75rem;
-            border-radius: 999px;
-        }
-        .badge-live {
-            background: var(--success-bg);
-            color: var(--success-text);
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 0.25rem 0.75rem;
-            border-radius: 999px;
-        }
-
-        /* Grid */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 1.5rem;
-        }
-
-        /* Cards */
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 1rem;
-            padding: 1.5rem;
-            box-shadow: var(--shadow);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            display: flex;
-            flex-direction: column;
-        }
+        .badge { background: var(--neutral-bg); color: var(--neutral-text); font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 999px; }
+        .badge-live { background: var(--success-bg); color: var(--success-text); font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 999px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+        .card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 1rem; padding: 1.5rem; box-shadow: var(--shadow); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column; }
         .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
-
-        .card.live {
-            background: linear-gradient(145deg, #064E3B 0%, #065F46 100%);
-            border-color: #047857;
-            color: #FFFFFF;
-        }
-
+        .card.live { background: linear-gradient(145deg, #064E3B 0%, #065F46 100%); border-color: #047857; color: #FFFFFF; }
         .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
-        .type-badge {
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            padding: 0.25rem 0.6rem;
-            border-radius: 6px;
-        }
+        .type-badge { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.25rem 0.6rem; border-radius: 6px; }
         .type-main { background: #E0E7FF; color: #3730A3; }
         .type-sme { background: #FEF3C7; color: #92400E; }
-        
-        .card.live .type-main, .card.live .type-sme {
-            background: rgba(255, 255, 255, 0.15);
-            color: #FFFFFF;
-            backdrop-filter: blur(4px);
-        }
-
-        .live-badge {
-            display: flex; align-items: center; gap: 0.4rem;
-            font-size: 0.75rem; font-weight: 600; color: #6EE7B7;
-        }
+        .card.live .type-main, .card.live .type-sme { background: rgba(255, 255, 255, 0.15); color: #FFFFFF; backdrop-filter: blur(4px); }
+        .live-badge { display: flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; font-weight: 600; color: #6EE7B7; }
         .pulse { width: 8px; height: 8px; background: #34D399; border-radius: 50%; position: relative; }
-        .pulse::after {
-            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: #34D399; border-radius: 50%; animation: pulse 1.5s infinite;
-        }
+        .pulse::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #34D399; border-radius: 50%; animation: pulse 1.5s infinite; }
         @keyframes pulse { 0% { transform: scale(1); opacity: 0.8; } 100% { transform: scale(2.5); opacity: 0; } }
-
         .company-name { font-size: 1.25rem; font-weight: 600; line-height: 1.3; margin-bottom: 1.25rem; color: inherit; }
-
         .hero-metric { margin-bottom: 1.5rem; }
         .hero-val { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.025em; line-height: 1; }
         .hero-label { font-size: 0.8rem; font-weight: 500; color: var(--text-secondary); margin-top: 0.25rem; }
         .card.live .hero-label { color: #A7F3D0; }
-
         .progress-container { margin-bottom: 1.5rem; }
         .progress-header { display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.4rem; font-weight: 600; }
         .card.live .progress-header { color: #D1FAE5; }
-        
         .progress-bg { height: 10px; background: var(--neutral-bg); border-radius: 5px; overflow: hidden; }
         .card.live .progress-bg { background: rgba(255, 255, 255, 0.15); }
-        
         .progress-fill { height: 100%; border-radius: 5px; transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-        
         .legend { display: flex; gap: 1rem; margin-top: 0.5rem; font-size: 0.7rem; color: var(--text-secondary); flex-wrap: wrap;}
         .card.live .legend { color: #A7F3D0; }
         .legend-item { display: flex; align-items: center; gap: 0.3rem; }
         .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
-
-        .card-footer {
-            margin-top: auto;
-            padding-top: 1rem;
-            border-top: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.875rem;
-        }
+        .card-footer { margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; font-size: 0.875rem; }
         .card.live .card-footer { border-top-color: rgba(255, 255, 255, 0.15); }
-        
         .price-info { color: var(--text-secondary); }
         .price-info b { color: var(--text-primary); font-weight: 600; }
         .card.live .price-info { color: #D1FAE5; }
         .card.live .price-info b { color: #FFFFFF; font-weight: 600; }
-
-        .gain-badge {
-            padding: 0.35rem 0.75rem;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
+        .gain-badge { padding: 0.35rem 0.75rem; border-radius: 8px; font-size: 0.8rem; font-weight: 600; display: flex; align-items: center; gap: 0.25rem; }
         .gain-up { background: var(--success-bg); color: var(--success-text); }
         .gain-dn { background: var(--danger-bg); color: var(--danger-text); }
         .gain-na { background: var(--neutral-bg); color: var(--neutral-text); }
-
-        /* Show More Button */
         .more { text-align: center; margin-top: 2rem; }
-        .show-more-btn {
-            padding: 10px 24px;
-            border-radius: 999px;
-            border: 1px solid var(--border-color);
-            background: var(--card-bg);
-            color: var(--text-primary);
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            box-shadow: var(--shadow);
-            transition: all 0.2s ease;
-            font-family: inherit;
-        }
-        .show-more-btn:hover {
-            background: var(--accent-primary);
-            color: white;
-            border-color: var(--accent-primary);
-            transform: translateY(-1px);
-        }
-
+        .show-more-btn { padding: 10px 24px; border-radius: 999px; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-primary); font-size: 0.9rem; font-weight: 600; cursor: pointer; box-shadow: var(--shadow); transition: all 0.2s ease; font-family: inherit; }
+        .show-more-btn:hover { background: var(--accent-primary); color: white; border-color: var(--accent-primary); transform: translateY(-1px); }
         .msg { padding: 1.5rem; color: var(--text-secondary); font-size: 1rem; text-align: center; grid-column: 1 / -1; }
-
-        /* Responsive */
+        .error-box { background: #FEE2E2; color: #991B1B; padding: 20px; border-radius: 12px; font-family: monospace; white-space: pre-wrap; margin: 20px 0; border: 1px solid #FECACA; }
         @media (max-width: 768px) {
-            .filter-panel {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 20px;
-            }
+            .filter-panel { flex-direction: column; align-items: stretch; gap: 20px; }
             .filter-actions { margin-left: 0; }
             .segmented-control { width: 100%; justify-content: space-between; }
             .seg-btn { flex: 1; text-align: center; padding: 6px 8px; }
@@ -324,9 +100,7 @@
         <h1>IPO Dashboard</h1>
         <div class="upd" id="upd"></div>
     </div>
-
     <div class="filter-panel" id="panel"></div>
-
     <div class="section" id="secLive">
         <div class="section-header">
             <h2>Live Now</h2>
@@ -334,7 +108,6 @@
         </div>
         <div class="grid" id="liveGrid"></div>
     </div>
-
     <div class="section" id="secPast">
         <div class="section-header">
             <h2>Past IPOs</h2>
@@ -351,8 +124,7 @@
     var PAGE = 24;
     var DEFAULTS = { qmin: 0, tmin: 0, gmin: 0, sort: "qib", limit: PAGE };
     var S = {};
-    var q;
-    for (q in DEFAULTS) { S[q] = DEFAULTS[q]; }
+    for (var q in DEFAULTS) { S[q] = DEFAULTS[q]; }
 
     var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     var data = null;
@@ -380,8 +152,17 @@
         return "₹" + v.toFixed(2).replace(/\.?0+$/, "");
     }
 
-    function dayMonth(iso) { var p = iso.split("-"); return p[2] + " " + MONTHS[parseInt(p[1], 10) - 1]; }
-    function longDate(iso) { var p = iso.split("-"); return parseInt(p[2], 10) + " " + MONTHS[parseInt(p[1], 10) - 1] + " " + p[0]; }
+    // SAFETY NET: Prevents crash if date is missing
+    function dayMonth(iso) { 
+        if (!iso) return "–";
+        var p = iso.split("-"); 
+        return p[2] + " " + MONTHS[parseInt(p[1], 10) - 1]; 
+    }
+    function longDate(iso) { 
+        if (!iso) return "–";
+        var p = iso.split("-"); 
+        return parseInt(p[2], 10) + " " + MONTHS[parseInt(p[1], 10) - 1] + " " + p[0]; 
+    }
 
     function subscriptionBreakdown(d, isLive) {
         var qib = isNum(d.qib) ? d.qib : 0;
@@ -397,7 +178,7 @@
         var niiColor = isLive ? '#2DD4BF' : '#0EA5E9';
         var retailColor = isLive ? '#FBBF24' : '#10B981';
 
-        var h = '<div class="progress-container">' +
+        return '<div class="progress-container">' +
                 '<div class="progress-header"><span>Subscription Breakdown</span><span>Total: ' + (isNum(d.total) ? fmtX(d.total) : '–') + '</span></div>' +
                 '<div class="progress-bg"><div class="progress-fill" style="width:' + barWidth + '%; background: linear-gradient(90deg, ' + qibColor + ' 0%, ' + niiColor + ' 50%, ' + retailColor + ' 100%);"></div></div>' +
                 '<div class="legend">' +
@@ -405,26 +186,16 @@
                 '<div class="legend-item"><div class="legend-dot" style="background:' + niiColor + '"></div> NII ' + (isNum(d.nii) ? fmtX(d.nii) : '–') + '</div>' +
                 '<div class="legend-item"><div class="legend-dot" style="background:' + retailColor + '"></div> Retail ' + (isNum(d.retail) ? fmtX(d.retail) : '–') + '</div>' +
                 '</div></div>';
-        return h;
     }
 
     function liveCard(d) {
         var typeClass = d.type === "SME" ? "type-sme" : "type-main";
         return '<div class="card live">' +
-               '<div class="card-top">' +
-               '<span class="type-badge ' + typeClass + '">' + esc(d.type) + '</span>' +
-               '<div class="live-badge"><span class="pulse"></span> Live</div>' +
-               '</div>' +
+               '<div class="card-top"><span class="type-badge ' + typeClass + '">' + esc(d.type) + '</span><div class="live-badge"><span class="pulse"></span> Live</div></div>' +
                '<div class="company-name">' + esc(cleanName(d.name)) + '</div>' +
-               '<div class="hero-metric">' +
-               '<div class="hero-val">' + (isNum(d.qib) ? fmtX(d.qib) : '–') + '</div>' +
-               '<div class="hero-label">QIB Subscription</div>' +
-               '</div>' +
+               '<div class="hero-metric"><div class="hero-val">' + (isNum(d.qib) ? fmtX(d.qib) : '–') + '</div><div class="hero-label">QIB Subscription</div></div>' +
                subscriptionBreakdown(d, true) +
-               '<div class="card-footer">' +
-               '<span class="price-info">Closes: ' + dayMonth(d.close) + '</span>' +
-               '<span class="price-info">Band: <b>' + fmtPrice(d.band_high) + '</b></span>' +
-               '</div></div>';
+               '<div class="card-footer"><span class="price-info">Closes: ' + dayMonth(d.close) + '</span><span class="price-info">Band: <b>' + fmtPrice(d.band_high) + '</b></span></div></div>';
     }
 
     function pastCard(d) {
@@ -443,22 +214,13 @@
         }
 
         return '<div class="card">' +
-               '<div class="card-top">' +
-               '<span class="type-badge ' + typeClass + '">' + esc(d.type) + '</span>' +
-               '</div>' +
+               '<div class="card-top"><span class="type-badge ' + typeClass + '">' + esc(d.type) + '</span></div>' +
                '<div class="company-name">' + esc(cleanName(d.name)) + '</div>' +
-               '<div class="hero-metric">' +
-               '<div class="hero-val">' + (isNum(d.qib) ? fmtX(d.qib) : '–') + '</div>' +
-               '<div class="hero-label">QIB Subscription</div>' +
-               '</div>' +
+               '<div class="hero-metric"><div class="hero-val">' + (isNum(d.qib) ? fmtX(d.qib) : '–') + '</div><div class="hero-label">QIB Subscription</div></div>' +
                subscriptionBreakdown(d, false) +
-               '<div class="card-footer">' +
-               '<span class="price-info">' + fmtPrice(d.offer) + ' → <b>' + fmtPrice(d.current) + '</b></span>' +
-               chip +
-               '</div></div>';
+               '<div class="card-footer"><span class="price-info">' + fmtPrice(d.offer) + ' → <b>' + fmtPrice(d.current) + '</b></span>' + chip + '</div></div>';
     }
 
-    /* ---------- filter and sort ---------- */
     function passes(d, kind) {
         if (S.qmin > 0 && !(isNum(d.qib) && d.qib >= S.qmin)) return false;
         if (S.tmin > 0 && !(isNum(d.total) && d.total >= S.tmin)) return false;
@@ -486,7 +248,6 @@
         return arr;
     }
 
-    /* ---------- controls ---------- */
     function controls() {
         return [
             { k: "sort", label: "Sort By", o: [["qib", "QIB"], ["total", "Total"], ["gain", "Gain"]] },
@@ -500,68 +261,66 @@
         var c = controls(), h = "", i, j, on;
         for (i = 0; i < c.length; i++) {
             if (c[i].k === "gain") {
-                h += '<div class="filter-section"><label class="filter-label">Min Listing Gain</label>' +
-                     '<div class="slider-wrapper">' +
-                     '<input type="range" class="custom-slider" id="gain" min="0" max="550" step="5" value="' + S.gmin + '">' +
-                     '<span class="slider-value" id="gval">' + (S.gmin > 0 ? S.gmin + '%' : '0%') + '</span>' +
-                     '</div></div>';
+                h += '<div class="filter-section"><label class="filter-label">Min Listing Gain</label><div class="slider-wrapper"><input type="range" class="custom-slider" id="gain" min="0" max="550" step="5" value="' + S.gmin + '"><span class="slider-value" id="gval">' + (S.gmin > 0 ? S.gmin + '%' : '0%') + '</span></div></div>';
                 continue;
             }
-            h += '<div class="filter-section"><label class="filter-label">' + c[i].label + '</label>' +
-                 '<div class="segmented-control">';
+            h += '<div class="filter-section"><label class="filter-label">' + c[i].label + '</label><div class="segmented-control">';
             for (j = 0; j < c[i].o.length; j++) {
                 on = String(S[c[i].k]) === String(c[i].o[j][0]);
                 h += '<button type="button" class="seg-btn' + (on ? ' active' : '') + '" data-k="' + c[i].k + '" data-v="' + c[i].o[j][0] + '">' + c[i].o[j][1] + '</button>';
             }
             h += '</div></div>';
         }
-        h += '<div class="filter-section filter-actions"><button type="button" class="reset-btn" data-k="reset" data-v="1">' +
-             '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg> Reset</button></div>';
+        h += '<div class="filter-section filter-actions"><button type="button" class="reset-btn" data-k="reset" data-v="1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg> Reset</button></div>';
         document.getElementById("panel").innerHTML = h;
     }
 
-    /* ---------- page ---------- */
+    // SAFETY NET: Wraps entire render in try/catch to show errors on screen
     function render(skipPanel) {
-        if (!data) return;
-        var today = data.updated, i, k, p, l;
-        var live = [], cands = [], seen = {};
+        try {
+            if (!data) return;
+            var today = data.updated, i, k, p, l;
+            var live = [], cands = [], seen = {};
 
-        for (i = 0; i < data.past.length; i++) { 
-            p = data.past[i]; 
-            seen[cleanName(p.name).toLowerCase().replace(/[^a-z0-9]/g, "")] = true; 
-            cands.push(p); 
-        }
-        
-        for (k = 0; k < data.live.length; k++) {
-            l = data.live[k];
-            var lKey = cleanName(l.name).toLowerCase().replace(/[^a-z0-9]/g, "");
-            if (l.close >= today) {
-                if (isNum(l.qib) || isNum(l.nii) || isNum(l.retail) || isNum(l.total)) live.push(l);
-            } else if (!seen[lKey]) {
-                cands.push({ name: l.name, type: l.type, qib: l.qib, nii: l.nii, retail: l.retail, total: l.total, offer: l.band_high, current: null, pl: null, listed: l.close });
+            for (i = 0; i < data.past.length; i++) { 
+                p = data.past[i]; 
+                seen[cleanName(p.name).toLowerCase().replace(/[^a-z0-9]/g, "")] = true; 
+                cands.push(p); 
             }
+            
+            for (k = 0; k < data.live.length; k++) {
+                l = data.live[k];
+                var lKey = cleanName(l.name).toLowerCase().replace(/[^a-z0-9]/g, "");
+                if (l.close >= today) {
+                    if (isNum(l.qib) || isNum(l.nii) || isNum(l.retail) || isNum(l.total)) live.push(l);
+                } else if (!seen[lKey]) {
+                    cands.push({ name: l.name, type: l.type, qib: l.qib, nii: l.nii, retail: l.retail, total: l.total, offer: l.band_high, current: null, pl: null, listed: l.close });
+                }
+            }
+
+            var lv = pick(live, "live");
+            var ps = pick(cands, "past");
+            var shown = ps.slice(0, S.limit);
+
+            if (!skipPanel) drawPanel();
+
+            document.getElementById("upd").textContent = "Updated " + longDate(today);
+            document.getElementById("liveN").textContent = lv.length;
+            document.getElementById("pastN").textContent = ps.length;
+
+            var lh = "";
+            for (i = 0; i < lv.length; i++) lh += liveCard(lv[i]);
+            document.getElementById("liveGrid").innerHTML = lh || '<div class="msg">No live IPOs match these filters.</div>';
+
+            var ph = "";
+            for (i = 0; i < shown.length; i++) ph += pastCard(shown[i]);
+            document.getElementById("pastGrid").innerHTML = ph || '<div class="msg">No past IPOs match these filters.</div>';
+
+            document.getElementById("moreWrap").innerHTML = (ps.length > shown.length)
+                ? '<button type="button" class="show-more-btn" data-k="more" data-v="1">Show ' + PAGE + ' more</button>' : '';
+        } catch (e) {
+            document.body.innerHTML = "<h1 style='color:red; padding:20px;'>Dashboard Rendering Error</h1><div class='error-box'>" + e.message + "\n\n" + e.stack + "</div>";
         }
-
-        var lv = pick(live, "live");
-        var ps = pick(cands, "past");
-        var shown = ps.slice(0, S.limit);
-
-        if (!skipPanel) drawPanel();
-
-        document.getElementById("upd").textContent = "Updated " + longDate(today);
-        document.getElementById("liveN").textContent = lv.length;
-        document.getElementById("pastN").textContent = ps.length;
-
-        var lh = "";
-        for (i = 0; i < lv.length; i++) lh += liveCard(lv[i]);
-        document.getElementById("liveGrid").innerHTML = lh || '<div class="msg">No live IPOs match these filters.</div>';
-
-        var ph = "";
-        for (i = 0; i < shown.length; i++) ph += pastCard(shown[i]);
-        document.getElementById("pastGrid").innerHTML = ph || '<div class="msg">No past IPOs match these filters.</div>';
-
-        document.getElementById("moreWrap").innerHTML = (ps.length > shown.length)
-            ? '<button type="button" class="show-more-btn" data-k="more" data-v="1">Show ' + PAGE + ' more</button>' : '';
     }
 
     document.addEventListener("click", function (e) {
@@ -594,15 +353,17 @@
         x.onreadystatechange = function () {
             if (x.readyState !== 4) return;
             if (x.status >= 200 && x.status < 300) {
-                try { data = JSON.parse(x.responseText); render(); }
-                catch (e) { fail(); }
-            } else if (!data) { fail(); }
+                try { 
+                    data = JSON.parse(x.responseText); 
+                    render(); 
+                } catch (e) { 
+                    document.body.innerHTML = "<h1 style='color:red; padding:20px;'>Data Error</h1><div class='error-box'>Failed to parse data.json: " + e.message + "</div>";
+                }
+            } else if (!data) { 
+                document.body.innerHTML = "<h1 style='color:red; padding:20px;'>Network Error</h1><div class='error-box'>Could not load data.json. Status: " + x.status + "<br>Make sure data.json is in the same folder as index.html.</div>";
+            }
         };
         x.send();
-    }
-
-    function fail() {
-        document.getElementById("liveGrid").innerHTML = '<div class="msg">Couldn’t load the data. Check your connection and reload.</div>';
     }
 
     load();
