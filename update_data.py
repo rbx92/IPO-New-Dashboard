@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 
 DATA_PATH = "data.json"
 GROWW_URL = "https://groww.in/ipo/subscription"
-KEEP_CLOSED_DAYS = 10      # closed IPOs stay in "live" this long (waiting to list)
+KEEP_CLOSED_DAYS = 14      # closed IPOs stay in "live" this long (waiting to list)
 MIN_ROWS = 3               # fewer rows than this = something is wrong, do not overwrite
 IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
 HEADERS = {
@@ -34,7 +34,21 @@ PRICE_API = ("https://groww.in/v1/api/stocks_data/v1/accord_points/exchange/%s/s
              "latest_prices_ohlc/%s")
 IPO_PAGE = "https://groww.in/ipo/%s-ipo"
 STOCK_PAGE = "https://groww.in/stocks/%s"
-PAUSE = 0.7                # seconds between price requests, to be polite to Groww
+PAUSE = 0.7
+
+# IPOs that closed before the price step existed and dropped out of the live list without a price.
+# They are put back into the live list on each run until a price is found, then they move to "past".
+# Once all of them are priced this list does nothing and can stay as it is.
+RESCUE = [
+    {"name": "SRIT India", "type": "Mainboard", "close": "2026-09-30", "band_low": 123.0,
+     "band_high": 130.0, "qib": 91.84, "nii": 310.94, "retail": 56.75, "total": 121.24},
+    {"name": "Black Opal Consultants", "type": "SME", "close": "2026-10-01", "band_low": 185.0,
+     "band_high": 197.0, "qib": 4.38, "nii": 43.0, "retail": 27.2, "total": 25.4},
+    {"name": "Papadmalji Agro", "type": "SME", "close": "2026-10-01", "band_low": 69.0,
+     "band_high": 72.0, "qib": 86.85, "nii": 1.14, "retail": 1.21, "total": 2.16},
+    {"name": "Vans Electroengineerings", "type": "SME", "close": "2026-10-01", "band_low": 112.0,
+     "band_high": 118.0, "qib": 73.3, "nii": 450.33, "retail": 461.25, "total": 347.25},
+]                # seconds between price requests, to be polite to Groww
 
 
 def fail(msg):
@@ -369,6 +383,15 @@ def price_for(name, nse, bse):
     return None, "no traded price found"
 
 
+def add_rescued(data):
+    have = {name_key(x["name"]) for x in data.get("live", [])}
+    have |= {name_key(p["name"]) for p in data.get("past", [])}
+    for r in RESCUE:
+        if name_key(r["name"]) not in have:
+            data["live"].append(dict(r))
+            print("  put back for pricing:", r["name"])
+
+
 def update_prices(data, today):
     past = data.setdefault("past", [])
     have = {name_key(p["name"]) for p in past}
@@ -449,6 +472,7 @@ def main():
 
     print("--- price step ---")
     try:
+        add_rescued(data)
         update_prices(data, today)
     except Exception as e:
         print("price step failed, live list still saved:", str(e)[:300])
