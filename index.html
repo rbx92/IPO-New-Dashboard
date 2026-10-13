@@ -28,10 +28,9 @@
 
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; }
 
-        /* --- BASE CARD --- */
         .card { border-radius: 16px; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
         
-        /* --- LIVE CARD (Dark Green) --- */
+        /* LIVE CARD */
         .card.live { background: #14472B; color: #FFFFFF; border: 1px solid #0F3D22; }
         .card.live .type-badge { background: rgba(255,255,255,0.15); color: #FFFFFF; }
         .card.live .hero-label { color: #A7F3D0; }
@@ -40,7 +39,7 @@
         .card.live .footer-text { color: #A7F3D0; }
         .card.live .footer-val { color: #FFFFFF; font-weight: 600; }
 
-        /* --- PAST CARD (White) --- */
+        /* PAST CARD */
         .card.past { background: var(--card-bg); border: 1px solid var(--border); }
         .card.past .type-badge.main { background: var(--main-bg); color: var(--main-text); }
         .card.past .type-badge.sme { background: var(--sme-bg); color: var(--sme-text); }
@@ -50,7 +49,6 @@
         .card.past .footer-text { color: var(--text-secondary); }
         .card.past .footer-val { color: var(--text-primary); font-weight: 600; }
 
-        /* --- CARD ELEMENTS --- */
         .card-header { display: flex; justify-content: space-between; align-items: flex-start; }
         .type-badge { padding: 4px 10px; border-radius: 6px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
         
@@ -68,7 +66,6 @@
         .progress-bg { height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 0.5rem; }
         .progress-fill { height: 100%; border-radius: 4px; transition: width 0.5s ease; }
         
-        /* Gradients matching screenshot */
         .card.live .progress-fill { background: linear-gradient(90deg, #34D399 0%, #FBBF24 100%); }
         .card.past .progress-fill { background: linear-gradient(90deg, #4F46E5 0%, #10B981 100%); }
 
@@ -76,7 +73,6 @@
         .legend-item { display: flex; align-items: center; gap: 0.3rem; }
         .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
         
-        /* Legend Colors */
         .card.live .dot-qib { background: #34D399; } .card.live .dot-nii { background: #2DD4BF; } .card.live .dot-retail { background: #FBBF24; }
         .card.past .dot-qib { background: #4F46E5; } .card.past .dot-nii { background: #3B82F6; } .card.past .dot-retail { background: #10B981; }
 
@@ -88,7 +84,6 @@
         .gain-badge.down { background: var(--loss-bg); color: var(--loss-text); }
 
         .msg { padding: 2rem; text-align: center; color: var(--text-secondary); grid-column: 1 / -1; }
-        .error-box { background: #FEE2E2; color: #991B1B; padding: 20px; border-radius: 12px; font-family: monospace; margin: 20px 0; }
 
         @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
     </style>
@@ -136,20 +131,19 @@
     }
 
     function getProgressWidth(qib, nii, retail) {
-        // Calculates a visual width based on the highest subscription to prevent overflow
         const max = Math.max(qib || 0, nii || 0, retail || 0, 1);
         const total = (qib || 0) + (nii || 0) + (retail || 0);
         return Math.min(100, (total / (max * 1.5)) * 100);
     }
 
     function liveCard(d) {
-        const typeClass = (d.type || "Mainboard").toLowerCase() === "sme" ? "sme" : "main";
+        const typeClass = (d.type || "SME").toLowerCase() === "sme" ? "sme" : "main";
         const qib = d.qib || 0, nii = d.nii || 0, retail = d.retail || 0;
         const width = getProgressWidth(qib, nii, retail);
 
         return `<div class="card live">
             <div class="card-header">
-                <span class="type-badge ${typeClass}">${esc(d.type || 'Mainboard')}</span>
+                <span class="type-badge ${typeClass}">${esc(d.type || 'SME')}</span>
                 <div class="live-badge">Live</div>
             </div>
             <div class="company-name">${esc(d.name)}</div>
@@ -165,7 +159,7 @@
                 <div class="progress-bg"><div class="progress-fill" style="width: ${width}%"></div></div>
                 <div class="legend">
                     <div class="legend-item"><div class="legend-dot dot-qib"></div> QIB ${fmtX(d.qib)}</div>
-                    <div class="legend-item"><div class="legend-dot dot-nii"></div> NII ${fmtX(d.nii)}</div>
+                    <div class="legend-item"><div class="legend-dot dot-nii"></div> HNI ${fmtX(d.nii)}</div>
                     <div class="legend-item"><div class="legend-dot dot-retail"></div> Retail ${fmtX(d.retail)}</div>
                 </div>
             </div>
@@ -177,17 +171,17 @@
     }
 
     function pastCard(d) {
-        const typeClass = (d.type || "Mainboard").toLowerCase() === "sme" ? "sme" : "main";
+        const typeClass = (d.type || "SME").toLowerCase() === "sme" ? "sme" : "main";
         const qib = d.qib || 0, nii = d.nii || 0, retail = d.retail || 0;
         const width = getProgressWidth(qib, nii, retail);
         
         const gainClass = isNum(d.pl) ? (d.pl >= 0 ? "up" : "down") : "";
         const gainArrow = isNum(d.pl) ? (d.pl >= 0 ? "▲" : "▼") : "";
-        const gainText = isNum(d.pl) ? Math.abs(d.pl).toFixed(0) + "%" : "";
+        const gainText = isNum(d.pl) ? Math.abs(d.pl).toFixed(1) + "%" : "";
 
         return `<div class="card past">
             <div class="card-header">
-                <span class="type-badge ${typeClass}">${esc(d.type || 'Mainboard')}</span>
+                <span class="type-badge ${typeClass}">${esc(d.type || 'SME')}</span>
             </div>
             <div class="company-name">${esc(d.name)}</div>
             <div class="hero-metric">
@@ -202,7 +196,7 @@
                 <div class="progress-bg"><div class="progress-fill" style="width: ${width}%"></div></div>
                 <div class="legend">
                     <div class="legend-item"><div class="legend-dot dot-qib"></div> QIB ${fmtX(d.qib)}</div>
-                    <div class="legend-item"><div class="legend-dot dot-nii"></div> NII ${fmtX(d.nii)}</div>
+                    <div class="legend-item"><div class="legend-dot dot-nii"></div> HNI ${fmtX(d.nii)}</div>
                     <div class="legend-item"><div class="legend-dot dot-retail"></div> Retail ${fmtX(d.retail)}</div>
                 </div>
             </div>
