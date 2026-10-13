@@ -1,7 +1,11 @@
 """Daily update of data.json for the IPO dashboard.
 
 Step 4a: refreshes the "live" list from Groww's IPO subscription page.
-If anything looks wrong it prints what it saw and stops WITHOUT touching data.json.
+Step 4b: for IPOs that have closed, looks for a live market price on Groww. When one is found, the IPO
+         moves into "past" with its issue price, current price and gain. Auto-added IPOs keep their
+         price refreshed on later runs.
+If anything looks wrong with the live list it prints what it saw and stops WITHOUT touching data.json.
+A problem in the price step never stops the live list from being saved.
 """
 import datetime
 import json
@@ -25,6 +29,12 @@ HEADERS = {
 MONTHS = {m: i + 1 for i, m in enumerate(
     ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"])}
 TYPE_RE = re.compile(r"\b(Mainboard|SME)\b", re.I)
+
+PRICE_API = ("https://groww.in/v1/api/stocks_data/v1/accord_points/exchange/%s/segment/CASH/"
+             "latest_prices_ohlc/%s")
+IPO_PAGE = "https://groww.in/ipo/%s-ipo"
+STOCK_PAGE = "https://groww.in/stocks/%s"
+PAUSE = 0.7                # seconds between price requests, to be polite to Groww
 
 
 def fail(msg):
@@ -252,6 +262,163 @@ def merge_live(old_live, new_rows, today):
     return sorted(merged.values(), key=lambda r: (r["close"], r["name"]))
 
 
+# ---------------------------------------------------------------------------
+# Step 4b: prices for newly listed IPOs (Groww only)
+# ---------------------------------------------------------------------------
+
+def name_key(s):
+    """Same idea as the dashboard: ignore 'Ltd', case and punctuation when matching names."""
+    s = re.sub(r"\s+(Ltd\.?|Limited)\s*$", "", str(s), flags=re.I)
+    return re.sub(r"[^a-z0-9]", "", s.lower())
+
+
+def slug_of(name):
+    s = re.sub(r"\s+(Ltd\.?|Limited)\s*$", "", name, flags=re.I)
+    s = re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+    return s
+
+
+def quiet_get(url):
+    """Like fetch(), but returns None instead of stopping the script."""
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=25)
+        return r if r.status_code == 200 else None
+    except requests.RequestException:
+        return None
+
+
+def next_data(html):
+    m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
+    if not m:
+        return None
+    try:
+        return json.loads(m.group(1))
+    except ValueError:
+        return None
+
+
+def valid_quote(q):
+    """A real traded price: positive last price and a last-trade time. Placeholders before the
+    first day of trading have no trade time, so they are rejected."""
+    if not isinstance(q, dict):
+        return None
+    ltp, t = q.get("ltp"), q.get("lastTradeTime")
+    if isinstance(ltp, (int, float)) and ltp > 0 and isinstance(t, (int, float)) and t > 0:
+        return round(float(ltp), 2)
+    return None
+
+
+def ipo_info(name, today):
+    """Reads the IPO's own Groww page for its exchange symbol, BSE code and listing date."""
+    out = {"nse": None, "bse": None, "listed": None}
+    r = quiet_get(IPO_PAGE % slug_of(name))
+    if not r:
+        return out
+    html = r.text
+    vals = re.findall(r'"(?:nseScripCode|symbol|bseScripCode)"\s*:\s*"([^"]+)"', html)
+    for v in vals:
+        if v.isdigit() and 5 <= len(v) <= 7 and not out["bse"]:
+            out["bse"] = v
+        elif re.match(r"^[A-Z][A-Z0-9&-]{1,19}$", v) and not out["nse"]:
+            out["nse"] = v
+    for key in ("listingDate", "listing_date", "listDate"):
+        m = re.search(r'"%s"\s*:\s*"([^"]+)"' % key, html)
+        if m:
+            v = m.group(1)
+            try:
+                out["listed"] = datetime.date.fromisoformat(v[:10])
+            except ValueError:
+                out["listed"] = parse_date(v, today)
+            if out["listed"]:
+                break
+    return out
+
+
+def price_for(name, nse, bse):
+    """Returns (price, how) or (None, reason). Order: price service by NSE symbol, by BSE code,
+    then the company's Groww stock page."""
+    tries = []
+    if nse:
+        tries.append(("NSE", nse))
+    if bse:
+        tries.append(("BSE", bse))
+    for exch, code in tries:
+        r = quiet_get(PRICE_API % (exch, code))
+        time.sleep(PAUSE)
+        if r:
+            try:
+                p = valid_quote(r.json())
+            except ValueError:
+                p = None
+            if p:
+                return p, "price service %s %s" % (exch, code)
+    s = slug_of(name)
+    for slug in (s + "-ltd", s):
+        r = quiet_get(STOCK_PAGE % slug)
+        time.sleep(PAUSE)
+        if not r:
+            continue
+        nd = next_data(r.text)
+        lp = (((nd or {}).get("props") or {}).get("pageProps") or {}).get("livePriceData")
+        if isinstance(lp, dict):
+            for code in [nse, bse] + list(lp.keys()):
+                if code and code in lp:
+                    p = valid_quote(lp[code])
+                    if p:
+                        return p, "stock page %s" % slug
+    return None, "no traded price found"
+
+
+def update_prices(data, today):
+    past = data.setdefault("past", [])
+    have = {name_key(p["name"]) for p in past}
+    added = 0
+    for l in data.get("live", []):
+        if datetime.date.fromisoformat(l["close"]) >= today:
+            continue                       # still open
+        if name_key(l["name"]) in have:
+            continue
+        if l.get("qib") is None and l.get("total") is None:
+            print("  skip (no subscription figures):", l["name"])
+            continue
+        offer = l.get("band_high")
+        if not offer:
+            print("  skip (no band price):", l["name"])
+            continue
+        info = ipo_info(l["name"], today)
+        time.sleep(PAUSE)
+        price, how = price_for(l["name"], info["nse"], info["bse"])
+        if price is None:
+            print("  no price yet:", l["name"], "| symbol", info["nse"], "| bse", info["bse"])
+            continue
+        listed = info["listed"] or today
+        past.append({
+            "name": l["name"], "type": l.get("type"),
+            "qib": l.get("qib"), "nii": l.get("nii"), "retail": l.get("retail"),
+            "total": l.get("total"),
+            "offer": offer, "current": price,
+            "pl": round((price - offer) / offer * 100, 2),
+            "listed": listed.isoformat(),
+            "symbol": info["nse"], "bse": info["bse"],
+        })
+        have.add(name_key(l["name"]))
+        added += 1
+        print("  PRICED:", l["name"], "| issue", offer, "| now", price, "| listed",
+              listed.isoformat(), "| via", how)
+    refreshed = 0
+    for p in past:
+        if not (p.get("symbol") or p.get("bse")) or not p.get("offer"):
+            continue                       # only IPOs added by this script are refreshed
+        price, how = price_for(p["name"], p.get("symbol"), p.get("bse"))
+        if price is None:
+            print("  refresh failed, kept old price:", p["name"])
+            continue
+        p["current"] = price
+        p["pl"] = round((price - p["offer"]) / p["offer"] * 100, 2)
+        refreshed += 1
+    print("price step done: %d added to past, %d refreshed" % (added, refreshed))
+
+
 def main():
     today = datetime.datetime.now(IST).date()
     with open(DATA_PATH, encoding="utf-8") as f:
@@ -279,9 +446,17 @@ def main():
 
     data["live"] = merge_live(data.get("live", []), rows, today)
     data["updated"] = today.isoformat()
+
+    print("--- price step ---")
+    try:
+        update_prices(data, today)
+    except Exception as e:
+        print("price step failed, live list still saved:", str(e)[:300])
+
     with open(DATA_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=1, ensure_ascii=False)
-    print("data.json updated:", len(data["live"]), "live entries, date", data["updated"])
+    print("data.json updated:", len(data["live"]), "live entries,", len(data.get("past", [])),
+          "past entries, date", data["updated"])
 
 
 if __name__ == "__main__":
