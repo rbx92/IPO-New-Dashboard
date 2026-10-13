@@ -10,9 +10,9 @@
       "nii": 1.9,
       "retail": 1.7,
       "total": 1.8,
-      "offer": 67.0,
-      "current": 79.2,
-      "pl": 18.21
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "EverestIMS Technologies",
@@ -22,9 +22,9 @@
       "nii": 406.3,
       "retail": 268.3,
       "total": 273.7,
-      "offer": 85.0,
-      "current": 106.7,
-      "pl": 25.53
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Shree TNB Polymers",
@@ -34,9 +34,9 @@
       "nii": 2.5,
       "retail": 1.7,
       "total": 1.9,
-      "offer": 53.0,
-      "current": 54.1,
-      "pl": 2.08
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sollfege Smart Electronics",
@@ -46,9 +46,9 @@
       "nii": 0.4,
       "retail": 3.7,
       "total": 2.1,
-      "offer": 55.0,
-      "current": 85.0,
-      "pl": 54.55
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "VANS Electroengineerings",
@@ -58,9 +58,9 @@
       "nii": 757.3,
       "retail": 686.3,
       "total": 584.4,
-      "offer": 118.0,
-      "current": 286.1,
-      "pl": 142.46
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Acme Universal Safezone 9",
@@ -70,9 +70,9 @@
       "nii": 23.9,
       "retail": 15.2,
       "total": 15.6,
-      "offer": 71.0,
-      "current": 110.0,
-      "pl": 54.93
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "SRIT",
@@ -82,9 +82,9 @@
       "nii": 313.0,
       "retail": 63.7,
       "total": 125.2,
-      "offer": 130.0,
-      "current": 120.0,
-      "pl": -7.69
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sai Urja Indo Ventures",
@@ -94,9 +94,9 @@
       "nii": 6.2,
       "retail": 4.0,
       "total": 4.4,
-      "offer": 113.0,
-      "current": 181.8,
-      "pl": 60.88
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Orient Cables",
@@ -106,9 +106,9 @@
       "nii": 115.6,
       "retail": 30.6,
       "total": 92.3,
-      "offer": 272.0,
-      "current": 414.1,
-      "pl": 52.24
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Roopa Screen",
@@ -118,9 +118,9 @@
       "nii": 281.6,
       "retail": 529.8,
       "total": 350.1,
-      "offer": 64.0,
-      "current": 105.5,
-      "pl": 64.84
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Moneyview",
@@ -130,9 +130,9 @@
       "nii": 115.4,
       "retail": 19.6,
       "total": 98.5,
-      "offer": 34.0,
-      "current": 61.7,
-      "pl": 81.47
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "AOne Steels",
@@ -142,9 +142,9 @@
       "nii": 24.5,
       "retail": 8.6,
       "total": 11.6,
-      "offer": 405.0,
-      "current": 397.6,
-      "pl": -1.83
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Adroit Industries",
@@ -154,9 +154,9 @@
       "nii": 332.4,
       "retail": 99.8,
       "total": 176.8,
-      "offer": 134.0,
-      "current": 183.8,
-      "pl": 37.16
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Himalaya Nutravedics",
@@ -166,9 +166,9 @@
       "nii": 2.9,
       "retail": 2.6,
       "total": 2.2,
-      "offer": 106.0,
-      "current": 120.0,
-      "pl": 13.21
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Robokidz Eduventures",
@@ -178,9 +178,9 @@
       "nii": 1148.0,
       "retail": 807.1,
       "total": 769.5,
-      "offer": 106.0,
-      "current": 205.7,
-      "pl": 94.06
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "SpectraA Technology Solutions",
@@ -190,9 +190,9 @@
       "nii": 588.3,
       "retail": 415.5,
       "total": 282.6,
-      "offer": 118.0,
-      "current": 257.0,
-      "pl": 117.8
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "SS Retail",
@@ -202,9 +202,9 @@
       "nii": 143.3,
       "retail": 36.4,
       "total": 103.3,
-      "offer": 424.0,
-      "current": 692.0,
-      "pl": 63.21
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Jindal Supreme",
@@ -214,9 +214,9 @@
       "nii": 328.0,
       "retail": 149.3,
       "total": 181.1,
-      "offer": 93.0,
-      "current": 167.4,
-      "pl": 80.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Maharaja Speedex",
@@ -226,9 +226,9 @@
       "nii": 30.1,
       "retail": 19.6,
       "total": 30.2,
-      "offer": 186.0,
-      "current": 250.1,
-      "pl": 34.46
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Veegaland Developers",
@@ -238,9 +238,9 @@
       "nii": 18.0,
       "retail": 9.2,
       "total": 13.6,
-      "offer": 140.0,
-      "current": 127.0,
-      "pl": -9.29
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Amtech Esters",
@@ -250,9 +250,9 @@
       "nii": 24.2,
       "retail": 28.9,
       "total": 24.0,
-      "offer": 75.0,
-      "current": 112.0,
-      "pl": 49.33
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Rentomojo",
@@ -262,9 +262,9 @@
       "nii": 67.9,
       "retail": 15.6,
       "total": 72.9,
-      "offer": 404.0,
-      "current": 578.5,
-      "pl": 43.19
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Steamhouse",
@@ -274,9 +274,9 @@
       "nii": 44.3,
       "retail": 16.9,
       "total": 30.5,
-      "offer": 81.0,
-      "current": 124.3,
-      "pl": 53.46
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Lcc Projects",
@@ -286,9 +286,9 @@
       "nii": 63.0,
       "retail": 25.6,
       "total": 48.5,
-      "offer": 146.0,
-      "current": 137.9,
-      "pl": -5.55
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Karamtara Engineering",
@@ -298,9 +298,9 @@
       "nii": 48.5,
       "retail": 13.3,
       "total": 62.6,
-      "offer": 254.0,
-      "current": 371.6,
-      "pl": 46.3
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Pranav Constructions",
@@ -310,9 +310,9 @@
       "nii": 208.2,
       "retail": 43.3,
       "total": 121.0,
-      "offer": 124.0,
-      "current": 98.8,
-      "pl": -20.32
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Qualiance International",
@@ -322,9 +322,9 @@
       "nii": 930.3,
       "retail": 593.8,
       "total": 426.8,
-      "offer": 127.0,
-      "current": 185.7,
-      "pl": 46.22
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Farm Peace",
@@ -334,9 +334,9 @@
       "nii": 1.7,
       "retail": 0.6,
       "total": 1.1,
-      "offer": 59.0,
-      "current": 40.9,
-      "pl": -30.68
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Deepa Jewellers",
@@ -346,9 +346,9 @@
       "nii": 106.0,
       "retail": 18.6,
       "total": 42.6,
-      "offer": 177.0,
-      "current": 241.7,
-      "pl": 36.55
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Ashutosh Fibre",
@@ -358,9 +358,9 @@
       "nii": 267.5,
       "retail": 131.8,
       "total": 124.4,
-      "offer": 92.0,
-      "current": 140.0,
-      "pl": 52.17
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Shanti Inorganics",
@@ -370,9 +370,9 @@
       "nii": 260.1,
       "retail": 167.1,
       "total": 132.3,
-      "offer": 83.0,
-      "current": 217.3,
-      "pl": 161.81
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Priority Jewels",
@@ -382,9 +382,9 @@
       "nii": 166.5,
       "retail": 106.8,
       "total": 100.5,
-      "offer": 200.0,
-      "current": 359.8,
-      "pl": 79.9
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "ESDS Software Solution",
@@ -394,9 +394,9 @@
       "nii": 192.9,
       "retail": 39.6,
       "total": 135.9,
-      "offer": 429.0,
-      "current": 1595.6,
-      "pl": 271.93
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Kwick Forensic Solutions",
@@ -406,9 +406,9 @@
       "nii": 237.0,
       "retail": 318.5,
       "total": 272.5,
-      "offer": 90.0,
-      "current": 227.1,
-      "pl": 152.33
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Lumino Industries",
@@ -418,9 +418,9 @@
       "nii": 176.4,
       "retail": 38.5,
       "total": 118.1,
-      "offer": 82.0,
-      "current": 104.4,
-      "pl": 27.32
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "HyTech Engineers",
@@ -430,9 +430,9 @@
       "nii": 402.3,
       "retail": 170.6,
       "total": 244.4,
-      "offer": 53.0,
-      "current": 89.0,
-      "pl": 67.92
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Augmont Enterprises",
@@ -442,9 +442,9 @@
       "nii": 121.5,
       "retail": 31.0,
       "total": 105.8,
-      "offer": 788.0,
-      "current": 1300.1,
-      "pl": 64.99
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Tempsens Instruments",
@@ -454,9 +454,9 @@
       "nii": 314.4,
       "retail": 60.7,
       "total": 184.1,
-      "offer": 300.0,
-      "current": 600.9,
-      "pl": 100.3
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Gaja Alternative Asset",
@@ -466,9 +466,9 @@
       "nii": 62.4,
       "retail": 11.0,
       "total": 31.3,
-      "offer": 160.0,
-      "current": 143.8,
-      "pl": -10.12
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Shankesh Jewellers",
@@ -478,9 +478,9 @@
       "nii": 5.7,
       "retail": 2.4,
       "total": 2.8,
-      "offer": 93.0,
-      "current": 97.4,
-      "pl": 4.73
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sunshine Pictures",
@@ -490,9 +490,9 @@
       "nii": 197.0,
       "retail": 56.6,
       "total": 105.8,
-      "offer": 360.0,
-      "current": 441.8,
-      "pl": 22.72
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Lalithaa Jewellery Mart",
@@ -502,9 +502,9 @@
       "nii": 73.9,
       "retail": 11.8,
       "total": 63.0,
-      "offer": 201.0,
-      "current": 361.6,
-      "pl": 79.9
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Technocrats Plasma Systems",
@@ -514,9 +514,9 @@
       "nii": 231.3,
       "retail": 176.1,
       "total": 189.2,
-      "offer": 132.0,
-      "current": 414.4,
-      "pl": 213.94
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Credent Connect N Care",
@@ -526,9 +526,9 @@
       "nii": 287.8,
       "retail": 184.3,
       "total": 142.4,
-      "offer": 189.0,
-      "current": 350.6,
-      "pl": 85.5
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Shiprocket",
@@ -538,9 +538,9 @@
       "nii": 89.0,
       "retail": 46.4,
       "total": 99.4,
-      "offer": 97.0,
-      "current": 136.0,
-      "pl": 40.21
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Behari Lal Engineering",
@@ -550,9 +550,9 @@
       "nii": 165.3,
       "retail": 53.3,
       "total": 108.4,
-      "offer": 285.0,
-      "current": 495.5,
-      "pl": 73.86
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Milky Mist Dairy Food",
@@ -562,9 +562,9 @@
       "nii": 34.9,
       "retail": 8.4,
       "total": 56.1,
-      "offer": 140.0,
-      "current": 313.1,
-      "pl": 123.64
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Dhoot Transmission",
@@ -574,9 +574,9 @@
       "nii": 51.9,
       "retail": 8.1,
       "total": 74.2,
-      "offer": 871.0,
-      "current": 1487.7,
-      "pl": 70.8
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Molbio Diagnostics",
@@ -586,9 +586,9 @@
       "nii": 49.8,
       "retail": 13.0,
       "total": 70.3,
-      "offer": 807.0,
-      "current": 1471.8,
-      "pl": 82.38
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Technocraft Ventures",
@@ -598,9 +598,9 @@
       "nii": 65.1,
       "retail": 25.4,
       "total": 38.7,
-      "offer": 212.0,
-      "current": 478.4,
-      "pl": 125.66
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "LAPL Automotive",
@@ -610,9 +610,9 @@
       "nii": 321.7,
       "retail": 387.8,
       "total": 320.3,
-      "offer": 94.0,
-      "current": 116.8,
-      "pl": 24.26
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "G V Electricals",
@@ -622,9 +622,9 @@
       "nii": 168.5,
       "retail": 168.7,
       "total": 149.3,
-      "offer": 130.0,
-      "current": 124.2,
-      "pl": -4.46
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Ardee Industries",
@@ -634,9 +634,9 @@
       "nii": 255.2,
       "retail": 45.7,
       "total": 133.7,
-      "offer": 53.0,
-      "current": 48.3,
-      "pl": -8.87
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Aegeus Technologies",
@@ -646,9 +646,9 @@
       "nii": 23.3,
       "retail": 25.6,
       "total": 24.3,
-      "offer": 105.0,
-      "current": 120.0,
-      "pl": 14.29
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Anawil Wire Engineering",
@@ -658,9 +658,9 @@
       "nii": 310.4,
       "retail": 138.4,
       "total": 138.7,
-      "offer": 270.0,
-      "current": 411.1,
-      "pl": 52.26
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Oneindig Technologies",
@@ -670,9 +670,9 @@
       "nii": 2.0,
       "retail": 1.8,
       "total": 1.7,
-      "offer": 96.0,
-      "current": 128.0,
-      "pl": 33.33
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Dhaval Packaging",
@@ -682,9 +682,9 @@
       "nii": 55.5,
       "retail": 40.3,
       "total": 46.6,
-      "offer": 97.0,
-      "current": 125.0,
-      "pl": 28.87
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "MV Electrosystems",
@@ -694,9 +694,9 @@
       "nii": 374.6,
       "retail": 205.4,
       "total": 188.8,
-      "offer": 425.0,
-      "current": 834.0,
-      "pl": 96.24
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Manipal Health Enterprises",
@@ -706,9 +706,9 @@
       "nii": 1.0,
       "retail": 0.9,
       "total": 4.9,
-      "offer": 590.0,
-      "current": 668.3,
-      "pl": 13.27
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Poojaa Precision Engg",
@@ -718,9 +718,9 @@
       "nii": 609.5,
       "retail": 325.1,
       "total": 259.4,
-      "offer": 301.0,
-      "current": 801.6,
-      "pl": 166.31
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "IndoMIM",
@@ -730,9 +730,9 @@
       "nii": 50.6,
       "retail": 6.7,
       "total": 72.3,
-      "offer": 485.0,
-      "current": 1227.0,
-      "pl": 152.99
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Shree Balaji Mala Textiles",
@@ -742,9 +742,9 @@
       "nii": 335.5,
       "retail": 303.1,
       "total": 186.3,
-      "offer": 70.0,
-      "current": 49.0,
-      "pl": -30.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Metalic Technoforge",
@@ -754,9 +754,9 @@
       "nii": 23.2,
       "retail": 9.3,
       "total": 8.0,
-      "offer": 77.0,
-      "current": 162.0,
-      "pl": 110.39
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Caliber Mining and Logistics",
@@ -766,9 +766,9 @@
       "nii": 267.4,
       "retail": 41.1,
       "total": 146.6,
-      "offer": 424.0,
-      "current": 623.0,
-      "pl": 46.93
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Millworks Technologies",
@@ -778,9 +778,9 @@
       "nii": 328.2,
       "retail": 272.1,
       "total": 193.2,
-      "offer": 331.0,
-      "current": 1089.0,
-      "pl": 229.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Devson Catalyst",
@@ -790,9 +790,9 @@
       "nii": 339.7,
       "retail": 316.9,
       "total": 205.1,
-      "offer": 118.0,
-      "current": 400.0,
-      "pl": 238.98
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Laser Power and Infra",
@@ -802,9 +802,9 @@
       "nii": 43.3,
       "retail": 6.6,
       "total": 38.9,
-      "offer": 214.0,
-      "current": 258.4,
-      "pl": 20.75
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Kusumgar",
@@ -814,9 +814,9 @@
       "nii": 165.5,
       "retail": 26.5,
       "total": 128.8,
-      "offer": 419.0,
-      "current": 583.9,
-      "pl": 39.36
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "IC Electricals Company",
@@ -826,9 +826,9 @@
       "nii": 1025.6,
       "retail": 494.4,
       "total": 390.8,
-      "offer": 99.0,
-      "current": 109.0,
-      "pl": 10.1
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Knack Packaging",
@@ -838,9 +838,9 @@
       "nii": 139.8,
       "retail": 20.1,
       "total": 83.3,
-      "offer": 170.0,
-      "current": 208.1,
-      "pl": 22.41
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Teja Engineering Industries",
@@ -850,9 +850,9 @@
       "nii": 1.2,
       "retail": 0.9,
       "total": 1.1,
-      "offer": 220.0,
-      "current": 212.9,
-      "pl": -3.23
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Kratikal Tech",
@@ -862,9 +862,9 @@
       "nii": 434.6,
       "retail": 289.5,
       "total": 205.1,
-      "offer": 135.0,
-      "current": 157.7,
-      "pl": 16.81
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Atharva PolyPlast",
@@ -874,9 +874,9 @@
       "nii": 25.6,
       "retail": 15.0,
       "total": 10.1,
-      "offer": 60.0,
-      "current": 124.0,
-      "pl": 106.67
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Adon Agro Commodities",
@@ -886,9 +886,9 @@
       "nii": 4.7,
       "retail": 1.1,
       "total": 1.3,
-      "offer": 70.0,
-      "current": 100.0,
-      "pl": 42.86
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Advit Jewels",
@@ -898,9 +898,9 @@
       "nii": 536.4,
       "retail": 95.3,
       "total": 212.6,
-      "offer": 138.0,
-      "current": 372.1,
-      "pl": 169.64
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Avience Biomedicals",
@@ -910,9 +910,9 @@
       "nii": 790.0,
       "retail": 528.5,
       "total": 355.1,
-      "offer": 208.0,
-      "current": 281.9,
-      "pl": 35.53
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Horizon Reclaim",
@@ -922,9 +922,9 @@
       "nii": 599.5,
       "retail": 409.6,
       "total": 282.9,
-      "offer": 103.0,
-      "current": 147.1,
-      "pl": 42.82
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Susan Electricals",
@@ -934,9 +934,9 @@
       "nii": 309.8,
       "retail": 190.5,
       "total": 139.3,
-      "offer": 127.0,
-      "current": 291.1,
-      "pl": 129.21
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Vahh Chemicals",
@@ -946,9 +946,9 @@
       "nii": 70.5,
       "retail": 95.1,
       "total": 82.8,
-      "offer": 60.0,
-      "current": 48.0,
-      "pl": -20.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "CMR Green Technologies",
@@ -958,9 +958,9 @@
       "nii": 172.3,
       "retail": 27.0,
       "total": 127.0,
-      "offer": 192.0,
-      "current": 216.3,
-      "pl": 12.66
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Merritronix",
@@ -970,9 +970,9 @@
       "nii": 635.2,
       "retail": 395.4,
       "total": 293.3,
-      "offer": 149.0,
-      "current": 401.4,
-      "pl": 169.4
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Q-Line Biotech",
@@ -982,9 +982,9 @@
       "nii": 194.5,
       "retail": 94.9,
       "total": 95.3,
-      "offer": 343.0,
-      "current": 601.8,
-      "pl": 75.45
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Vegorama Punjabi Angithi",
@@ -994,9 +994,9 @@
       "nii": 85.3,
       "retail": 36.9,
       "total": 32.8,
-      "offer": 77.0,
-      "current": 242.0,
-      "pl": 214.29
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Teamtech Formwork Solutions",
@@ -1006,9 +1006,9 @@
       "nii": 17.4,
       "retail": 8.1,
       "total": 6.6,
-      "offer": 63.0,
-      "current": 136.7,
-      "pl": 116.98
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Goldline Pharmaceutical",
@@ -1018,9 +1018,9 @@
       "nii": 2196.3,
       "retail": 1151.3,
       "total": 781.9,
-      "offer": 43.0,
-      "current": 32.5,
-      "pl": -24.42
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Recode Studios",
@@ -1030,9 +1030,9 @@
       "nii": 538.9,
       "retail": 287.2,
       "total": 217.9,
-      "offer": 158.0,
-      "current": 435.0,
-      "pl": 175.32
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "OnEMI Technology Solutions",
@@ -1042,9 +1042,9 @@
       "nii": 6.6,
       "retail": 2.0,
       "total": 9.5,
-      "offer": 171.0,
-      "current": 376.0,
-      "pl": 119.88
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Adisoft Technologies",
@@ -1054,9 +1054,9 @@
       "nii": 160.1,
       "retail": 62.8,
       "total": 72.1,
-      "offer": 172.0,
-      "current": 288.0,
-      "pl": 67.44
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Mehul Telecom",
@@ -1066,9 +1066,9 @@
       "nii": 105.1,
       "retail": 49.4,
       "total": 41.8,
-      "offer": 98.0,
-      "current": 138.4,
-      "pl": 41.22
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Emiac Technologies",
@@ -1078,9 +1078,9 @@
       "nii": 7.0,
       "retail": 5.0,
       "total": 3.1,
-      "offer": 98.0,
-      "current": 84.9,
-      "pl": -13.37
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Apsis Aerocom",
@@ -1090,9 +1090,9 @@
       "nii": 314.0,
       "retail": 132.7,
       "total": 120.2,
-      "offer": 110.0,
-      "current": 642.8,
-      "pl": 484.36
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "SEDEMAC Mechatronics",
@@ -1102,9 +1102,9 @@
       "nii": 0.8,
       "retail": 0.2,
       "total": 2.7,
-      "offer": 1352.0,
-      "current": 3165.6,
-      "pl": 134.14
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Msafe Equipments",
@@ -1114,9 +1114,9 @@
       "nii": 411.0,
       "retail": 175.3,
       "total": 154.0,
-      "offer": 123.0,
-      "current": 295.0,
-      "pl": 139.84
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Accretion Nutraveda",
@@ -1126,9 +1126,9 @@
       "nii": 3.2,
       "retail": 2.9,
       "total": 1.8,
-      "offer": 129.0,
-      "current": 295.0,
-      "pl": 128.68
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "KRM Ayurveda",
@@ -1138,9 +1138,9 @@
       "nii": 168.6,
       "retail": 66.8,
       "total": 64.3,
-      "offer": 135.0,
-      "current": 270.2,
-      "pl": 100.15
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Avana Electrosystems",
@@ -1150,9 +1150,9 @@
       "nii": 295.2,
       "retail": 182.5,
       "total": 122.7,
-      "offer": 59.0,
-      "current": 160.8,
-      "pl": 172.54
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Defrail Technologies",
@@ -1162,9 +1162,9 @@
       "nii": 215.3,
       "retail": 134.5,
       "total": 98.2,
-      "offer": 74.0,
-      "current": 71.2,
-      "pl": -3.78
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Bharat Coking Coal",
@@ -1174,9 +1174,9 @@
       "nii": 258.2,
       "retail": 49.3,
       "total": 146.9,
-      "offer": 23.0,
-      "current": 31.1,
-      "pl": 35.22
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Modern Diagnostic Research",
@@ -1186,9 +1186,9 @@
       "nii": 933.5,
       "retail": 454.1,
       "total": 350.5,
-      "offer": 90.0,
-      "current": 65.0,
-      "pl": -27.78
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "E to E Transportation",
@@ -1198,9 +1198,9 @@
       "nii": 1159.0,
       "retail": 725.7,
       "total": 490.6,
-      "offer": 174.0,
-      "current": 306.3,
-      "pl": 76.03
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Dhara Rail Projects",
@@ -1210,9 +1210,9 @@
       "nii": 264.9,
       "retail": 129.5,
       "total": 104.0,
-      "offer": 126.0,
-      "current": 133.4,
-      "pl": 5.87
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Apollo Techno Industries",
@@ -1222,9 +1222,9 @@
       "nii": 130.7,
       "retail": 59.6,
       "total": 47.1,
-      "offer": 130.0,
-      "current": 89.0,
-      "pl": -31.54
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "EPW",
@@ -1234,9 +1234,9 @@
       "nii": 2.5,
       "retail": 1.7,
       "total": 1.3,
-      "offer": 97.0,
-      "current": 225.0,
-      "pl": 131.96
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Shyam Dhani Industries",
@@ -1246,9 +1246,9 @@
       "nii": 2146.4,
       "retail": 1509.2,
       "total": 918.1,
-      "offer": 70.0,
-      "current": 52.0,
-      "pl": -25.71
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Exim Routes",
@@ -1258,9 +1258,9 @@
       "nii": 30.3,
       "retail": 13.2,
       "total": 14.2,
-      "offer": 88.0,
-      "current": 97.0,
-      "pl": 10.23
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "ICICI Prudential Asset",
@@ -1270,9 +1270,9 @@
       "nii": 22.0,
       "retail": 2.5,
       "total": 39.2,
-      "offer": 2165.0,
-      "current": 2938.5,
-      "pl": 35.73
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "HRS Aluglaze",
@@ -1282,9 +1282,9 @@
       "nii": 97.6,
       "retail": 59.3,
       "total": 42.0,
-      "offer": 96.0,
-      "current": 257.5,
-      "pl": 168.23
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "K V Toys",
@@ -1294,9 +1294,9 @@
       "nii": 326.9,
       "retail": 243.6,
       "total": 158.8,
-      "offer": 239.0,
-      "current": 256.1,
-      "pl": 7.15
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Corona Remedies",
@@ -1306,9 +1306,9 @@
       "nii": 208.9,
       "retail": 28.7,
       "total": 137.0,
-      "offer": 1062.0,
-      "current": 2026.2,
-      "pl": 90.79
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Encompass Design",
@@ -1318,9 +1318,9 @@
       "nii": 6.6,
       "retail": 2.3,
       "total": 2.1,
-      "offer": 107.0,
-      "current": 246.9,
-      "pl": 130.75
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Luxury Time",
@@ -1330,9 +1330,9 @@
       "nii": 620.1,
       "retail": 783.4,
       "total": 404.2,
-      "offer": 82.0,
-      "current": 73.0,
-      "pl": -10.98
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Meesho",
@@ -1342,9 +1342,9 @@
       "nii": 38.2,
       "retail": 19.1,
       "total": 79.0,
-      "offer": 111.0,
-      "current": 240.7,
-      "pl": 116.85
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Aequs",
@@ -1354,9 +1354,9 @@
       "nii": 80.6,
       "retail": 78.0,
       "total": 101.6,
-      "offer": 124.0,
-      "current": 265.1,
-      "pl": 113.79
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Neochem Bio Solutions",
@@ -1366,9 +1366,9 @@
       "nii": 28.6,
       "retail": 12.5,
       "total": 14.5,
-      "offer": 98.0,
-      "current": 107.0,
-      "pl": 9.18
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Invicta Diagnostic",
@@ -1378,9 +1378,9 @@
       "nii": 10.5,
       "retail": 5.0,
       "total": 4.0,
-      "offer": 85.0,
-      "current": 64.5,
-      "pl": -24.12
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Ravelcare",
@@ -1390,9 +1390,9 @@
       "nii": 996.6,
       "retail": 617.3,
       "total": 406.7,
-      "offer": 130.0,
-      "current": 97.0,
-      "pl": -25.38
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Exato Technologies",
@@ -1402,9 +1402,9 @@
       "nii": 1981.3,
       "retail": 1419.9,
       "total": 881.0,
-      "offer": 140.0,
-      "current": 693.1,
-      "pl": 395.07
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sudeep Pharma",
@@ -1414,9 +1414,9 @@
       "nii": 116.7,
       "retail": 15.7,
       "total": 93.7,
-      "offer": 593.0,
-      "current": 1012.2,
-      "pl": 70.69
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Gallard Steel",
@@ -1426,9 +1426,9 @@
       "nii": 837.4,
       "retail": 466.6,
       "total": 349.4,
-      "offer": 150.0,
-      "current": 172.0,
-      "pl": 14.67
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Excelsoft Technologies",
@@ -1438,9 +1438,9 @@
       "nii": 101.7,
       "retail": 15.6,
       "total": 43.2,
-      "offer": 120.0,
-      "current": 83.9,
-      "pl": -30.08
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Tenneco Clean Air",
@@ -1450,9 +1450,9 @@
       "nii": 40.7,
       "retail": 5.1,
       "total": 58.8,
-      "offer": 397.0,
-      "current": 466.0,
-      "pl": 17.38
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Workmates Core2Cloud Solution",
@@ -1462,9 +1462,9 @@
       "nii": 268.5,
       "retail": 147.3,
       "total": 131.6,
-      "offer": 204.0,
-      "current": 400.1,
-      "pl": 96.13
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Physicswallah",
@@ -1474,9 +1474,9 @@
       "nii": 0.5,
       "retail": 1.1,
       "total": 1.8,
-      "offer": 109.0,
-      "current": 138.9,
-      "pl": 27.43
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Curis Lifesciences",
@@ -1486,9 +1486,9 @@
       "nii": 154.3,
       "retail": 58.8,
       "total": 69.3,
-      "offer": 128.0,
-      "current": 182.6,
-      "pl": 42.66
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Finbud Financial Services",
@@ -1498,9 +1498,9 @@
       "nii": 11.6,
       "retail": 3.9,
       "total": 4.2,
-      "offer": 142.0,
-      "current": 122.5,
-      "pl": -13.73
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Billionbrains Garage Ventures (Groww)",
@@ -1510,9 +1510,9 @@
       "nii": 14.2,
       "retail": 9.4,
       "total": 17.6,
-      "offer": 100.0,
-      "current": 193.8,
-      "pl": 93.8
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "SK Minerals Additives",
@@ -1522,9 +1522,9 @@
       "nii": 10.0,
       "retail": 4.5,
       "total": 3.4,
-      "offer": 127.0,
-      "current": 419.9,
-      "pl": 230.63
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Rubicon Research",
@@ -1534,9 +1534,9 @@
       "nii": 97.6,
       "retail": 35.5,
       "total": 103.9,
-      "offer": 485.0,
-      "current": 1523.4,
-      "pl": 214.1
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "LG Electronics",
@@ -1546,9 +1546,9 @@
       "nii": 22.4,
       "retail": 3.5,
       "total": 54.0,
-      "offer": 1140.0,
-      "current": 1758.0,
-      "pl": 54.21
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "DSM Fresh Foods",
@@ -1558,9 +1558,9 @@
       "nii": 3.2,
       "retail": 1.3,
       "total": 1.3,
-      "offer": 100.0,
-      "current": 53.4,
-      "pl": -46.6
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sheel Biotech",
@@ -1570,9 +1570,9 @@
       "nii": 35.0,
       "retail": 12.7,
       "total": 14.9,
-      "offer": 63.0,
-      "current": 60.9,
-      "pl": -3.33
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Zelio EMobility",
@@ -1582,9 +1582,9 @@
       "nii": 2.8,
       "retail": 1.8,
       "total": 1.5,
-      "offer": 136.0,
-      "current": 1149.8,
-      "pl": 745.44
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "BAG Convergence",
@@ -1594,9 +1594,9 @@
       "nii": 4.1,
       "retail": 1.1,
       "total": 1.4,
-      "offer": 87.0,
-      "current": 108.9,
-      "pl": 25.17
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sunsky Logistics",
@@ -1606,9 +1606,9 @@
       "nii": 2.0,
       "retail": 0.9,
       "total": 1.4,
-      "offer": 46.0,
-      "current": 36.5,
-      "pl": -20.65
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Infinity Infoway",
@@ -1618,9 +1618,9 @@
       "nii": 647.7,
       "retail": 355.9,
       "total": 258.5,
-      "offer": 155.0,
-      "current": 580.0,
-      "pl": 274.19
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Advance Agrolife",
@@ -1630,9 +1630,9 @@
       "nii": 175.3,
       "retail": 23.1,
       "total": 56.9,
-      "offer": 100.0,
-      "current": 144.0,
-      "pl": 44.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sodhani Capital",
@@ -1642,9 +1642,9 @@
       "nii": 4.6,
       "retail": 4.6,
       "total": 4.6,
-      "offer": 51.0,
-      "current": 72.0,
-      "pl": 41.18
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Suba Hotels",
@@ -1654,9 +1654,9 @@
       "nii": 30.2,
       "retail": 12.1,
       "total": 14.3,
-      "offer": 111.0,
-      "current": 93.7,
-      "pl": -15.59
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "KVS Castings",
@@ -1666,9 +1666,9 @@
       "nii": 7.1,
       "retail": 3.5,
       "total": 3.9,
-      "offer": 56.0,
-      "current": 72.7,
-      "pl": 29.82
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Manas Polymers and Energies",
@@ -1678,9 +1678,9 @@
       "nii": 3.1,
       "retail": 0.3,
       "total": 1.2,
-      "offer": 81.0,
-      "current": 24.7,
-      "pl": -69.51
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Chatterbox Technologies",
@@ -1690,9 +1690,9 @@
       "nii": 110.1,
       "retail": 62.4,
       "total": 48.5,
-      "offer": 115.0,
-      "current": 30.6,
-      "pl": -73.39
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "TruAlt Bioenergy",
@@ -1702,9 +1702,9 @@
       "nii": 98.6,
       "retail": 11.0,
       "total": 71.9,
-      "offer": 496.0,
-      "current": 447.2,
-      "pl": -9.84
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Jain Resource Recycling",
@@ -1714,9 +1714,9 @@
       "nii": 5.3,
       "retail": 3.6,
       "total": 15.9,
-      "offer": 232.0,
-      "current": 288.6,
-      "pl": 24.4
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Aptus Pharma",
@@ -1726,9 +1726,9 @@
       "nii": 38.8,
       "retail": 41.9,
       "total": 20.8,
-      "offer": 70.0,
-      "current": 463.6,
-      "pl": 562.29
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Solarworld Energy Solutions",
@@ -1738,9 +1738,9 @@
       "nii": 64.7,
       "retail": 49.1,
       "total": 65.0,
-      "offer": 351.0,
-      "current": 127.0,
-      "pl": -63.82
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Atlanta Electricals",
@@ -1750,9 +1750,9 @@
       "nii": 54.2,
       "retail": 10.4,
       "total": 70.6,
-      "offer": 754.0,
-      "current": 1852.0,
-      "pl": 145.62
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "GK Energy",
@@ -1762,9 +1762,9 @@
       "nii": 122.7,
       "retail": 20.8,
       "total": 89.6,
-      "offer": 153.0,
-      "current": 109.1,
-      "pl": -28.69
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Euro Pratik Sales",
@@ -1774,9 +1774,9 @@
       "nii": 1.9,
       "retail": 1.2,
       "total": 1.3,
-      "offer": 247.0,
-      "current": 165.8,
-      "pl": -32.87
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "TechD Cybersecurity",
@@ -1786,9 +1786,9 @@
       "nii": 1699.5,
       "retail": 964.5,
       "total": 668.0,
-      "offer": 193.0,
-      "current": 516.8,
-      "pl": 167.77
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "L T Elevator",
@@ -1798,9 +1798,9 @@
       "nii": 473.3,
       "retail": 211.1,
       "total": 170.3,
-      "offer": 78.0,
-      "current": 335.2,
-      "pl": 329.74
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Airfloa Rail Technology",
@@ -1810,9 +1810,9 @@
       "nii": 466.6,
       "retail": 440.3,
       "total": 281.0,
-      "offer": 140.0,
-      "current": 552.6,
-      "pl": 294.71
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Urban Company",
@@ -1822,9 +1822,9 @@
       "nii": 74.0,
       "retail": 39.3,
       "total": 103.6,
-      "offer": 103.0,
-      "current": 163.2,
-      "pl": 58.45
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Shringar House of Mangalsutra",
@@ -1834,9 +1834,9 @@
       "nii": 82.6,
       "retail": 27.2,
       "total": 60.3,
-      "offer": 165.0,
-      "current": 310.9,
-      "pl": 88.42
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Taurian Mps",
@@ -1846,9 +1846,9 @@
       "nii": 21.9,
       "retail": 8.2,
       "total": 9.9,
-      "offer": 171.0,
-      "current": 594.0,
-      "pl": 247.37
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Karbonsteel Engineering",
@@ -1858,9 +1858,9 @@
       "nii": 114.9,
       "retail": 62.2,
       "total": 71.3,
-      "offer": 159.0,
-      "current": 116.0,
-      "pl": -27.04
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sharvaya Metals",
@@ -1870,9 +1870,9 @@
       "nii": 8.6,
       "retail": 8.4,
       "total": 4.6,
-      "offer": 196.0,
-      "current": 200.8,
-      "pl": 2.45
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Austere Systems",
@@ -1882,9 +1882,9 @@
       "nii": 2880.2,
       "retail": 1449.5,
       "total": 1001.8,
-      "offer": 55.0,
-      "current": 38.2,
-      "pl": -30.55
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Optivalue Tek Consulting",
@@ -1894,9 +1894,9 @@
       "nii": 159.1,
       "retail": 66.0,
       "total": 60.0,
-      "offer": 84.0,
-      "current": 220.0,
-      "pl": 161.9
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Goel Construction Company",
@@ -1906,9 +1906,9 @@
       "nii": 291.2,
       "retail": 114.4,
       "total": 115.8,
-      "offer": 263.0,
-      "current": 403.8,
-      "pl": 53.54
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sattva Engineering",
@@ -1918,9 +1918,9 @@
       "nii": 343.8,
       "retail": 164.2,
       "total": 132.3,
-      "offer": 75.0,
-      "current": 57.8,
-      "pl": -22.93
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Current Infraprojects",
@@ -1930,9 +1930,9 @@
       "nii": 722.9,
       "retail": 448.1,
       "total": 308.4,
-      "offer": 80.0,
-      "current": 95.9,
-      "pl": 19.88
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Anondita Medicare",
@@ -1942,9 +1942,9 @@
       "nii": 701.8,
       "retail": 376.9,
       "total": 277.5,
-      "offer": 145.0,
-      "current": 1023.8,
-      "pl": 606.07
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Classic Electrodes",
@@ -1954,9 +1954,9 @@
       "nii": 469.1,
       "retail": 207.8,
       "total": 165.4,
-      "offer": 87.0,
-      "current": 50.4,
-      "pl": -42.07
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "ARC Insulation Insulators",
@@ -1966,9 +1966,9 @@
       "nii": 36.2,
       "retail": 23.0,
       "total": 17.5,
-      "offer": 125.0,
-      "current": 32.7,
-      "pl": -73.84
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Patel Retail",
@@ -1978,9 +1978,9 @@
       "nii": 108.2,
       "retail": 42.5,
       "total": 95.7,
-      "offer": 255.0,
-      "current": 240.3,
-      "pl": -5.76
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Regaal Resources",
@@ -1990,9 +1990,9 @@
       "nii": 356.7,
       "retail": 57.8,
       "total": 159.9,
-      "offer": 102.0,
-      "current": 90.3,
-      "pl": -11.47
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Medistep Healthcare",
@@ -2002,9 +2002,9 @@
       "nii": 261.3,
       "retail": 451.4,
       "total": 356.3,
-      "offer": 43.0,
-      "current": 20.5,
-      "pl": -52.33
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Connplex Cinemas",
@@ -2014,9 +2014,9 @@
       "nii": 66.6,
       "retail": 32.9,
       "total": 33.3,
-      "offer": 177.0,
-      "current": 242.7,
-      "pl": 37.12
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sawaliya Foods Products",
@@ -2026,9 +2026,9 @@
       "nii": 27.6,
       "retail": 11.8,
       "total": 12.4,
-      "offer": 120.0,
-      "current": 185.9,
-      "pl": 54.92
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "All Time Plastics",
@@ -2038,9 +2038,9 @@
       "nii": 13.5,
       "retail": 5.1,
       "total": 8.3,
-      "offer": 275.0,
-      "current": 187.0,
-      "pl": -32.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Highway Infrastructure",
@@ -2050,9 +2050,9 @@
       "nii": 447.3,
       "retail": 155.6,
       "total": 300.6,
-      "offer": 70.0,
-      "current": 52.1,
-      "pl": -25.57
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "BLT Logistics",
@@ -2062,9 +2062,9 @@
       "nii": 1308.9,
       "retail": 820.5,
       "total": 504.4,
-      "offer": 75.0,
-      "current": 27.0,
-      "pl": -64.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Flysbs Aviation",
@@ -2074,9 +2074,9 @@
       "nii": 749.3,
       "retail": 380.0,
       "total": 296.4,
-      "offer": 225.0,
-      "current": 618.3,
-      "pl": 174.8
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Cash Ur Drive Marketing",
@@ -2086,9 +2086,9 @@
       "nii": 128.2,
       "retail": 59.1,
       "total": 54.3,
-      "offer": 130.0,
-      "current": 95.0,
-      "pl": -26.92
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Mehul Colours",
@@ -2098,9 +2098,9 @@
       "nii": 15.0,
       "retail": 4.8,
       "total": 7.5,
-      "offer": 72.0,
-      "current": 49.9,
-      "pl": -30.69
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sri Lotus Developers",
@@ -2110,9 +2110,9 @@
       "nii": 57.7,
       "retail": 20.3,
       "total": 69.1,
-      "offer": 150.0,
-      "current": 230.7,
-      "pl": 53.8
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "National Securities Depository",
@@ -2122,9 +2122,9 @@
       "nii": 35.0,
       "retail": 7.7,
       "total": 41.0,
-      "offer": 800.0,
-      "current": 746.3,
-      "pl": -6.71
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Aditya Infotech",
@@ -2134,9 +2134,9 @@
       "nii": 72.0,
       "retail": 50.9,
       "total": 100.7,
-      "offer": 675.0,
-      "current": 4376.5,
-      "pl": 548.37
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Shree Refrigerations",
@@ -2146,9 +2146,9 @@
       "nii": 260.5,
       "retail": 259.3,
       "total": 174.3,
-      "offer": 125.0,
-      "current": 361.2,
-      "pl": 188.96
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Patel Chem Specialities",
@@ -2158,9 +2158,9 @@
       "nii": 314.7,
       "retail": 230.0,
       "total": 155.6,
-      "offer": 84.0,
-      "current": 150.7,
-      "pl": 79.4
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Shanti Gold International",
@@ -2170,9 +2170,9 @@
       "nii": 151.5,
       "retail": 30.4,
       "total": 81.2,
-      "offer": 199.0,
-      "current": 390.4,
-      "pl": 96.18
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "GNG Electronics",
@@ -2182,9 +2182,9 @@
       "nii": 227.7,
       "retail": 46.8,
       "total": 147.9,
-      "offer": 237.0,
-      "current": 698.2,
-      "pl": 194.6
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Monarch Surveyors",
@@ -2194,9 +2194,9 @@
       "nii": 419.4,
       "retail": 346.8,
       "total": 231.4,
-      "offer": 250.0,
-      "current": 239.0,
-      "pl": -4.4
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Savy Infra and Logistics",
@@ -2206,9 +2206,9 @@
       "nii": 261.6,
       "retail": 121.7,
       "total": 106.5,
-      "offer": 120.0,
-      "current": 136.3,
-      "pl": 13.58
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Spunweb Nonwoven",
@@ -2218,9 +2218,9 @@
       "nii": 484.0,
       "retail": 333.9,
       "total": 233.3,
-      "offer": 96.0,
-      "current": 131.8,
-      "pl": 37.29
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Anthem Biosciences",
@@ -2230,9 +2230,9 @@
       "nii": 42.4,
       "retail": 5.6,
       "total": 63.9,
-      "offer": 570.0,
-      "current": 870.1,
-      "pl": 52.65
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "GLEN Industries",
@@ -2242,9 +2242,9 @@
       "nii": 612.9,
       "retail": 288.6,
       "total": 242.3,
-      "offer": 97.0,
-      "current": 105.4,
-      "pl": 8.66
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Smarten Power Systems",
@@ -2254,9 +2254,9 @@
       "nii": 6.0,
       "retail": 4.5,
       "total": 5.3,
-      "offer": 100.0,
-      "current": 53.0,
-      "pl": -47.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Meta Infotech",
@@ -2266,9 +2266,9 @@
       "nii": 405.2,
       "retail": 159.7,
       "total": 155.3,
-      "offer": 161.0,
-      "current": 72.9,
-      "pl": -54.72
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Cryogenic OGS",
@@ -2278,9 +2278,9 @@
       "nii": 1537.6,
       "retail": 1029.4,
       "total": 646.5,
-      "offer": 47.0,
-      "current": 419.4,
-      "pl": 792.34
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Crizac",
@@ -2290,9 +2290,9 @@
       "nii": 76.2,
       "retail": 10.2,
       "total": 59.8,
-      "offer": 245.0,
-      "current": 157.8,
-      "pl": -35.59
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Adcounty Media",
@@ -2302,9 +2302,9 @@
       "nii": 732.4,
       "retail": 302.1,
       "total": 251.7,
-      "offer": 85.0,
-      "current": 82.6,
-      "pl": -2.82
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Neetu Yoshi",
@@ -2314,9 +2314,9 @@
       "nii": 341.6,
       "retail": 121.0,
       "total": 119.2,
-      "offer": 75.0,
-      "current": 228.6,
-      "pl": 204.8
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Ace Alpha Tech",
@@ -2326,9 +2326,9 @@
       "nii": 225.5,
       "retail": 121.0,
       "total": 93.8,
-      "offer": 69.0,
-      "current": 164.0,
-      "pl": 137.68
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Suntech Infra Solutions",
@@ -2338,9 +2338,9 @@
       "nii": 704.0,
       "retail": 199.4,
       "total": 208.0,
-      "offer": 86.0,
-      "current": 38.0,
-      "pl": -55.81
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "HDB Financial Services",
@@ -2350,9 +2350,9 @@
       "nii": 10.0,
       "retail": 1.4,
       "total": 16.7,
-      "offer": 740.0,
-      "current": 609.0,
-      "pl": -17.7
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sambhv Steel Tubes",
@@ -2362,9 +2362,9 @@
       "nii": 31.8,
       "retail": 8.0,
       "total": 28.5,
-      "offer": 82.0,
-      "current": 164.1,
-      "pl": 100.12
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Globe Civil Projects",
@@ -2374,9 +2374,9 @@
       "nii": 143.2,
       "retail": 53.7,
       "total": 86.0,
-      "offer": 71.0,
-      "current": 40.6,
-      "pl": -42.82
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Ellenbarrie Industrial Gases",
@@ -2386,9 +2386,9 @@
       "nii": 15.2,
       "retail": 2.1,
       "total": 22.2,
-      "offer": 400.0,
-      "current": 345.9,
-      "pl": -13.53
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Mayasheel Ventures",
@@ -2398,9 +2398,9 @@
       "nii": 951.4,
       "retail": 136.3,
       "total": 216.5,
-      "offer": 47.0,
-      "current": 33.5,
-      "pl": -28.72
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Influx Healthtech",
@@ -2410,9 +2410,9 @@
       "nii": 639.8,
       "retail": 156.4,
       "total": 187.3,
-      "offer": 96.0,
-      "current": 265.2,
-      "pl": 176.25
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Eppeltone Engineers",
@@ -2422,9 +2422,9 @@
       "nii": 834.8,
       "retail": 329.5,
       "total": 275.7,
-      "offer": 128.0,
-      "current": 153.9,
-      "pl": 20.23
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Patil Automation",
@@ -2434,9 +2434,9 @@
       "nii": 343.4,
       "retail": 59.5,
       "total": 94.3,
-      "offer": 120.0,
-      "current": 373.9,
-      "pl": 211.58
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Monolithisch India",
@@ -2446,9 +2446,9 @@
       "nii": 611.9,
       "retail": 125.8,
       "total": 170.1,
-      "offer": 143.0,
-      "current": 1201.8,
-      "pl": 740.42
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sacheerome",
@@ -2458,9 +2458,9 @@
       "nii": 1075.3,
       "retail": 239.6,
       "total": 291.1,
-      "offer": 102.0,
-      "current": 485.1,
-      "pl": 375.59
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Ganga Bath Fittings",
@@ -2470,9 +2470,9 @@
       "nii": 0.8,
       "retail": 2.4,
       "total": 1.6,
-      "offer": 49.0,
-      "current": 25.4,
-      "pl": -48.16
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Prostarm Info Systems",
@@ -2482,9 +2482,9 @@
       "nii": 222.1,
       "retail": 39.5,
       "total": 97.2,
-      "offer": 105.0,
-      "current": 129.1,
-      "pl": 22.95
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Belrise Industries",
@@ -2494,9 +2494,9 @@
       "nii": 38.3,
       "retail": 4.3,
       "total": 41.3,
-      "offer": 90.0,
-      "current": 235.6,
-      "pl": 161.78
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Borana Weaves",
@@ -2506,9 +2506,9 @@
       "nii": 237.4,
       "retail": 200.5,
       "total": 148.8,
-      "offer": 216.0,
-      "current": 267.4,
-      "pl": 23.8
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Virtual Galaxy Infotech",
@@ -2518,9 +2518,9 @@
       "nii": 790.8,
       "retail": 178.1,
       "total": 215.1,
-      "offer": 142.0,
-      "current": 137.4,
-      "pl": -3.24
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Srigee DLM",
@@ -2530,9 +2530,9 @@
       "nii": 2046.7,
       "retail": 324.1,
       "total": 456.8,
-      "offer": 99.0,
-      "current": 73.0,
-      "pl": -26.26
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Tankup Engineers",
@@ -2542,9 +2542,9 @@
       "nii": 560.9,
       "retail": 59.6,
       "total": 116.2,
-      "offer": 140.0,
-      "current": 1751.3,
-      "pl": 1150.93
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Shri Ahimsa Naturals",
@@ -2554,9 +2554,9 @@
       "nii": 242.8,
       "retail": 46.8,
       "total": 58.4,
-      "offer": 119.0,
-      "current": 420.5,
-      "pl": 253.36
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "NAPS Global",
@@ -2566,9 +2566,9 @@
       "nii": 0.8,
       "retail": 1.5,
       "total": 1.2,
-      "offer": 90.0,
-      "current": 67.7,
-      "pl": -24.78
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Chamunda Electrical",
@@ -2578,9 +2578,9 @@
       "nii": 2558.0,
       "retail": 729.3,
       "total": 680.0,
-      "offer": 50.0,
-      "current": 45.0,
-      "pl": -10.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Denta Water and Infra",
@@ -2590,9 +2590,9 @@
       "nii": 507.3,
       "retail": 90.6,
       "total": 221.7,
-      "offer": 294.0,
-      "current": 255.7,
-      "pl": -13.03
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "EMA Partners India Ltd.",
@@ -2602,9 +2602,9 @@
       "nii": 590.7,
       "retail": 222.4,
       "total": 205.7,
-      "offer": 124.0,
-      "current": 80.2,
-      "pl": -35.32
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Stallion India Fluorochemicals Ltd.",
@@ -2614,9 +2614,9 @@
       "nii": 422.4,
       "retail": 96.9,
       "total": 188.4,
-      "offer": 90.0,
-      "current": 214.6,
-      "pl": 138.44
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Rikhav Securities Ltd.",
@@ -2626,9 +2626,9 @@
       "nii": 821.5,
       "retail": 334.3,
       "total": 285.3,
-      "offer": 86.0,
-      "current": 51.1,
-      "pl": -40.58
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Kabra Jewels",
@@ -2638,9 +2638,9 @@
       "nii": 695.8,
       "retail": 479.8,
       "total": 310.8,
-      "offer": 128.0,
-      "current": 148.0,
-      "pl": 15.62
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Laxmi Dental",
@@ -2650,9 +2650,9 @@
       "nii": 147.9,
       "retail": 76.2,
       "total": 114.4,
-      "offer": 428.0,
-      "current": 195.9,
-      "pl": -54.23
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sat Kartar Shopping",
@@ -2662,9 +2662,9 @@
       "nii": 1069.0,
       "retail": 348.7,
       "total": 316.0,
-      "offer": 81.0,
-      "current": 136.4,
-      "pl": 68.4
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Delta Autocorp",
@@ -2674,9 +2674,9 @@
       "nii": 806.9,
       "retail": 405.5,
       "total": 309.0,
-      "offer": 130.0,
-      "current": 41.2,
-      "pl": -68.31
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Avax Apparels and Ornaments Ltd.",
@@ -2686,9 +2686,9 @@
       "nii": 133.4,
       "retail": 360.9,
       "total": 247.2,
-      "offer": 70.0,
-      "current": 50.4,
-      "pl": -28.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Quadrant Future Tek",
@@ -2698,9 +2698,9 @@
       "nii": 254.7,
       "retail": 246.9,
       "total": 186.7,
-      "offer": 290.0,
-      "current": 472.8,
-      "pl": 63.03
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Indobell Insulation Ltd.",
@@ -2710,9 +2710,9 @@
       "nii": 48.8,
       "retail": 54.1,
       "total": 51.5,
-      "offer": 46.0,
-      "current": 61.9,
-      "pl": 34.57
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Standard Glass Lining",
@@ -2722,9 +2722,9 @@
       "nii": 268.5,
       "retail": 65.0,
       "total": 183.2,
-      "offer": 140.0,
-      "current": 376.6,
-      "pl": 169.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Fabtech Technologies Cleanrooms Ltd.",
@@ -2734,9 +2734,9 @@
       "nii": 1974.4,
       "retail": 950.1,
       "total": 688.2,
-      "offer": 85.0,
-      "current": 484.0,
-      "pl": 469.41
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Parmeshwar Metal Ltd.",
@@ -2746,9 +2746,9 @@
       "nii": 1597.6,
       "retail": 792.4,
       "total": 564.0,
-      "offer": 61.0,
-      "current": 295.0,
-      "pl": 383.61
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Leo Dryfruits & Spices Trading Ltd.",
@@ -2758,9 +2758,9 @@
       "nii": 525.7,
       "retail": 207.0,
       "total": 169.1,
-      "offer": 52.0,
-      "current": 59.1,
-      "pl": 13.65
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Indo Farm Equipment",
@@ -2770,9 +2770,9 @@
       "nii": 503.8,
       "retail": 104.9,
       "total": 229.7,
-      "offer": 215.0,
-      "current": 130.1,
-      "pl": -39.49
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Anya Polytech Fertilizers",
@@ -2782,9 +2782,9 @@
       "nii": 1463.9,
       "retail": 427.5,
       "total": 409.3,
-      "offer": 14.0,
-      "current": 17.9,
-      "pl": 27.86
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Unimech Aerospace",
@@ -2794,9 +2794,9 @@
       "nii": 263.8,
       "retail": 56.7,
       "total": 175.3,
-      "offer": 785.0,
-      "current": 1833.1,
-      "pl": 133.52
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Ventive Hospitality Ltd.",
@@ -2806,9 +2806,9 @@
       "nii": 13.8,
       "retail": 5.9,
       "total": 9.8,
-      "offer": 643.0,
-      "current": 555.4,
-      "pl": -13.62
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Senores Pharmaceuticals Ltd.",
@@ -2818,9 +2818,9 @@
       "nii": 96.1,
       "retail": 89.2,
       "total": 93.4,
-      "offer": 391.0,
-      "current": 1321.0,
-      "pl": 237.85
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Dam Capital Advisors Ltd.",
@@ -2830,9 +2830,9 @@
       "nii": 98.6,
       "retail": 27.1,
       "total": 82.1,
-      "offer": 283.0,
-      "current": 143.7,
-      "pl": -49.22
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Mamata Machinery Ltd.",
@@ -2842,9 +2842,9 @@
       "nii": 274.4,
       "retail": 138.1,
       "total": 194.9,
-      "offer": 243.0,
-      "current": 390.6,
-      "pl": 60.74
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sanathan Textiles Ltd.",
@@ -2854,9 +2854,9 @@
       "nii": 42.2,
       "retail": 8.9,
       "total": 35.1,
-      "offer": 321.0,
-      "current": 533.4,
-      "pl": 66.17
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Transrail Lighting Ltd.",
@@ -2866,9 +2866,9 @@
       "nii": 76.4,
       "retail": 22.1,
       "total": 80.8,
-      "offer": 432.0,
-      "current": 461.6,
-      "pl": 6.85
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Concord Enviro Systems Ltd.",
@@ -2878,9 +2878,9 @@
       "nii": 14.2,
       "retail": 5.6,
       "total": 10.7,
-      "offer": 701.0,
-      "current": 256.1,
-      "pl": -63.47
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Identical Brains Studios Ltd.",
@@ -2890,9 +2890,9 @@
       "nii": 1357.7,
       "retail": 721.7,
       "total": 506.1,
-      "offer": 54.0,
-      "current": 17.1,
-      "pl": -68.33
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "NACDAC Infrastructure Ltd.",
@@ -2902,9 +2902,9 @@
       "nii": 5237.1,
       "retail": 3232.8,
       "total": 1976.1,
-      "offer": 35.0,
-      "current": 23.0,
-      "pl": -34.29
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Hamps Bio Ltd.",
@@ -2914,9 +2914,9 @@
       "nii": 719.8,
       "retail": 1286.8,
       "total": 1003.3,
-      "offer": 51.0,
-      "current": 25.5,
-      "pl": -50.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "International Gemmological Institute India Ltd.",
@@ -2926,9 +2926,9 @@
       "nii": 24.8,
       "retail": 11.2,
       "total": 33.8,
-      "offer": 417.0,
-      "current": 317.6,
-      "pl": -23.84
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Yash Highvoltage Ltd.",
@@ -2938,9 +2938,9 @@
       "nii": 439.0,
       "retail": 201.3,
       "total": 169.2,
-      "offer": 146.0,
-      "current": 1207.3,
-      "pl": 726.92
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Inventurus Knowledge Solutions Ltd.",
@@ -2950,9 +2950,9 @@
       "nii": 23.3,
       "retail": 14.6,
       "total": 52.7,
-      "offer": 1329.0,
-      "current": 1743.6,
-      "pl": 31.2
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Purple United Sales Ltd.",
@@ -2962,9 +2962,9 @@
       "nii": 358.5,
       "retail": 206.3,
       "total": 148.9,
-      "offer": 126.0,
-      "current": 482.9,
-      "pl": 283.25
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Vishal Mega Mart Ltd.",
@@ -2974,9 +2974,9 @@
       "nii": 14.2,
       "retail": 2.3,
       "total": 27.3,
-      "offer": 78.0,
-      "current": 97.0,
-      "pl": 24.36
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sai Life Sciences Ltd.",
@@ -2986,9 +2986,9 @@
       "nii": 4.9,
       "retail": 1.4,
       "total": 10.3,
-      "offer": 549.0,
-      "current": 1462.3,
-      "pl": 166.36
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "One MobiKwik Systems Ltd.",
@@ -2998,9 +2998,9 @@
       "nii": 109.0,
       "retail": 134.7,
       "total": 119.4,
-      "offer": 279.0,
-      "current": 244.5,
-      "pl": -12.37
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Jungle Camps India Ltd.",
@@ -3010,9 +3010,9 @@
       "nii": 1010.5,
       "retail": 731.8,
       "total": 460.0,
-      "offer": 72.0,
-      "current": 40.9,
-      "pl": -43.19
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Toss The Coin Ltd.",
@@ -3022,9 +3022,9 @@
       "nii": 1281.8,
       "retail": 2060.8,
       "total": 952.6,
-      "offer": 182.0,
-      "current": 163.0,
-      "pl": -10.44
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Dhanlaxmi Crop Science Ltd.",
@@ -3034,9 +3034,9 @@
       "nii": 1722.9,
       "retail": 738.4,
       "total": 565.0,
-      "offer": 55.0,
-      "current": 27.0,
-      "pl": -50.91
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Emerald Tyre Manufacturers Ltd.",
@@ -3046,9 +3046,9 @@
       "nii": 1199.3,
       "retail": 734.8,
       "total": 488.5,
-      "offer": 95.0,
-      "current": 72.5,
-      "pl": -23.68
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Nisus Finance Services Co Ltd.",
@@ -3058,9 +3058,9 @@
       "nii": 592.0,
       "retail": 183.3,
       "total": 177.6,
-      "offer": 180.0,
-      "current": 171.6,
-      "pl": -4.67
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Ganesh Infraworld Ltd.",
@@ -3070,9 +3070,9 @@
       "nii": 1072.3,
       "retail": 357.2,
       "total": 326.2,
-      "offer": 83.0,
-      "current": 86.3,
-      "pl": 3.98
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Agarwal Toughened Glass India Ltd.",
@@ -3082,9 +3082,9 @@
       "nii": 20.6,
       "retail": 14.2,
       "total": 9.3,
-      "offer": 108.0,
-      "current": 184.1,
-      "pl": 70.46
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Apex Ecotech Ltd.",
@@ -3094,9 +3094,9 @@
       "nii": 1554.3,
       "retail": 433.4,
       "total": 420.7,
-      "offer": 73.0,
-      "current": 255.0,
-      "pl": 249.32
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Rajputana Biodiesel Ltd.",
@@ -3106,9 +3106,9 @@
       "nii": 1750.0,
       "retail": 968.9,
       "total": 645.8,
-      "offer": 130.0,
-      "current": 203.0,
-      "pl": 56.15
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "C2C Advanced Systems Ltd.",
@@ -3118,9 +3118,9 @@
       "nii": 310.2,
       "retail": 176.3,
       "total": 116.6,
-      "offer": 226.0,
-      "current": 184.0,
-      "pl": -18.58
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Rajesh Power Services Ltd.",
@@ -3130,9 +3130,9 @@
       "nii": 185.2,
       "retail": 42.4,
       "total": 54.9,
-      "offer": 335.0,
-      "current": 770.0,
-      "pl": 129.85
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Enviro Infra Engineers Ltd.",
@@ -3142,9 +3142,9 @@
       "nii": 153.8,
       "retail": 24.5,
       "total": 89.9,
-      "offer": 148.0,
-      "current": 183.3,
-      "pl": 23.85
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Neelam Linens and Garments (India) Ltd.",
@@ -3154,9 +3154,9 @@
       "nii": 364.0,
       "retail": 76.6,
       "total": 85.5,
-      "offer": 24.0,
-      "current": 6.5,
-      "pl": -72.92
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "OBSC Perfection Ltd.",
@@ -3166,9 +3166,9 @@
       "nii": 34.8,
       "retail": 21.5,
       "total": 15.5,
-      "offer": 100.0,
-      "current": 829.4,
-      "pl": 729.4
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Danish Power Ltd.",
@@ -3178,9 +3178,9 @@
       "nii": 360.6,
       "retail": 104.2,
       "total": 117.9,
-      "offer": 380.0,
-      "current": 1015.7,
-      "pl": 167.29
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Waaree Energies Ltd.",
@@ -3190,9 +3190,9 @@
       "nii": 62.5,
       "retail": 10.8,
       "total": 76.3,
-      "offer": 1503.0,
-      "current": 2451.0,
-      "pl": 63.07
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Freshara Agro Exports Ltd.",
@@ -3202,9 +3202,9 @@
       "nii": 635.5,
       "retail": 224.5,
       "total": 206.0,
-      "offer": 116.0,
-      "current": 391.1,
-      "pl": 237.16
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Lakshya Powertech Ltd.",
@@ -3214,9 +3214,9 @@
       "nii": 1455.3,
       "retail": 744.9,
       "total": 533.9,
-      "offer": 180.0,
-      "current": 100.0,
-      "pl": -44.44
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Shiv Texchem Ltd.",
@@ -3226,9 +3226,9 @@
       "nii": 605.9,
       "retail": 90.7,
       "total": 145.7,
-      "offer": 166.0,
-      "current": 111.7,
-      "pl": -32.71
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Garuda Construction and Engineering Ltd.",
@@ -3238,9 +3238,9 @@
       "nii": 9.0,
       "retail": 10.8,
       "total": 7.5,
-      "offer": 95.0,
-      "current": 168.3,
-      "pl": 77.16
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Nexxus Petro Industries Ltd.",
@@ -3250,9 +3250,9 @@
       "nii": 8.1,
       "retail": 8.1,
       "total": 8.1,
-      "offer": 105.0,
-      "current": 64.5,
-      "pl": -38.57
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Divyadhan Recycling Industries Ltd.",
@@ -3262,9 +3262,9 @@
       "nii": 101.3,
       "retail": 43.0,
       "total": 38.0,
-      "offer": 64.0,
-      "current": 40.9,
-      "pl": -36.09
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sahasra Electronic Solutions Ltd.",
@@ -3274,9 +3274,9 @@
       "nii": 346.8,
       "retail": 99.5,
       "total": 113.6,
-      "offer": 283.0,
-      "current": 467.1,
-      "pl": 65.05
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Diffusion Engineers Ltd.",
@@ -3286,9 +3286,9 @@
       "nii": 207.6,
       "retail": 85.6,
       "total": 114.5,
-      "offer": 168.0,
-      "current": 421.6,
-      "pl": 150.95
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Techera Engineering India Ltd.",
@@ -3298,9 +3298,9 @@
       "nii": 171.8,
       "retail": 89.4,
       "total": 65.3,
-      "offer": 82.0,
-      "current": 150.0,
-      "pl": 82.93
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Thinking Hats Entertainment Solutions Ltd.",
@@ -3310,9 +3310,9 @@
       "nii": 338.4,
       "retail": 329.5,
       "total": 305.4,
-      "offer": 44.0,
-      "current": 13.3,
-      "pl": -69.77
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "KRN Heat Exchanger and Refrigeration Ltd.",
@@ -3322,9 +3322,9 @@
       "nii": 431.6,
       "retail": 98.3,
       "total": 214.4,
-      "offer": 220.0,
-      "current": 1380.7,
-      "pl": 527.59
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "WOL 3D India Ltd.",
@@ -3334,9 +3334,9 @@
       "nii": 994.8,
       "retail": 488.5,
       "total": 347.0,
-      "offer": 150.0,
-      "current": 137.0,
-      "pl": -8.67
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Rappid Valves (India) Ltd.",
@@ -3346,9 +3346,9 @@
       "nii": 654.2,
       "retail": 144.8,
       "total": 163.6,
-      "offer": 222.0,
-      "current": 329.5,
-      "pl": 48.42
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Manba Finance Ltd.",
@@ -3358,9 +3358,9 @@
       "nii": 511.6,
       "retail": 144.0,
       "total": 224.1,
-      "offer": 120.0,
-      "current": 140.7,
-      "pl": 17.25
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "S D Retail Ltd.",
@@ -3370,9 +3370,9 @@
       "nii": 276.3,
       "retail": 86.7,
       "total": 90.3,
-      "offer": 131.0,
-      "current": 83.9,
-      "pl": -35.95
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Paramount Speciality Forgings Ltd.",
@@ -3382,9 +3382,9 @@
       "nii": 293.2,
       "retail": 54.9,
       "total": 68.7,
-      "offer": 59.0,
-      "current": 31.6,
-      "pl": -46.44
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Envirotech Systems Ltd.",
@@ -3394,9 +3394,9 @@
       "nii": 221.7,
       "retail": 75.5,
       "total": 75.7,
-      "offer": 56.0,
-      "current": 68.8,
-      "pl": 22.86
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Osel Devcies Ltd.",
@@ -3406,9 +3406,9 @@
       "nii": 427.3,
       "retail": 273.6,
       "total": 180.7,
-      "offer": 160.0,
-      "current": 360.2,
-      "pl": 125.12
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Pelatro Ltd.",
@@ -3418,9 +3418,9 @@
       "nii": 72.4,
       "retail": 16.9,
       "total": 20.7,
-      "offer": 200.0,
-      "current": 358.0,
-      "pl": 79.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Northern Arc Capital",
@@ -3430,9 +3430,9 @@
       "nii": 142.4,
       "retail": 31.1,
       "total": 110.9,
-      "offer": 263.0,
-      "current": 288.5,
-      "pl": 9.7
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Arkade Developers Ltd.",
@@ -3442,9 +3442,9 @@
       "nii": 163.0,
       "retail": 51.4,
       "total": 106.8,
-      "offer": 128.0,
-      "current": 120.4,
-      "pl": -5.94
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sodhani Academy of Fintech Enablers Ltd.",
@@ -3454,9 +3454,9 @@
       "nii": 492.6,
       "retail": 340.2,
       "total": 416.4,
-      "offer": 40.0,
-      "current": 132.0,
-      "pl": 230.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Innomet Advanced Materials Ltd.",
@@ -3466,9 +3466,9 @@
       "nii": 299.0,
       "retail": 215.6,
       "total": 282.5,
-      "offer": 100.0,
-      "current": 264.1,
-      "pl": 164.1
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "P N Gadgil Jewellers Ltd.",
@@ -3478,9 +3478,9 @@
       "nii": 56.1,
       "retail": 16.6,
       "total": 59.4,
-      "offer": 480.0,
-      "current": 597.2,
-      "pl": 24.42
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Gajanand International Ltd.",
@@ -3490,9 +3490,9 @@
       "nii": 5.6,
       "retail": 23.0,
       "total": 14.3,
-      "offer": 36.0,
-      "current": 7.2,
-      "pl": -80.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Aditya Ultra Steel Ltd.",
@@ -3502,9 +3502,9 @@
       "nii": 11.9,
       "retail": 22.5,
       "total": 10.2,
-      "offer": 62.0,
-      "current": 23.8,
-      "pl": -61.61
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Shubhshree Biofuels Energy Ltd.",
@@ -3514,9 +3514,9 @@
       "nii": 327.4,
       "retail": 179.8,
       "total": 119.4,
-      "offer": 119.0,
-      "current": 339.0,
-      "pl": 184.87
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Bajaj Housing Finance Ltd.",
@@ -3526,9 +3526,9 @@
       "nii": 41.5,
       "retail": 7.0,
       "total": 63.6,
-      "offer": 70.0,
-      "current": 82.7,
-      "pl": 18.14
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Vision Infra Equipment Solutions Ltd.",
@@ -3538,9 +3538,9 @@
       "nii": 2.2,
       "retail": 4.1,
       "total": 2.9,
-      "offer": 163.0,
-      "current": 342.7,
-      "pl": 110.25
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "My Mudra Fincorp",
@@ -3550,9 +3550,9 @@
       "nii": 211.9,
       "retail": 144.4,
       "total": 95.3,
-      "offer": 110.0,
-      "current": 98.0,
-      "pl": -10.91
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Namo eWaste Management Ltd.",
@@ -3562,9 +3562,9 @@
       "nii": 524.5,
       "retail": 259.7,
       "total": 209.9,
-      "offer": 85.0,
-      "current": 351.3,
-      "pl": 313.29
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Mach Conferences and Events Ltd.",
@@ -3574,9 +3574,9 @@
       "nii": 293.0,
       "retail": 136.5,
       "total": 182.0,
-      "offer": 225.0,
-      "current": 212.0,
-      "pl": -5.78
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Naturewings Holidays Ltd.",
@@ -3586,9 +3586,9 @@
       "nii": 265.8,
       "retail": 462.6,
       "total": 364.2,
-      "offer": 74.0,
-      "current": 68.0,
-      "pl": -8.11
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Gala Precision",
@@ -3598,9 +3598,9 @@
       "nii": 414.6,
       "retail": 92.0,
       "total": 201.4,
-      "offer": 529.0,
-      "current": 1097.0,
-      "pl": 107.37
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Boss Packaging Solutions Ltd.",
@@ -3610,9 +3610,9 @@
       "nii": 98.5,
       "retail": 156.7,
       "total": 127.6,
-      "offer": 66.0,
-      "current": 54.1,
-      "pl": -18.03
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Travels & Rentals Ltd.",
@@ -3622,9 +3622,9 @@
       "nii": 747.8,
       "retail": 408.5,
       "total": 578.1,
-      "offer": 40.0,
-      "current": 8.9,
-      "pl": -77.75
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Aeron Composite",
@@ -3634,9 +3634,9 @@
       "nii": 94.3,
       "retail": 42.1,
       "total": 35.8,
-      "offer": 125.0,
-      "current": 82.0,
-      "pl": -34.4
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Ecos Mobility",
@@ -3646,9 +3646,9 @@
       "nii": 71.2,
       "retail": 19.8,
       "total": 64.3,
-      "offer": 334.0,
-      "current": 107.2,
-      "pl": -67.9
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Vdeal System",
@@ -3658,9 +3658,9 @@
       "nii": 58.6,
       "retail": 76.5,
       "total": 67.6,
-      "offer": 112.0,
-      "current": 104.6,
-      "pl": -6.61
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Jay Bee Laminations Ltd.",
@@ -3670,9 +3670,9 @@
       "nii": 306.6,
       "retail": 129.9,
       "total": 110.3,
-      "offer": 146.0,
-      "current": 84.7,
-      "pl": -41.99
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Indian Phosphate Ltd.",
@@ -3682,9 +3682,9 @@
       "nii": 586.4,
       "retail": 355.3,
       "total": 260.2,
-      "offer": 99.0,
-      "current": 72.8,
-      "pl": -26.46
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Premier Energies",
@@ -3694,9 +3694,9 @@
       "nii": 50.0,
       "retail": 7.7,
       "total": 74.4,
-      "offer": 450.0,
-      "current": 906.0,
-      "pl": 101.33
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Rapid Multimodal",
@@ -3706,9 +3706,9 @@
       "nii": 501.8,
       "retail": 163.8,
       "total": 332.8,
-      "offer": 84.0,
-      "current": 175.0,
-      "pl": 108.33
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "QVC Exports",
@@ -3718,9 +3718,9 @@
       "nii": 566.3,
       "retail": 397.8,
       "total": 482.1,
-      "offer": 86.0,
-      "current": 24.6,
-      "pl": -71.4
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Orient Technologies",
@@ -3730,9 +3730,9 @@
       "nii": 300.6,
       "retail": 66.8,
       "total": 151.7,
-      "offer": 206.0,
-      "current": 232.8,
-      "pl": 13.01
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Brace Port Logistics",
@@ -3742,9 +3742,9 @@
       "nii": 1813.5,
       "retail": 803.0,
       "total": 617.3,
-      "offer": 80.0,
-      "current": 62.7,
-      "pl": -21.62
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Forcas Studio",
@@ -3754,9 +3754,9 @@
       "nii": 932.7,
       "retail": 552.3,
       "total": 387.8,
-      "offer": 80.0,
-      "current": 228.0,
-      "pl": 185.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Interarch Building",
@@ -3766,9 +3766,9 @@
       "nii": 128.4,
       "retail": 19.1,
       "total": 93.5,
-      "offer": 900.0,
-      "current": 1606.5,
-      "pl": 78.5
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Broach Lifecare Hospital",
@@ -3778,9 +3778,9 @@
       "nii": 84.0,
       "retail": 214.5,
       "total": 150.8,
-      "offer": 25.0,
-      "current": 14.0,
-      "pl": -44.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Solve Plastic",
@@ -3790,9 +3790,9 @@
       "nii": 14.8,
       "retail": 40.7,
       "total": 28.7,
-      "offer": 91.0,
-      "current": 18.1,
-      "pl": -80.11
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Positron Energy",
@@ -3802,9 +3802,9 @@
       "nii": 1071.8,
       "retail": 467.7,
       "total": 385.9,
-      "offer": 250.0,
-      "current": 227.4,
-      "pl": -9.04
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sunlite Recycling",
@@ -3814,9 +3814,9 @@
       "nii": 775.6,
       "retail": 334.0,
       "total": 262.1,
-      "offer": 105.0,
-      "current": 667.1,
-      "pl": 535.33
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Saraswati Saree Depot",
@@ -3826,9 +3826,9 @@
       "nii": 358.5,
       "retail": 61.6,
       "total": 107.4,
-      "offer": 160.0,
-      "current": 67.2,
-      "pl": -58.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Aesthetik Engineers",
@@ -3838,9 +3838,9 @@
       "nii": 2577.7,
       "retail": 633.4,
       "total": 663.3,
-      "offer": 58.0,
-      "current": 69.7,
-      "pl": 20.17
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Brainbees Solutions",
@@ -3850,9 +3850,9 @@
       "nii": 4.7,
       "retail": 2.3,
       "total": 12.2,
-      "offer": 465.0,
-      "current": 178.0,
-      "pl": -61.72
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Unicommerce eSolutions",
@@ -3862,9 +3862,9 @@
       "nii": 252.5,
       "retail": 131.0,
       "total": 168.3,
-      "offer": 108.0,
-      "current": 84.1,
-      "pl": -22.13
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Picturepost Studios",
@@ -3874,9 +3874,9 @@
       "nii": 520.6,
       "retail": 418.9,
       "total": 251.5,
-      "offer": 24.0,
-      "current": 3.0,
-      "pl": -87.5
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Afcom Holdings",
@@ -3886,9 +3886,9 @@
       "nii": 512.0,
       "retail": 202.8,
       "total": 281.4,
-      "offer": 108.0,
-      "current": 1514.9,
-      "pl": 1302.69
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Dhariwalcorp",
@@ -3898,9 +3898,9 @@
       "nii": 379.7,
       "retail": 251.8,
       "total": 165.0,
-      "offer": 106.0,
-      "current": 26.8,
-      "pl": -74.72
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Kizi Apparels",
@@ -3910,9 +3910,9 @@
       "nii": 86.9,
       "retail": 132.4,
       "total": 109.7,
-      "offer": 21.0,
-      "current": 16.2,
-      "pl": -22.86
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Ashapura Logistics",
@@ -3922,9 +3922,9 @@
       "nii": 385.3,
       "retail": 231.4,
       "total": 172.9,
-      "offer": 144.0,
-      "current": 60.0,
-      "pl": -58.33
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Bulkcorp Intl",
@@ -3934,9 +3934,9 @@
       "nii": 334.3,
       "retail": 481.7,
       "total": 246.4,
-      "offer": 105.0,
-      "current": 79.8,
-      "pl": -24.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Rajputana Industries",
@@ -3946,9 +3946,9 @@
       "nii": 540.0,
       "retail": 644.6,
       "total": 347.5,
-      "offer": 38.0,
-      "current": 66.0,
-      "pl": 73.68
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sathlokhar Synergys",
@@ -3958,9 +3958,9 @@
       "nii": 478.9,
       "retail": 200.8,
       "total": 185.0,
-      "offer": 140.0,
-      "current": 371.8,
-      "pl": 165.57
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "S A Tech Software",
@@ -3970,9 +3970,9 @@
       "nii": 1518.1,
       "retail": 798.3,
       "total": 558.9,
-      "offer": 59.0,
-      "current": 36.0,
-      "pl": -38.98
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Trom Industries",
@@ -3982,9 +3982,9 @@
       "nii": 1000.4,
       "retail": 651.1,
       "total": 430.3,
-      "offer": 115.0,
-      "current": 61.2,
-      "pl": -46.78
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Clinitech Laboratory",
@@ -3994,9 +3994,9 @@
       "nii": 24.4,
       "retail": 49.6,
       "total": 37.0,
-      "offer": 96.0,
-      "current": 32.0,
-      "pl": -66.67
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Aprameya Engineering",
@@ -4006,9 +4006,9 @@
       "nii": 451.8,
       "retail": 249.5,
       "total": 179.1,
-      "offer": 58.0,
-      "current": 97.8,
-      "pl": 68.62
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Manglam Infra",
@@ -4018,9 +4018,9 @@
       "nii": 923.4,
       "retail": 454.5,
       "total": 337.4,
-      "offer": 56.0,
-      "current": 12.2,
-      "pl": -78.21
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Chetana Education",
@@ -4030,9 +4030,9 @@
       "nii": 622.4,
       "retail": 179.3,
       "total": 183.0,
-      "offer": 85.0,
-      "current": 33.5,
-      "pl": -60.59
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "VVIP Infratech",
@@ -4042,9 +4042,9 @@
       "nii": 335.9,
       "retail": 181.7,
       "total": 220.0,
-      "offer": 93.0,
-      "current": 132.7,
-      "pl": 42.69
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "V L Infraprojects",
@@ -4054,9 +4054,9 @@
       "nii": 961.0,
       "retail": 1114.5,
       "total": 588.0,
-      "offer": 42.0,
-      "current": 24.1,
-      "pl": -42.62
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "RNFI Services",
@@ -4066,9 +4066,9 @@
       "nii": 678.5,
       "retail": 210.8,
       "total": 212.6,
-      "offer": 105.0,
-      "current": 332.0,
-      "pl": 216.19
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sanstar",
@@ -4078,9 +4078,9 @@
       "nii": 136.5,
       "retail": 24.2,
       "total": 83.0,
-      "offer": 95.0,
-      "current": 100.4,
-      "pl": 5.68
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Kataria Industries",
@@ -4090,9 +4090,9 @@
       "nii": 1286.9,
       "retail": 364.5,
       "total": 366.1,
-      "offer": 96.0,
-      "current": 152.3,
-      "pl": 58.65
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Macobs Technologies",
@@ -4102,9 +4102,9 @@
       "nii": 305.5,
       "retail": 202.5,
       "total": 190.1,
-      "offer": 75.0,
-      "current": 199.0,
-      "pl": 165.33
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Aelea Commodities",
@@ -4114,9 +4114,9 @@
       "nii": 288.8,
       "retail": 164.9,
       "total": 182.2,
-      "offer": 95.0,
-      "current": 143.3,
-      "pl": 50.84
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sati Poly Plast",
@@ -4126,9 +4126,9 @@
       "nii": 755.1,
       "retail": 887.9,
       "total": 462.7,
-      "offer": 130.0,
-      "current": 33.5,
-      "pl": -74.23
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Three M Paper Boards",
@@ -4138,9 +4138,9 @@
       "nii": 210.8,
       "retail": 175.2,
       "total": 159.4,
-      "offer": 69.0,
-      "current": 22.0,
-      "pl": -68.12
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Prizor Viztech",
@@ -4150,9 +4150,9 @@
       "nii": 372.4,
       "retail": 354.9,
       "total": 204.9,
-      "offer": 87.0,
-      "current": 1360.0,
-      "pl": 1463.22
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sahaj Solar",
@@ -4162,9 +4162,9 @@
       "nii": 1132.8,
       "retail": 702.2,
       "total": 472.0,
-      "offer": 180.0,
-      "current": 88.2,
-      "pl": -51.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Effwa Infra & Research",
@@ -4174,9 +4174,9 @@
       "nii": 650.4,
       "retail": 429.6,
       "total": 291.1,
-      "offer": 82.0,
-      "current": 348.6,
-      "pl": 325.12
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Ganesh Green Bharat",
@@ -4186,9 +4186,9 @@
       "nii": 616.3,
       "retail": 231.5,
       "total": 213.9,
-      "offer": 190.0,
-      "current": 211.6,
-      "pl": 11.37
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Ambey Laboratories",
@@ -4198,9 +4198,9 @@
       "nii": 279.0,
       "retail": 258.9,
       "total": 148.9,
-      "offer": 68.0,
-      "current": 26.1,
-      "pl": -61.62
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Bansal Wire",
@@ -4210,9 +4210,9 @@
       "nii": 51.5,
       "retail": 13.6,
       "total": 59.6,
-      "offer": 256.0,
-      "current": 318.2,
-      "pl": 24.3
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Emcure Pharma",
@@ -4222,9 +4222,9 @@
       "nii": 48.3,
       "retail": 7.2,
       "total": 67.9,
-      "offer": 1008.0,
-      "current": 1868.6,
-      "pl": 85.38
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Nephro Care",
@@ -4234,9 +4234,9 @@
       "nii": 2214.8,
       "retail": 782.4,
       "total": 666.6,
-      "offer": 90.0,
-      "current": 86.5,
-      "pl": -3.89
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Diensten Tech",
@@ -4246,9 +4246,9 @@
       "nii": 206.8,
       "retail": 47.6,
       "total": 50.2,
-      "offer": 100.0,
-      "current": 120.0,
-      "pl": 20.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Vraj Iron & Steel",
@@ -4258,9 +4258,9 @@
       "nii": 208.8,
       "retail": 54.9,
       "total": 119.0,
-      "offer": 207.0,
-      "current": 119.4,
-      "pl": -42.32
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Divine Power Energy",
@@ -4270,9 +4270,9 @@
       "nii": 632.9,
       "retail": 678.8,
       "total": 369.1,
-      "offer": 40.0,
-      "current": 605.0,
-      "pl": 1412.5
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Petro Carbon",
@@ -4282,9 +4282,9 @@
       "nii": 169.5,
       "retail": 96.7,
       "total": 83.8,
-      "offer": 171.0,
-      "current": 400.4,
-      "pl": 134.15
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Akiko Global",
@@ -4294,9 +4294,9 @@
       "nii": 65.0,
       "retail": 63.9,
       "total": 35.2,
-      "offer": 77.0,
-      "current": 408.5,
-      "pl": 430.52
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Allied Blenders",
@@ -4306,9 +4306,9 @@
       "nii": 32.4,
       "retail": 4.5,
       "total": 23.6,
-      "offer": 281.0,
-      "current": 718.5,
-      "pl": 155.69
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Mason Infratech",
@@ -4318,9 +4318,9 @@
       "nii": 67.3,
       "retail": 48.6,
       "total": 30.7,
-      "offer": 64.0,
-      "current": 101.0,
-      "pl": 57.81
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sylvan Plyboard",
@@ -4330,9 +4330,9 @@
       "nii": 72.2,
       "retail": 84.8,
       "total": 78.5,
-      "offer": 55.0,
-      "current": 49.0,
-      "pl": -10.91
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Shivalic Power",
@@ -4342,9 +4342,9 @@
       "nii": 578.5,
       "retail": 305.0,
       "total": 238.6,
-      "offer": 100.0,
-      "current": 70.0,
-      "pl": -30.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Medicamen Organics",
@@ -4354,9 +4354,9 @@
       "nii": 1773.0,
       "retail": 1729.8,
       "total": 916.8,
-      "offer": 34.0,
-      "current": 25.2,
-      "pl": -25.88
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Stanley Lifestyles",
@@ -4366,9 +4366,9 @@
       "nii": 119.5,
       "retail": 19.2,
       "total": 97.0,
-      "offer": 369.0,
-      "current": 127.8,
-      "pl": -65.37
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Winny Immigration",
@@ -4378,9 +4378,9 @@
       "nii": 95.5,
       "retail": 180.7,
       "total": 142.4,
-      "offer": 140.0,
-      "current": 35.8,
-      "pl": -74.43
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Dindigul Farm",
@@ -4390,9 +4390,9 @@
       "nii": 207.1,
       "retail": 201.4,
       "total": 188.1,
-      "offer": 54.0,
-      "current": 31.4,
-      "pl": -41.85
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "GEM Enviro Mgmt",
@@ -4402,9 +4402,9 @@
       "nii": 330.0,
       "retail": 240.3,
       "total": 244.1,
-      "offer": 75.0,
-      "current": 38.9,
-      "pl": -48.13
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Durlax Top Surface",
@@ -4414,9 +4414,9 @@
       "nii": 438.8,
       "retail": 214.3,
       "total": 160.9,
-      "offer": 68.0,
-      "current": 62.8,
-      "pl": -7.65
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "DEE Development",
@@ -4426,9 +4426,9 @@
       "nii": 144.0,
       "retail": 23.4,
       "total": 99.6,
-      "offer": 203.0,
-      "current": 606.6,
-      "pl": 198.82
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "GP Eco Solutions",
@@ -4438,9 +4438,9 @@
       "nii": 2258.4,
       "retail": 977.4,
       "total": 739.1,
-      "offer": 94.0,
-      "current": 411.7,
-      "pl": 337.98
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "LE Travenues Tech",
@@ -4450,9 +4450,9 @@
       "nii": 110.5,
       "retail": 54.7,
       "total": 98.3,
-      "offer": 93.0,
-      "current": 140.5,
-      "pl": 51.08
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Magenta Lifecare",
@@ -4462,9 +4462,9 @@
       "nii": 1126.3,
       "retail": 737.9,
       "total": 932.1,
-      "offer": 35.0,
-      "current": 7.3,
-      "pl": -79.14
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sattrix Information",
@@ -4474,9 +4474,9 @@
       "nii": 98.0,
       "retail": 35.8,
       "total": 66.9,
-      "offer": 121.0,
-      "current": 290.0,
-      "pl": 139.67
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Kronox Lab Sciences",
@@ -4486,9 +4486,9 @@
       "nii": 303.0,
       "retail": 55.7,
       "total": 118.2,
-      "offer": 136.0,
-      "current": 214.0,
-      "pl": 57.35
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "TBI Corn",
@@ -4498,9 +4498,9 @@
       "nii": 686.2,
       "retail": 258.6,
       "total": 215.1,
-      "offer": 94.0,
-      "current": 72.9,
-      "pl": -22.45
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Associated Coaters",
@@ -4510,9 +4510,9 @@
       "nii": 208.9,
       "retail": 417.6,
       "total": 313.3,
-      "offer": 121.0,
-      "current": 95.0,
-      "pl": -21.49
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Aimtron Electronics",
@@ -4522,9 +4522,9 @@
       "nii": 269.1,
       "retail": 94.9,
       "total": 92.1,
-      "offer": 161.0,
-      "current": 1758.2,
-      "pl": 992.05
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Beacon Trusteeship",
@@ -4534,9 +4534,9 @@
       "nii": 1038.6,
       "retail": 671.7,
       "total": 434.4,
-      "offer": 60.0,
-      "current": 88.8,
-      "pl": 48.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Vilas Transcore",
@@ -4546,9 +4546,9 @@
       "nii": 599.4,
       "retail": 214.0,
       "total": 195.3,
-      "offer": 147.0,
-      "current": 370.4,
-      "pl": 151.97
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Awfis Space Solutions",
@@ -4558,9 +4558,9 @@
       "nii": 129.8,
       "retail": 54.6,
       "total": 108.6,
-      "offer": 383.0,
-      "current": 250.3,
-      "pl": -34.65
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Rulka Electricals",
@@ -4570,9 +4570,9 @@
       "nii": 1794.0,
       "retail": 874.5,
       "total": 629.4,
-      "offer": 235.0,
-      "current": 104.6,
-      "pl": -55.49
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "HOAC Foods",
@@ -4582,9 +4582,9 @@
       "nii": 1317.4,
       "retail": 2350.6,
       "total": 1834.0,
-      "offer": 48.0,
-      "current": 1058.0,
-      "pl": 2104.17
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Quest Laboratories",
@@ -4594,9 +4594,9 @@
       "nii": 250.7,
       "retail": 76.8,
       "total": 79.3,
-      "offer": 97.0,
-      "current": 97.2,
-      "pl": 0.21
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Indian Emulsifiers",
@@ -4606,9 +4606,9 @@
       "nii": 1039.5,
       "retail": 643.9,
       "total": 427.9,
-      "offer": 132.0,
-      "current": 40.0,
-      "pl": -69.7
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Veritaas Advertising",
@@ -4618,9 +4618,9 @@
       "nii": 781.3,
       "retail": 1227.8,
       "total": 581.4,
-      "offer": 114.0,
-      "current": 30.0,
-      "pl": -73.68
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "ABS Marine Services",
@@ -4630,9 +4630,9 @@
       "nii": 354.6,
       "retail": 146.9,
       "total": 133.1,
-      "offer": 147.0,
-      "current": 309.4,
-      "pl": 110.48
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Piotex Industries",
@@ -4642,9 +4642,9 @@
       "nii": 115.5,
       "retail": 88.6,
       "total": 102.0,
-      "offer": 94.0,
-      "current": 28.5,
-      "pl": -69.68
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Aztec Fluids & Machinery",
@@ -4654,9 +4654,9 @@
       "nii": 252.8,
       "retail": 228.4,
       "total": 203.0,
-      "offer": 67.0,
-      "current": 94.5,
-      "pl": 41.04
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Premier Roadlines",
@@ -4666,9 +4666,9 @@
       "nii": 239.7,
       "retail": 141.5,
       "total": 109.3,
-      "offer": 67.0,
-      "current": 41.3,
-      "pl": -38.36
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Energy-Mission",
@@ -4678,9 +4678,9 @@
       "nii": 804.4,
       "retail": 384.5,
       "total": 298.2,
-      "offer": 138.0,
-      "current": 122.5,
-      "pl": -11.23
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "TGIF Agribusiness",
@@ -4690,9 +4690,9 @@
       "nii": 29.2,
       "retail": 35.3,
       "total": 35.1,
-      "offer": 93.0,
-      "current": 107.0,
-      "pl": 15.05
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Silkflex Polymers",
@@ -4702,9 +4702,9 @@
       "nii": 34.6,
       "retail": 31.1,
       "total": 32.8,
-      "offer": 52.0,
-      "current": 258.0,
-      "pl": 396.15
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "TBO Tek",
@@ -4714,9 +4714,9 @@
       "nii": 50.6,
       "retail": 25.7,
       "total": 86.7,
-      "offer": 920.0,
-      "current": 1649.8,
-      "pl": 79.33
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Winsol Engineers",
@@ -4726,9 +4726,9 @@
       "nii": 1447.0,
       "retail": 1038.7,
       "total": 635.7,
-      "offer": 75.0,
-      "current": 109.2,
-      "pl": 45.6
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Refractory Shapes",
@@ -4738,9 +4738,9 @@
       "nii": 616.8,
       "retail": 344.2,
       "total": 237.1,
-      "offer": 31.0,
-      "current": 33.8,
-      "pl": 9.03
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Indegene",
@@ -4750,9 +4750,9 @@
       "nii": 55.1,
       "retail": 8.0,
       "total": 69.9,
-      "offer": 452.0,
-      "current": 580.7,
-      "pl": 28.47
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Slone Infosystems",
@@ -4762,9 +4762,9 @@
       "nii": 718.1,
       "retail": 514.2,
       "total": 616.1,
-      "offer": 79.0,
-      "current": 123.3,
-      "pl": 56.08
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sai Swami Metals",
@@ -4774,9 +4774,9 @@
       "nii": 530.0,
       "retail": 501.9,
       "total": 515.9,
-      "offer": 60.0,
-      "current": 7.7,
-      "pl": -87.17
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Amkay Products",
@@ -4786,9 +4786,9 @@
       "nii": 722.0,
       "retail": 973.1,
       "total": 693.4,
-      "offer": 55.0,
-      "current": 67.5,
-      "pl": 22.73
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Storage Technologies",
@@ -4798,9 +4798,9 @@
       "nii": 422.8,
       "retail": 242.7,
       "total": 258.6,
-      "offer": 78.0,
-      "current": 30.3,
-      "pl": -61.15
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Emmforce Autotech",
@@ -4810,9 +4810,9 @@
       "nii": 637.7,
       "retail": 267.6,
       "total": 338.9,
-      "offer": 98.0,
-      "current": 180.2,
-      "pl": 83.88
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Varyaa Creations",
@@ -4822,9 +4822,9 @@
       "nii": 1.1,
       "retail": 5.8,
       "total": 3.5,
-      "offer": 150.0,
-      "current": 26.4,
-      "pl": -82.4
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "JNK",
@@ -4834,9 +4834,9 @@
       "nii": 23.3,
       "retail": 4.1,
       "total": 28.1,
-      "offer": 415.0,
-      "current": 426.1,
-      "pl": 2.67
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Faalcon Concepts",
@@ -4846,9 +4846,9 @@
       "nii": 90.7,
       "retail": 44.8,
       "total": 67.8,
-      "offer": 62.0,
-      "current": 38.9,
-      "pl": -37.26
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Ramdevbaba Solvent",
@@ -4858,9 +4858,9 @@
       "nii": 416.4,
       "retail": 105.8,
       "total": 116.9,
-      "offer": 85.0,
-      "current": 79.0,
-      "pl": -7.06
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Greenhitech Ventures",
@@ -4870,9 +4870,9 @@
       "nii": 893.2,
       "retail": 566.1,
       "total": 729.7,
-      "offer": 50.0,
-      "current": 39.3,
-      "pl": -21.4
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Teerth Gopicon",
@@ -4882,9 +4882,9 @@
       "nii": 92.4,
       "retail": 42.1,
       "total": 67.2,
-      "offer": 111.0,
-      "current": 12.1,
-      "pl": -89.1
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Bharti Hexacom",
@@ -4894,9 +4894,9 @@
       "nii": 10.5,
       "retail": 2.8,
       "total": 29.9,
-      "offer": 570.0,
-      "current": 1548.7,
-      "pl": 171.7
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Creative Graphics",
@@ -4906,9 +4906,9 @@
       "nii": 628.7,
       "retail": 192.2,
       "total": 187.8,
-      "offer": 85.0,
-      "current": 153.4,
-      "pl": 80.47
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "K2 Infragen",
@@ -4918,9 +4918,9 @@
       "nii": 147.1,
       "retail": 52.3,
       "total": 46.4,
-      "offer": 119.0,
-      "current": 41.3,
-      "pl": -65.29
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Jay Kailash Namkeen",
@@ -4930,9 +4930,9 @@
       "nii": 54.6,
       "retail": 51.0,
       "total": 38.0,
-      "offer": 73.0,
-      "current": 50.9,
-      "pl": -30.27
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Yash Optics & Lens",
@@ -4942,9 +4942,9 @@
       "nii": 130.4,
       "retail": 43.0,
       "total": 39.4,
-      "offer": 81.0,
-      "current": 120.6,
-      "pl": 48.89
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Radiowalla Network",
@@ -4954,9 +4954,9 @@
       "nii": 646.3,
       "retail": 463.1,
       "total": 282.1,
-      "offer": 76.0,
-      "current": 26.9,
-      "pl": -64.61
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "TAC Infosec",
@@ -4966,9 +4966,9 @@
       "nii": 1022.0,
       "retail": 576.3,
       "total": 392.6,
-      "offer": 106.0,
-      "current": 399.4,
-      "pl": 276.79
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Trust Fintech",
@@ -4978,9 +4978,9 @@
       "nii": 325.1,
       "retail": 99.7,
       "total": 101.0,
-      "offer": 101.0,
-      "current": 25.1,
-      "pl": -75.15
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Blue Pebble",
@@ -4990,9 +4990,9 @@
       "nii": 129.8,
       "retail": 77.4,
       "total": 52.3,
-      "offer": 168.0,
-      "current": 66.0,
-      "pl": -60.71
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Naman In-Store",
@@ -5002,9 +5002,9 @@
       "nii": 703.0,
       "retail": 436.9,
       "total": 287.5,
-      "offer": 89.0,
-      "current": 48.0,
-      "pl": -46.07
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Chatha Foods",
@@ -5014,9 +5014,9 @@
       "nii": 33.2,
       "retail": 14.6,
       "total": 18.0,
-      "offer": 56.0,
-      "current": 88.2,
-      "pl": 57.5
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Enfuse Solutions",
@@ -5026,9 +5026,9 @@
       "nii": 1266.9,
       "retail": 329.3,
       "total": 331.8,
-      "offer": 96.0,
-      "current": 157.9,
-      "pl": 64.48
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "KP Green Engineering",
@@ -5038,9 +5038,9 @@
       "nii": 36.0,
       "retail": 20.1,
       "total": 27.5,
-      "offer": 144.0,
-      "current": 272.6,
-      "pl": 89.31
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Royal Sense",
@@ -5050,9 +5050,9 @@
       "nii": 8.9,
       "retail": 6.5,
       "total": 7.7,
-      "offer": 68.0,
-      "current": 69.1,
-      "pl": 1.62
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Signoria Creation",
@@ -5062,9 +5062,9 @@
       "nii": 1962.0,
       "retail": 888.2,
       "total": 626.1,
-      "offer": 65.0,
-      "current": 141.0,
-      "pl": 116.92
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Pratham EPC Projects",
@@ -5074,9 +5074,9 @@
       "nii": 426.6,
       "retail": 238.5,
       "total": 166.1,
-      "offer": 75.0,
-      "current": 112.0,
-      "pl": 49.33
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Pune E-Stock Broking",
@@ -5086,9 +5086,9 @@
       "nii": 357.5,
       "retail": 338.9,
       "total": 296.6,
-      "offer": 83.0,
-      "current": 260.7,
-      "pl": 214.1
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Koura Fine Jewelry",
@@ -5098,9 +5098,9 @@
       "nii": 353.3,
       "retail": 1010.3,
       "total": 681.8,
-      "offer": 55.0,
-      "current": 52.3,
-      "pl": -4.91
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Shree Karni Fabcom",
@@ -5110,9 +5110,9 @@
       "nii": 614.0,
       "retail": 439.1,
       "total": 275.8,
-      "offer": 227.0,
-      "current": 426.1,
-      "pl": 87.71
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Mukka Proteins",
@@ -5122,9 +5122,9 @@
       "nii": 250.4,
       "retail": 58.5,
       "total": 137.0,
-      "offer": 28.0,
-      "current": 27.4,
-      "pl": -2.14
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Purv Flexipack",
@@ -5134,9 +5134,9 @@
       "nii": 938.9,
       "retail": 589.1,
       "total": 386.9,
-      "offer": 71.0,
-      "current": 38.0,
-      "pl": -46.48
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Exicom Tele-Systems",
@@ -5146,9 +5146,9 @@
       "nii": 153.2,
       "retail": 119.6,
       "total": 129.5,
-      "offer": 142.0,
-      "current": 147.6,
-      "pl": 3.94
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Platinum Industries",
@@ -5158,9 +5158,9 @@
       "nii": 141.8,
       "retail": 51.0,
       "total": 99.0,
-      "offer": 171.0,
-      "current": 203.6,
-      "pl": 19.06
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Owais Metal & Mineral",
@@ -5170,9 +5170,9 @@
       "nii": 428.1,
       "retail": 339.9,
       "total": 206.9,
-      "offer": 87.0,
-      "current": 61.1,
-      "pl": -29.77
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Sadhav Shipping",
@@ -5182,9 +5182,9 @@
       "nii": 175.7,
       "retail": 65.8,
       "total": 120.7,
-      "offer": 95.0,
-      "current": 113.3,
-      "pl": 19.26
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "GPT Healthcare",
@@ -5194,9 +5194,9 @@
       "nii": 11.0,
       "retail": 2.4,
       "total": 8.5,
-      "offer": 186.0,
-      "current": 142.1,
-      "pl": -23.6
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Deem Roll-Tech",
@@ -5206,9 +5206,9 @@
       "nii": 296.4,
       "retail": 171.4,
       "total": 233.9,
-      "offer": 129.0,
-      "current": 42.7,
-      "pl": -66.9
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Zenith Drugs",
@@ -5218,9 +5218,9 @@
       "nii": 309.0,
       "retail": 116.2,
       "total": 104.8,
-      "offer": 79.0,
-      "current": 39.7,
-      "pl": -49.75
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Atmastco",
@@ -5230,9 +5230,9 @@
       "nii": 14.4,
       "retail": 18.4,
       "total": 16.4,
-      "offer": 77.0,
-      "current": 109.2,
-      "pl": 41.82
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Esconet Technologies",
@@ -5242,9 +5242,9 @@
       "nii": 1151.4,
       "retail": 734.8,
       "total": 471.2,
-      "offer": 84.0,
-      "current": 263.7,
-      "pl": 213.93
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Interiors & More",
@@ -5254,9 +5254,9 @@
       "nii": 40.8,
       "retail": 10.5,
       "total": 10.8,
-      "offer": 227.0,
-      "current": 133.0,
-      "pl": -41.41
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Thaai Casting",
@@ -5266,9 +5266,9 @@
       "nii": 960.4,
       "retail": 467.9,
       "total": 345.9,
-      "offer": 77.0,
-      "current": 124.0,
-      "pl": 61.04
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Vibhor Steel Tubes",
@@ -5278,9 +5278,9 @@
       "nii": 721.3,
       "retail": 188.2,
       "total": 298.9,
-      "offer": 151.0,
-      "current": 100.3,
-      "pl": -33.58
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Wise Travel",
@@ -5290,9 +5290,9 @@
       "nii": 481.4,
       "retail": 139.1,
       "total": 148.2,
-      "offer": 147.0,
-      "current": 95.4,
-      "pl": -35.1
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Rudra Gas Enterprise",
@@ -5302,9 +5302,9 @@
       "nii": 281.9,
       "retail": 383.5,
       "total": 332.7,
-      "offer": 63.0,
-      "current": 70.1,
-      "pl": 11.27
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Alpex Solar",
@@ -5314,9 +5314,9 @@
       "nii": 668.1,
       "retail": 467.6,
       "total": 301.4,
-      "offer": 115.0,
-      "current": 781.3,
-      "pl": 579.39
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Apeejay Surrendra",
@@ -5326,9 +5326,9 @@
       "nii": 52.4,
       "retail": 30.4,
       "total": 59.7,
-      "offer": 155.0,
-      "current": 103.7,
-      "pl": -33.1
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Gabriel Pet Straps",
@@ -5338,9 +5338,9 @@
       "nii": 349.0,
       "retail": 116.1,
       "total": 232.6,
-      "offer": 101.0,
-      "current": 88.7,
-      "pl": -12.18
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "BLS E-Services",
@@ -5350,9 +5350,9 @@
       "nii": 300.1,
       "retail": 237.0,
       "total": 162.5,
-      "offer": 135.0,
-      "current": 149.5,
-      "pl": 10.74
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Harshdeep Hortico",
@@ -5362,9 +5362,9 @@
       "nii": 134.4,
       "retail": 98.3,
       "total": 96.4,
-      "offer": 45.0,
-      "current": 99.0,
-      "pl": 120.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Megatherm Induction",
@@ -5374,9 +5374,9 @@
       "nii": 408.5,
       "retail": 266.3,
       "total": 182.4,
-      "offer": 108.0,
-      "current": 249.3,
-      "pl": 130.83
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "DocMode Health",
@@ -5386,9 +5386,9 @@
       "nii": 185.1,
       "retail": 218.7,
       "total": 201.9,
-      "offer": 79.0,
-      "current": 22.4,
-      "pl": -71.65
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "delaPlex",
@@ -5398,9 +5398,9 @@
       "nii": 445.6,
       "retail": 212.2,
       "total": 165.2,
-      "offer": 192.0,
-      "current": 124.0,
-      "pl": -35.42
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Fonebox Retail",
@@ -5410,9 +5410,9 @@
       "nii": 1091.7,
       "retail": 1178.7,
       "total": 613.3,
-      "offer": 70.0,
-      "current": 153.9,
-      "pl": 119.86
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Brisk Technovision",
@@ -5422,9 +5422,9 @@
       "nii": 55.5,
       "retail": 34.1,
       "total": 44.8,
-      "offer": 156.0,
-      "current": 76.8,
-      "pl": -50.77
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Nova Agritech",
@@ -5434,9 +5434,9 @@
       "nii": 224.1,
       "retail": 77.1,
       "total": 109.4,
-      "offer": 41.0,
-      "current": 21.7,
-      "pl": -47.07
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Euphoria Infotech",
@@ -5446,9 +5446,9 @@
       "nii": 238.0,
       "retail": 426.6,
       "total": 364.7,
-      "offer": 100.0,
-      "current": 30.5,
-      "pl": -69.5
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Addictive Learning",
@@ -5458,9 +5458,9 @@
       "nii": 533.7,
       "retail": 387.3,
       "total": 245.3,
-      "offer": 140.0,
-      "current": 43.5,
-      "pl": -68.93
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Konstelec Engineers",
@@ -5470,9 +5470,9 @@
       "nii": 561.5,
       "retail": 581.3,
       "total": 317.9,
-      "offer": 70.0,
-      "current": 48.5,
-      "pl": -30.71
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Qualitek Labs",
@@ -5482,9 +5482,9 @@
       "nii": 74.8,
       "retail": 37.2,
       "total": 56.0,
-      "offer": 100.0,
-      "current": 567.6,
-      "pl": 467.6
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Maxposure",
@@ -5494,9 +5494,9 @@
       "nii": 2574.0,
       "retail": 1363.1,
       "total": 904.9,
-      "offer": 33.0,
-      "current": 33.3,
-      "pl": 0.91
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Medi Assist Healthcare",
@@ -5506,9 +5506,9 @@
       "nii": 14.8,
       "retail": 3.2,
       "total": 16.3,
-      "offer": 418.0,
-      "current": 303.8,
-      "pl": -27.32
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Shree Marutinandan Tubes",
@@ -5518,9 +5518,9 @@
       "nii": 33.0,
       "retail": 56.7,
       "total": 44.9,
-      "offer": 143.0,
-      "current": 42.5,
-      "pl": -70.28
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "New Swan Multitech",
@@ -5530,9 +5530,9 @@
       "nii": 544.8,
       "retail": 388.2,
       "total": 356.9,
-      "offer": 66.0,
-      "current": 41.7,
-      "pl": -36.82
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Australian Premium Solar",
@@ -5542,9 +5542,9 @@
       "nii": 1028.2,
       "retail": 711.9,
       "total": 431.8,
-      "offer": 54.0,
-      "current": 215.6,
-      "pl": 299.26
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Jyoti CNC Automation",
@@ -5554,9 +5554,9 @@
       "nii": 36.5,
       "retail": 26.2,
       "total": 38.5,
-      "offer": 331.0,
-      "current": 1022.2,
-      "pl": 208.82
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Kaushalya Logistics",
@@ -5566,9 +5566,9 @@
       "nii": 1110.0,
       "retail": 491.4,
       "total": 364.2,
-      "offer": 75.0,
-      "current": 39.6,
-      "pl": -47.2
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Kay Cee Energy",
@@ -5578,9 +5578,9 @@
       "nii": 2184.5,
       "retail": 1711.0,
       "total": 959.5,
-      "offer": 54.0,
-      "current": 76.0,
-      "pl": 40.74
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Manoj Ceramic",
@@ -5590,9 +5590,9 @@
       "nii": 7.0,
       "retail": 10.2,
       "total": 8.6,
-      "offer": 62.0,
-      "current": 63.5,
-      "pl": 2.42
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Shri Balaji Valve",
@@ -5602,9 +5602,9 @@
       "nii": 800.1,
       "retail": 169.9,
       "total": 276.5,
-      "offer": 100.0,
-      "current": 137.0,
-      "pl": 37.0
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "HRH Next Services",
@@ -5614,9 +5614,9 @@
       "nii": 63.7,
       "retail": 60.3,
       "total": 62.0,
-      "offer": 36.0,
-      "current": 23.2,
-      "pl": -35.56
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "Akanksha Power",
@@ -5626,9 +5626,9 @@
       "nii": 316.8,
       "retail": 146.3,
       "total": 108.9,
-      "offer": 55.0,
-      "current": 186.3,
-      "pl": 238.73
+      "offer": null,
+      "current": null,
+      "pl": null
     },
     {
       "name": "AIK Pipes",
@@ -5638,9 +5638,9 @@
       "nii": 53.5,
       "retail": 29.4,
       "total": 41.4,
-      "offer": 89.0,
-      "current": 24.4,
-      "pl": -72.58
+      "offer": null,
+      "current": null,
+      "pl": null
     }
   ]
 }
